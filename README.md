@@ -82,7 +82,7 @@ We went ahead and made a branch and pull request for you.
 -->
 
 <details id=2>
-<summary><strong>:beginner: Step 2: Start your workflow file</strong></summary>
+<summary><strong>:beginner: Step 2: Add a job to your workflow file</strong></summary>
 
 ### Nice work! :tada: You added a workflow!
 
@@ -97,7 +97,7 @@ Next, we need to specify jobs to run.
 
 In this step, we will add a "build" job. We will specify `ubuntu-latest` as the fastest and cheapest job runner available.
 
-### :keyboard: Activity: Start your workflow file
+### :keyboard: Activity: Add a job to your workflow file
 
 1. Update `emoji.yml` in the `emoji-workflow` branch to:
    ```yaml
@@ -126,12 +126,12 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
 
 ### :dancer: Nice work adding a job to your workflow!
 
-Workflows have jobs, and jobs have steps. So now we'll add steps
+Workflows have jobs, and jobs have steps. So now we'll add steps.
 
 **What are _steps_**: Action steps will run during our job in order. Each step must pass for the next step to run. Action steps can be used from within the same repository, from any other public repository, or from a published Docker container image.
 
 In our action,
-1. We will `git checkout` the code, using a [prebuilt checkout action](https://github.com/actions/checkout).
+1. We will `git checkout` the code, using a [pre-built checkout action](https://github.com/actions/checkout).
 2. We'll run a [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script to check Markdown files.
 3. We'll fail (`exit 1`) if any Markdown file contains an emoji without using [emoji shortcodes](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md).
 
@@ -224,7 +224,7 @@ Here's a recap of all the tasks you've accomplished in your repository:
 - You've created your first GitHub Action workflow
 - You learned where to make your workflow file
 - You created an event trigger, a job, and steps for your workflow
-- You're ready to automate to your hearts content
+- You're ready to automate anything you can dream of
 
 ### What's next?
 
