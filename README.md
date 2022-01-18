@@ -32,7 +32,7 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 
 - **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users
 - **What you'll learn**: Create workflow files, trigger workflows, find workflow logs
-- **What you'll build**: A working action, including a Dockerfile, an entrypoint script, and a workflow file
+- **What you'll build**: A working action that will check emoji references in Markdown files
 - **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/githublearn/introduction-to-github) course, first!
 - **How long**: This course is 5 steps and can be finished in less than two hours
 
@@ -47,7 +47,7 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 -->
 
 <details id=1>
-<summary><strong>:TBD: Step 1: Create a workflow file</strong></summary>
+<summary><strong>:pencil: Step 1: Create a workflow file</strong></summary>
 
 ### :TBD: TBD
 
@@ -68,7 +68,7 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 -->
 
 <details id=2>
-<summary><strong>:pencil: Step 2: Start your workflow file</strong></summary>
+<summary><strong>:beginner: Step 2: Start your workflow file</strong></summary>
 
 ### :TBD: TBD
 
@@ -88,11 +88,13 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 -->
 
 <details id=3>
-<summary><strong>:pencil: Step 3: Add actions to your workflow file</strong></summary>
+<summary><strong>:mechanical_arm: Step 3: Add actions to your workflow file</strong></summary>
 
 ### :TBD: TBD
 
 **What is _TBD**: TBD
+
+TBD check that emojis are valid GitHub refs
 
 ### :keyboard: Activity: TBD
 
@@ -108,7 +110,7 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 -->
 
 <details id=4>
-<summary><strong>:pencil: Step 4: Trigger the workflow</strong></summary>
+<summary><strong>:arrow_forward: Step 4: Trigger the workflow</strong></summary>
 
 ### :TBD: TBD
 
@@ -128,7 +130,7 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 -->
 
 <details id=2>
-<summary><strong>:pencil: Step 5: Merge your workflow file</strong></summary>
+<summary><strong>:dancer: Step 5: Merge your workflow file</strong></summary>
 
 ### :TBD: TBD
 
