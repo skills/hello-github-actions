@@ -130,7 +130,7 @@ TBD check that emojis are valid GitHub refs
 -->
 
 <details id=2>
-<summary><strong>:dancer: Step 5: Merge your workflow file</strong></summary>
+<summary><strong>:shipit: Step 5: Merge your workflow file</strong></summary>
 
 ### :TBD: TBD
 
