@@ -54,7 +54,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .github/workflows/emoji.yml
           git commit --message="Create .github/workflows/emoji.yml file"
-          git push --set-upstream origin start-markdown
+          git push --set-upstream origin emoji-workflow
 
           echo "Make a pull request"
           # Reference https://cli.github.com/manual/gh_pr_create
