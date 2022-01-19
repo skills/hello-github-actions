@@ -15,9 +15,7 @@ on:
 permissions:
   # Need `contents: read` to checkout the repository
   # Need `contents: write` to update the step metadata
-  # Need `workflows: write` to create and update .github/workflows/emoji.yml
   contents: write
-  workflows: write
 
 jobs:
   on_start:
@@ -59,8 +57,7 @@ jobs:
           echo "Make a commit and push"
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .github/workflows/emoji.yml
-          git commit --message="Create .github/workflows/emoji.yml file"
+          git commit --allow-empty --message="Create an empty commit"
           git push --set-upstream origin emoji-workflow
 
           echo "Make a pull request"
