@@ -167,7 +167,27 @@ In our action,
 -->
 
 <details id=4>
-<summary><strong>:arrow_forward: Step 4: Trigger the workflow</strong></summary>
+<summary><strong>:shipit: Step 4: Merge your workflow file</strong></summary>
+
+### :heart: You're now able to write and run actions workflows!
+
+Merge this pull request so the action will be a part of the `main` branch.
+
+### :keyboard: Activity: Merge your workflow file
+
+1. Merge the pull request from branch `emoji-workflow`
+1. Wait about 20 seconds then refresh this page for the next step
+
+</details>
+
+<!--
+  <<< Author notes: Step 5 >>>
+  Start this step by acknowledging the first step.
+  Define terms and link to docs.github.com.
+-->
+
+<details id=5>
+<summary><strong>:arrow_forward: Step 5: Trigger the workflow</strong></summary>
 
 ### :smile: You've now got a fully functioning workflow!
 
@@ -183,26 +203,6 @@ This action will run any time a new commit is created or pushed to the remote re
 1. Commit any change to your branch, such as adding an emoji to your README.md file
 1. Open a pull request with branch: `test-workflow`
 1. See your action run on your pull request
-1. Wait about 20 seconds then refresh this page for the next step
-
-</details>
-
-<!--
-  <<< Author notes: Step 5 >>>
-  Start this step by acknowledging the first step.
-  Define terms and link to docs.github.com.
--->
-
-<details id=2>
-<summary><strong>:shipit: Step 5: Merge your workflow file</strong></summary>
-
-### :heart: You're now able to write and run actions workflows!
-
-Now that you've seen your workflow running, let's finish out this course. As a final step, merge this pull request so the action will be a part of the `main` branch.
-
-### :keyboard: Activity: Merge your workflow file
-
-1. Merge the pull request from branch `emoji-workflow`
 1. Wait about 20 seconds then refresh this page for the next step
 
 </details>
