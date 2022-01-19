@@ -63,7 +63,7 @@ We went ahead and made a branch and pull request for you.
 
 1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab
 1. Open the pull request from the `emoji-workflow` branch
-1. Create a file titled `.github/workflows/emoji.yml`
+1. Add a file at `.github/workflows/emoji.yml` on the `emoji-workflow` branch
 1. Add the following content to the `emoji.yml` file:
    ```yaml
    name: Check emoji shortcode
@@ -107,7 +107,6 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
      build:
        name: Check emoji shortcode
        runs-on: ubuntu-latest
-       steps:
    ```
 1. Click **Start commit** in the top right of the workflow editor
 1. Type your commit message and commit your changes directly to your branch
@@ -176,6 +175,7 @@ Merge this pull request so the action will be a part of the `main` branch.
 ### :keyboard: Activity: Merge your workflow file
 
 1. Merge the pull request from branch `emoji-workflow`
+1. Delete your `emoji-workflow` branch (optional)
 1. Wait about 20 seconds then refresh this page for the next step
 
 </details>
