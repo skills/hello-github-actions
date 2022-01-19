@@ -1,6 +1,6 @@
 name: Step 4, Merge your pull request
 
-# This step triggers after a pull requst is merged to `main`
+# This step triggers after a pull request is merged to `main`
 # This step sets STEP to 5
 # This step closes <details id=4> and opens <details id=5>
 
@@ -42,4 +42,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FROM_STEP: 4
           TO_STEP: 5
-          BRANCH_NAME: TBD
+          BRANCH_NAME: emoji-workflow

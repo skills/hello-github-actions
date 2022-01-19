@@ -63,7 +63,7 @@ We went ahead and made a branch and pull request for you.
 
 1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab
 1. Open the pull request from the `emoji-workflow` branch
-1. Create a file titled `.github/workflows/emoji.yml`
+1. View a file titled `.github/workflows/emoji.yml`
 1. Add the following content to the `emoji.yml` file:
    ```yaml
    name: Check emoji shortcode

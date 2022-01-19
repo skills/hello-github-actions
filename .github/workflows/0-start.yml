@@ -33,7 +33,37 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches
 
-      # TBD Include any additional set up steps here
+      # Make a branch, file, commit, and pull request for the learner
+      - name: Prepare a pull request, branch, and file
+        run: |
+          echo "Make sure we are on step 0"
+          if [ "$(cat .github/script/STEP)" != 0 ]
+          then
+            echo "Current step is not 0"
+            exit 0
+          fi
+
+          echo "Make a branch"
+          git checkout -b emoji-workflow
+
+          echo "Make a file"
+          touch .github/workflows/emoji.yml
+
+          echo "Make a commit and push"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .github/workflows/emoji.yml
+          git commit --message="Create .github/workflows/emoji.yml file"
+          git push --set-upstream origin start-markdown
+
+          echo "Make a pull request"
+          # Reference https://cli.github.com/manual/gh_pr_create
+          gh pr create --title "Create emoji shortcode workflow" --body "Create emoji shortcode workflow"
+
+          echo "Restore main"
+          git checkout main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Update README to close <details id=0>
       # and open <details id=1>
@@ -44,4 +74,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FROM_STEP: 0
           TO_STEP: 1
-          BRANCH_NAME: my-first-branch
+          BRANCH_NAME: emoji-workflow

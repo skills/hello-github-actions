@@ -1,18 +1,20 @@
-name: Step 3, TBD
+name: Step 3, Add actions
 
-# This step triggers after TBD
+# This step triggers after every push to emoji-workflow
 # This step sets STEP to 4
 # This step closes <details id=3> and opens <details id=4>
 
-# This will run every time we TBD
+# This will run every time we push to emoji-workflow
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
-  TBD:
+  push:
+    branches:
+      - emoji-workflow
 
 jobs:
-  on_TBD:
-    name: On TBD
+  on_add_actions:
+    name: On add actions
 
     # We will only run this action when:
     # 1. This repository isn't the template repository
@@ -31,7 +33,19 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches
 
-      # TBD include any further steps here
+      # Verify the learner added the file contents
+      - name: Check workflow contents, actions/checkout
+        run: |
+          echo "Check actions/checkout in emoji.yml"
+          if grep --extended-regexp "actions/checkout" .github/workflows/emoji.yml
+          then
+            echo "Found actions/checkout"
+          else
+            echo "Missing actions/checkout"
+            echo "----------------"
+            echo "$(cat .github/workflows/emoji.yml)"
+            exit 204  # We're sending a weird code so it looks different from other "failures"
+          fi
 
       # Update README to close <details id=3>
       # and open <details id=4>
@@ -42,4 +56,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FROM_STEP: 3
           TO_STEP: 4
-          BRANCH_NAME: TBD
+          BRANCH_NAME: emoji-workflow

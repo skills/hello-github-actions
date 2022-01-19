@@ -1,18 +1,22 @@
 name: Step 5, Trigger the workflow
 
-# This step triggers after TBD
+# This step triggers after after every push to test-workflow
 # This step sets STEP to X
 # This step closes <details id=5> and opens <details id=X>
 
-# This will run every time we TBD
+# This will run every time we finish running "Check emoji shortcode"
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
-  TBD:
+  workflow_run:
+    workflows:
+      - Check emoji shortcode
+    types:
+      - completed
 
 jobs:
-  on_TBD:
-    name: On TBD
+  on_trigger:
+    name: On trigger
 
     # We will only run this action when:
     # 1. This repository isn't the template repository
@@ -31,8 +35,6 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches
 
-      # TBD include any further steps here
-
       # Update README to close <details id=5>
       # and open <details id=X>
       # and set STEP to 'X'
@@ -42,4 +44,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FROM_STEP: 5
           TO_STEP: X
-          BRANCH_NAME: TBD
+          BRANCH_NAME: test-workflow
