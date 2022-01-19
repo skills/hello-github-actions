@@ -12,6 +12,13 @@ on:
     branches:
       - emoji-workflow
 
+permissions:
+  # Need `contents: read` to checkout the repository
+  # Need `contents: write` to update the step metadata
+  # Need `workflows: write` to create and update .github/workflows/emoji.yml
+  contents: write
+  workflows: write
+
 jobs:
   on_create_workflow:
     name: On create workflow
