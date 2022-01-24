@@ -25,15 +25,15 @@ _Create a GitHub Action and use it in a workflow._
 
 **To start this course: [<img width="150" alt="Use this template" src="https://user-images.githubusercontent.com/1221423/148581131-555c0fb8-5361-4450-a760-75fa6219a2fc.png">](https://github.com/githublearn/hello-github-actions/generate)**
 
-> We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).<br>
+> We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions).<br>
 > After you make your own repository, wait about 20 seconds and refresh. I will go to the next step.
 
-Automation is key for streamlining your work processes, and GitHub Actions are the best way to supercharge your workflow.
+Automation is key for streamlining your work processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to supercharge your workflow.
 
 - **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users
 - **What you'll learn**: Create workflow files, trigger workflows, find workflow logs
-- **What you'll build**: An action workflow that will check emoji shortcode references in Markdown files
-- **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/githublearn/introduction-to-github) course, first!
+- **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files
+- **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/githublearn/introduction-to-github) course first!
 - **How long**: This course is 5 steps and can be finished in less than two hours
 
 </details>
@@ -51,9 +51,9 @@ Automation is key for streamlining your work processes, and GitHub Actions are t
 
 ### :wave: Welcome to "Hello GitHub Actions"!
 
-**What are _GitHub Actions_**: GitHub Actions are a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn even more, check out the [GitHub Actions feature page](https://github.com/features/actions), or the [GitHub Actions documentation](https://help.github.com/en/actions).
+**What is _GitHub Actions_**: Actions are a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn more, check out the [GitHub Actions feature page](https://github.com/features/actions), or the [GitHub Actions documentation](https://docs.github.com/actions).
 
-First, we'll define a **workflow** that uses the GitHub Action.
+First, we'll define a **workflow** that uses the action.
 
 **What is a _workflow_**: Workflows are defined in special files in the `.github/workflows` directory. Workflows can execute based on your chosen event. For this lab, we'll be using the [`push`](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#push) event.
 
@@ -168,7 +168,7 @@ In our action,
 <details id=4>
 <summary><strong>:shipit: Step 4: Merge your workflow file</strong></summary>
 
-### :heart: You're now able to write and run actions workflows!
+### :heart: You're now able to write and run Actions workflows!
 
 Merge this pull request so the action will be a part of the `main` branch.
 
@@ -221,18 +221,18 @@ This action will run any time a new commit is created or pushed to the remote re
 
 Here's a recap of all the tasks you've accomplished in your repository:
 
-- You've created your first GitHub Action workflow
+- You've created your first GitHub Actions workflow
 - You learned where to make your workflow file
 - You created an event trigger, a job, and steps for your workflow
 - You're ready to automate anything you can dream of
 
 ### What's next?
 
-- Review the [GitHub Actions documentation](https://docs.github.com/en/actions/learn-github-actions) on the GitHub Developer site
+- Review the [GitHub Actions documentation](https://docs.github.com/actions/learn-github-actions) on GitHub Docs
 - Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions)
 - We'd love to hear what you thought of this course [in our community forum](https://github.community/c/education/github-learning-lab/34)
 - [Take another GitHub Learn Course](https://github.com/githublearn)
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started)
+- [Read the GitHub Getting Started docs](https://docs.github.com/get-started)
 - To find projects to contribute to, check out [GitHub Explore](https://github.com/explore)
 
 </details>
