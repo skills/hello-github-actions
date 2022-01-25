@@ -30,11 +30,11 @@ _Create a GitHub Action and use it in a workflow._
 
 Automation is key for streamlining your work processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to supercharge your workflow.
 
-- **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users
-- **What you'll learn**: Create workflow files, trigger workflows, find workflow logs
-- **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files
+- **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users.
+- **What you'll learn**: Create workflow files, trigger workflows, find workflow logs.
+- **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files.
 - **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/githublearn/introduction-to-github) course first!
-- **How long**: This course is 5 steps and can be finished in less than two hours
+- **How long**: This course is 5 steps and can be finished in less than two hours.
 
 </details>
 
@@ -61,16 +61,16 @@ We went ahead and made a branch and pull request for you.
 
 ### :keyboard: Activity: Create a workflow file
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab
-1. Open the pull request from the `emoji-workflow` branch
-1. Add a file at `.github/workflows/emoji.yml` on the `emoji-workflow` branch
+1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
+1. Open the pull request from the `emoji-workflow` branch.
+1. Add a file at `.github/workflows/emoji.yml` on the `emoji-workflow` branch.
 1. Add the following content to the `emoji.yml` file:
    ```yaml
    name: Check emoji shortcode
    on: push
    ```
-1. Commit the changes
-1. Wait about 20 seconds then refresh this page for the next step
+1. Commit the changes.
+1. Wait about 20 seconds then refresh this page for the next step.
 
 </details>
 
@@ -108,9 +108,9 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
        name: Check emoji shortcode
        runs-on: ubuntu-latest
    ```
-1. Click **Start commit** in the top right of the workflow editor
-1. Type your commit message and commit your changes directly to your branch
-1. Wait about 20 seconds then refresh this page for the next step
+1. Click **Start commit** in the top right of the workflow editor.
+1. Type your commit message and commit your changes directly to your branch.
+1. Wait about 20 seconds then refresh this page for the next step.
 
 </details>
 
@@ -153,9 +153,9 @@ In our action,
                exit 1
              fi
    ```
-1. Click **Start commit** in the top right of the workflow editor
-1. Type your commit message and commit your changes directly to your branch
-1. Wait about 20 seconds then refresh this page for the next step
+1. Click **Start commit** in the top right of the workflow editor.
+1. Type your commit message and commit your changes directly to your branch.
+1. Wait about 20 seconds then refresh this page for the next step.
 
 </details>
 
@@ -174,9 +174,9 @@ Merge this pull request so the action will be a part of the `main` branch.
 
 ### :keyboard: Activity: Merge your workflow file
 
-1. Merge the pull request from branch `emoji-workflow`
-1. Delete your `emoji-workflow` branch (optional)
-1. Wait about 20 seconds then refresh this page for the next step
+1. Merge the pull request from branch `emoji-workflow`.
+1. Delete your `emoji-workflow` branch (optional).
+1. Wait about 20 seconds then refresh this page for the next step.
 
 </details>
 
@@ -199,11 +199,11 @@ This action will run any time a new commit is created or pushed to the remote re
 
 ### :keyboard: Activity: Trigger the workflow
 
-1. Make a new branch: `test-workflow`
-1. Commit any change to your branch, such as adding an emoji to your README.md file
-1. Open a pull request with branch: `test-workflow`
-1. See your action run on your pull request
-1. Wait about 20 seconds then refresh this page for the next step
+1. Make a new branch: `test-workflow`.
+1. Commit any change to your branch, such as adding an emoji to your README.md file.
+1. Open a pull request with branch: `test-workflow`.
+1. See your action run on your pull request.
+1. Wait about 20 seconds then refresh this page for the next step.
 
 </details>
 
@@ -221,19 +221,19 @@ This action will run any time a new commit is created or pushed to the remote re
 
 Here's a recap of all the tasks you've accomplished in your repository:
 
-- You've created your first GitHub Actions workflow
-- You learned where to make your workflow file
-- You created an event trigger, a job, and steps for your workflow
-- You're ready to automate anything you can dream of
+- You've created your first GitHub Actions workflow.
+- You learned where to make your workflow file.
+- You created an event trigger, a job, and steps for your workflow.
+- You're ready to automate anything you can dream of.
 
 ### What's next?
 
-- Review the [GitHub Actions documentation](https://docs.github.com/actions/learn-github-actions) on GitHub Docs
-- Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions)
-- We'd love to hear what you thought of this course [in our community forum](https://github.community/c/education/github-learning-lab/34)
-- [Take another GitHub Learn Course](https://github.com/githublearn)
-- [Read the GitHub Getting Started docs](https://docs.github.com/get-started)
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore)
+- Review the [GitHub Actions documentation](https://docs.github.com/actions/learn-github-actions) on GitHub Docs.
+- Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions).
+- We'd love to hear what you thought of this course [in our community forum](https://github.community/c/education/github-learning-lab/34).
+- [Take another GitHub Learn Course](https://github.com/githublearn).
+- [Read the GitHub Getting Started docs](https://docs.github.com/get-started).
+- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
 
 </details>
 
