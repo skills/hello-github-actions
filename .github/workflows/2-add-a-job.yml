@@ -40,17 +40,10 @@ jobs:
 
       # Verify the learner added the file contents
       - name: Check workflow contents, jobs
-        run: |
-          echo "Check jobs: in emoji.yml"
-          if grep --extended-regexp "jobs:" .github/workflows/emoji.yml
-          then
-            echo "Found jobs:"
-          else
-            echo "Missing jobs:"
-            echo "----------------"
-            echo "$(cat .github/workflows/emoji.yml)"
-            exit 204  # We're sending a weird code so it looks different from other "failures"
-          fi
+        run: ./.github/script/check-file.sh
+        env:
+          FILE: ".github/workflows/emoji.yml"
+          SEARCH: "jobs:"
 
       # Update README to close <details id=2>
       # and open <details id=3>
