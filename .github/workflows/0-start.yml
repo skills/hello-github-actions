@@ -52,13 +52,16 @@ jobs:
           fi
 
           echo "Make a branch"
-          git checkout -b emoji-workflow
+          BRANCH=emoji-workflow
+          git checkout -b $BRANCH
 
-          echo "Make a commit and push"
+          echo "Make a commit"
           git config user.name github-actions
           git config user.email github-actions@github.com
           git commit --allow-empty --message="Create an empty commit"
-          git push --set-upstream origin emoji-workflow
+          
+          echo "Push"
+          git push --set-upstream origin $BRANCH
 
           echo "Make a pull request"
           # Reference https://cli.github.com/manual/gh_pr_create
