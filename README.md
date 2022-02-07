@@ -76,7 +76,7 @@ We went ahead and made a branch and pull request for you.
 
 <!--
   <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the first step.
+  Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
   Historic note: The previous course had troubleshooting steps for people not using the GitHub UI.
 -->
@@ -116,7 +116,7 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
 
 <!--
   <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the first step.
+  Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
 -->
 
@@ -161,7 +161,7 @@ In our action,
 
 <!--
   <<< Author notes: Step 4 >>>
-  Start this step by acknowledging the first step.
+  Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
 -->
 
@@ -182,7 +182,7 @@ Merge this pull request so the action will be a part of the `main` branch.
 
 <!--
   <<< Author notes: Step 5 >>>
-  Start this step by acknowledging the first step.
+  Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
 -->
 
