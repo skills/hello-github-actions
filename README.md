@@ -34,7 +34,7 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 - **What you'll learn**: Create workflow files, trigger workflows, find workflow logs.
 - **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files.
 - **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/githublearn/introduction-to-github) course first!
-- **How long**: This course is 5 steps and can be finished in less than two hours.
+- **How long**: This course is five steps long and can be finished in less than two hours to complete.
 
 </details>
 
@@ -49,7 +49,7 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 <details id=1>
 <summary><strong>:pencil: Step 1: Create a workflow file</strong></summary>
 
-### :wave: Welcome to "Hello GitHub Actions"!
+### Welcome to "Hello GitHub Actions"! :wave:
 
 **What is _GitHub Actions_**: Actions are a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn more, check out the [GitHub Actions feature page](https://github.com/features/actions), or the [GitHub Actions documentation](https://docs.github.com/actions).
 
@@ -123,7 +123,7 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
 <details id=3>
 <summary><strong>:mechanical_arm: Step 3: Add actions to your workflow file</strong></summary>
 
-### :dancer: Nice work adding a job to your workflow!
+### Nice work adding a job to your workflow! :dancer:
 
 Workflows have jobs, and jobs have steps. So now we'll add steps.
 
@@ -168,7 +168,7 @@ In our action,
 <details id=4>
 <summary><strong>:shipit: Step 4: Merge your workflow file</strong></summary>
 
-### :heart: You're now able to write and run Actions workflows!
+### You're now able to write and run Actions workflows! :heart:
 
 Merge this pull request so the action will be a part of the `main` branch.
 
@@ -189,7 +189,7 @@ Merge this pull request so the action will be a part of the `main` branch.
 <details id=5>
 <summary><strong>:arrow_forward: Step 5: Trigger the workflow</strong></summary>
 
-### :smile: You've now got a fully functioning workflow!
+### You've now got a fully functioning workflow! :smile:
 
 This action will run any time a new commit is created or pushed to the remote repository. Since you just created a commit, the workflow should have been triggered.
 
@@ -231,7 +231,7 @@ Here's a recap of all the tasks you've accomplished in your repository:
 - Review the [GitHub Actions documentation](https://docs.github.com/actions/learn-github-actions) on GitHub Docs.
 - Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions).
 - We'd love to hear what you thought of this course [in our community forum](https://github.community/c/education/github-learning-lab/34).
-- [Take another GitHub Learn Course](https://github.com/githublearn).
+- [Take another GitHub Learn course](https://github.com/githublearn).
 - [Read the GitHub Getting Started docs](https://docs.github.com/get-started).
 - To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
 
