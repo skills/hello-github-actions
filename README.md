@@ -21,10 +21,11 @@ _Create a GitHub Action and use it in a workflow._
 -->
 
 <details id=0 open>
-<summary><strong>:golf: Start</strong></summary>
+<summary><h2>:golf: Start</h2></summary>
 
-### [![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/githublearn/hello-github-actions/generate)
+[![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/githublearn/hello-github-actions/generate)
 
+> When you select **Start course** or **Use this template**, you will be prompted to create a new repository.
 > We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions).<br>
 > After you make your own repository, wait about 20 seconds and refresh. I will go to the next step.
 
@@ -47,9 +48,9 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 -->
 
 <details id=1>
-<summary><strong>:pencil: Step 1: Create a workflow file</strong></summary>
+<summary><h2>:pencil: Step 1: Create a workflow file</h2></summary>
 
-### Welcome to "Hello GitHub Actions"! :wave:
+_Welcome to "Hello GitHub Actions"! :wave:_
 
 **What is _GitHub Actions_**: Actions are a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn more, check out the [GitHub Actions feature page](https://github.com/features/actions), or the [GitHub Actions documentation](https://docs.github.com/actions).
 
@@ -82,9 +83,9 @@ We went ahead and made a branch and pull request for you.
 -->
 
 <details id=2>
-<summary><strong>:beginner: Step 2: Add a job to your workflow file</strong></summary>
+<summary><h2>:beginner: Step 2: Add a job to your workflow file</h2></summary>
 
-### Nice work! :tada: You added a workflow!
+_Nice work! :tada: You added a workflow!_
 
 Here's what it means:
 
@@ -121,9 +122,9 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
 -->
 
 <details id=3>
-<summary><strong>:mechanical_arm: Step 3: Add actions to your workflow file</strong></summary>
+<summary><h2>:mechanical_arm: Step 3: Add actions to your workflow file</h2></summary>
 
-### Nice work adding a job to your workflow! :dancer:
+_Nice work adding a job to your workflow! :dancer:_
 
 Workflows have jobs, and jobs have steps. So now we'll add steps.
 
@@ -166,9 +167,9 @@ In our action,
 -->
 
 <details id=4>
-<summary><strong>:shipit: Step 4: Merge your workflow file</strong></summary>
+<summary><h2>:shipit: Step 4: Merge your workflow file</h2></summary>
 
-### You're now able to write and run Actions workflows! :heart:
+_You're now able to write and run Actions workflows! :heart:_
 
 Merge this pull request so the action will be a part of the `main` branch.
 
@@ -187,9 +188,9 @@ Merge this pull request so the action will be a part of the `main` branch.
 -->
 
 <details id=5>
-<summary><strong>:arrow_forward: Step 5: Trigger the workflow</strong></summary>
+<summary><h2>:arrow_forward: Step 5: Trigger the workflow</h2></summary>
 
-### You've now got a fully functioning workflow! :smile:
+_You've now got a fully functioning workflow! :smile:_
 
 This action will run any time a new commit is created or pushed to the remote repository. Since you just created a commit, the workflow should have been triggered.
 
@@ -213,9 +214,9 @@ This action will run any time a new commit is created or pushed to the remote re
 -->
 
 <details id=X>
-<summary><strong>:checkered_flag: Finish</strong></summary>
+<summary><h2>:checkered_flag: Finish</h2></summary>
 
-### Congratulations friend, you've completed this course!
+_Congratulations friend, you've completed this course!_
 
 <img src=https://octodex.github.com/images/jetpacktocat.png alt=celebrate width=300 align=right>
 
