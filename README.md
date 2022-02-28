@@ -167,7 +167,7 @@ In our action,
 -->
 
 <details id=4>
-<summary><h2>:shipit: Step 4: Merge your workflow file</h2></summary>
+<summary><h2>:squirrel: Step 4: Merge your workflow file</h2></summary>
 
 _You're now able to write and run Actions workflows! :heart:_
 
