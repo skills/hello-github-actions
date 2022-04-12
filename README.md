@@ -23,7 +23,7 @@ _Create a GitHub Action and use it in a workflow._
 <details id=0 open>
 <summary><h2>:golf: Start</h2></summary>
 
-[![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/githublearn/hello-github-actions/generate)
+[![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/skills/hello-github-actions/generate)
 
 > When you select **Start course** or **Use this template**, you will be prompted to create a new repository.
 > We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions).<br>
@@ -34,7 +34,7 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 - **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users.
 - **What you'll learn**: Create workflow files, trigger workflows, find workflow logs.
 - **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files.
-- **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/githublearn/introduction-to-github) course first!
+- **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](/skills/introduction-to-github) course first!
 - **How long**: This course is five steps long and can be finished in less than two hours to complete.
 
 </details>
@@ -231,8 +231,8 @@ Here's a recap of all the tasks you've accomplished in your repository:
 
 - Review the [GitHub Actions documentation](https://docs.github.com/actions/learn-github-actions) on GitHub Docs.
 - Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions).
-- We'd love to hear what you thought of this course [in our community forum](https://github.community/c/education/github-learning-lab/34).
-- [Take another GitHub Learn course](https://github.com/githublearn).
+- We'd love to hear what you thought of this course [in our discussion board](https://github.com/skills/.github/discussions).
+- [Take another GitHub Skills course](https://github.com/skills).
 - [Read the GitHub Getting Started docs](https://docs.github.com/get-started).
 - To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
 
@@ -245,6 +245,6 @@ Here's a recap of all the tasks you've accomplished in your repository:
 
 ---
 
-Get help: [Post in our community forum](https://github.community/c/education/github-learning-lab/34) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+Get help: [Post in our discussion board](https://github.com/skills/.github/discussions) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
 
 &copy; 2022 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [CC-BY-4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
