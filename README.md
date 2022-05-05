@@ -5,8 +5,6 @@
   Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
 -->
 
-<img src=https://user-images.githubusercontent.com/1221423/156946922-c6167732-6171-4233-899b-5a6216e1a363.svg width=300 align=right>
-
 # Hello GitHub Actions
 
 _Create a GitHub Action and use it in a workflow._
@@ -21,7 +19,7 @@ _Create a GitHub Action and use it in a workflow._
 -->
 
 <details id=0 open>
-<summary><h2>:golf: Start</h2></summary>
+<summary><h2>Start</h2></summary>
 
 [![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/skills/hello-github-actions/generate)
 
@@ -48,7 +46,7 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 -->
 
 <details id=1>
-<summary><h2>:pencil: Step 1: Create a workflow file</h2></summary>
+<summary><h2>Step 1: Create a workflow file</h2></summary>
 
 _Welcome to "Hello GitHub Actions"! :wave:_
 
@@ -83,7 +81,7 @@ We went ahead and made a branch and pull request for you.
 -->
 
 <details id=2>
-<summary><h2>:beginner: Step 2: Add a job to your workflow file</h2></summary>
+<summary><h2>Step 2: Add a job to your workflow file</h2></summary>
 
 _Nice work! :tada: You added a workflow!_
 
@@ -122,7 +120,7 @@ In this step, we will add a "build" job. We will specify `ubuntu-latest` as the 
 -->
 
 <details id=3>
-<summary><h2>:mechanical_arm: Step 3: Add actions to your workflow file</h2></summary>
+<summary><h2>Step 3: Add actions to your workflow file</h2></summary>
 
 _Nice work adding a job to your workflow! :dancer:_
 
@@ -167,7 +165,7 @@ In our action,
 -->
 
 <details id=4>
-<summary><h2>:chipmunk: Step 4: Merge your workflow file</h2></summary>
+<summary><h2>Step 4: Merge your workflow file</h2></summary>
 
 _You're now able to write and run Actions workflows! :heart:_
 
@@ -188,7 +186,7 @@ Merge this pull request so the action will be a part of the `main` branch.
 -->
 
 <details id=5>
-<summary><h2>:arrow_forward: Step 5: Trigger the workflow</h2></summary>
+<summary><h2>Step 5: Trigger the workflow</h2></summary>
 
 _You've now got a fully functioning workflow! :smile:_
 
@@ -214,7 +212,7 @@ This action will run any time a new commit is created or pushed to the remote re
 -->
 
 <details id=X>
-<summary><h2>:checkered_flag: Finish</h2></summary>
+<summary><h2>Finish</h2></summary>
 
 _Congratulations friend, you've completed this course!_
 
