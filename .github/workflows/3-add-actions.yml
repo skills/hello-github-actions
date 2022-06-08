@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - emoji-workflow
+      - welcome-workflow
 
 # Reference https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
@@ -39,11 +39,11 @@ jobs:
           fetch-depth: 0 # Let's get all the branches
 
       # Verify the learner added the file contents
-      - name: Check workflow contents, actions/checkout
+      - name: Check workflow contents, steps
         run: ./.github/script/check-file.sh
         env:
-          FILE: ".github/workflows/emoji.yml"
-          SEARCH: "actions/checkout"
+          FILE: ".github/workflows/welcome.yml"
+          SEARCH: "steps:"
 
       # Update README to close <details id=3> and open <details id=4>
       # and set STEP to '4'
@@ -53,4 +53,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 3
           to_step: 4
-          branch_name: emoji-workflow
+          branch_name: welcome-workflow

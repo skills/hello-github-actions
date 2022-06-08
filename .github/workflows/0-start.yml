@@ -51,7 +51,7 @@ jobs:
           fi
 
           echo "Make a branch"
-          BRANCH=emoji-workflow
+          BRANCH=welcome-workflow
           git checkout -b $BRANCH
 
           echo "Make a commit"
@@ -64,7 +64,7 @@ jobs:
 
           echo "Make a pull request"
           # Reference https://cli.github.com/manual/gh_pr_create
-          gh pr create --title "Create emoji shortcode workflow" --body "Create emoji shortcode workflow"
+          gh pr create --title "Post welcome comment workflow" --body "Post welcome comment workflow"
 
           echo "Restore main"
           git checkout main
@@ -79,4 +79,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 0
           to_step: 1
-          branch_name: emoji-workflow
+          branch_name: welcome-workflow
