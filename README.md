@@ -185,7 +185,7 @@ Merge your pull request so the action will be a part of the `main` branch.
 ### :keyboard: Activity: Merge your workflow file
 
 1. In your repo, click on the **Pull requests** tab.
-2. Click on the **Post welcome message workflow** pull request.
+2. Click on the **Post welcome comment workflow** pull request.
 3. Click **Merge pull request**, then click **Confirm merge**.
 4. Optionally, click **Delete branch** to delete your `welcome-workflow` branch.
 5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.

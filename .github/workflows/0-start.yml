@@ -64,7 +64,7 @@ jobs:
 
           echo "Make a pull request"
           # Reference https://cli.github.com/manual/gh_pr_create
-          gh pr create --title "Post welcome message workflow" --body "Post welcome message workflow"
+          gh pr create --title "Post welcome comment workflow" --body "Post welcome comment workflow"
 
           echo "Restore main"
           git checkout main
