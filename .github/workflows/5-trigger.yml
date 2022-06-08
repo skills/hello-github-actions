@@ -4,13 +4,13 @@ name: Step 5, Trigger the workflow
 # This step sets STEP to X
 # This step closes <details id=5> and opens <details id=X>
 
-# This will run every time we finish running "Check emoji shortcode"
+# This will run every time we finish running "Post welcome message"
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - Check emoji shortcode
+      - Post welcome message
     types:
       - completed
 
