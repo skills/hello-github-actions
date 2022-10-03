@@ -1,6 +1,6 @@
 name: Step 5, Trigger the workflow
 
-# This step triggers after after every push to test-workflow
+# This step triggers after we finish running "Post welcome comment"
 # This step sets STEP to X
 # This step closes <details id=5> and opens <details id=X>
 
