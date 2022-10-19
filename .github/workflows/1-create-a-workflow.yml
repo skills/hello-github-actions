@@ -1,10 +1,10 @@
 name: Step 1, Create a workflow
 
-# This step triggers after every push to emoji-workflow
+# This step triggers after every push to welcome-workflow
 # This step sets STEP to 2
 # This step closes <details id=1> and opens <details id=2>
 
-# This will run every time we push to emoji-workflow
+# This will run every time we push to welcome-workflow
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
