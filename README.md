@@ -70,7 +70,7 @@ To get you started, we used actions to go ahead and made a branch and pull reque
 1. Open a new browser tab, and navigate to this same repository. Then, work on the steps in your second tab while you read the instructions in this tab.
 1. Navigate to the **Code** tab.
 1. From the **main** branch dropdown, click on the **welcome-workflow** branch.
-1. Navigate to the `.github/workflows/` folder, then select **Add file** and click on **Create new file**.
+1. Navigate to the `.github/workflows/` folder, then select **Add file** and click on **+ New file**.
 1. In the **Name your file...** field, enter `welcome.yml`.
 1. Add the following content to the `welcome.yml` file:
    ```yaml
@@ -79,7 +79,7 @@ To get you started, we used actions to go ahead and made a branch and pull reque
      pull_request:
        types: [opened]
    ```
-1. To commit your changes, click **Commit new file**.
+1. To commit your changes, click **Commit new file** and commit your changes directly to your welcome-workflow branch.
 1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
 </details>
@@ -121,7 +121,7 @@ In this step of our exercise, we will add a "build" job. We will specify `ubuntu
        name: Post welcome comment
        runs-on: ubuntu-latest
    ```
-3. Click **Start commit** in the top right of the workflow editor.
+3. Click **Commit changes** in the top right of the workflow editor.
 4. Type your commit message and commit your changes directly to your branch.
 5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
