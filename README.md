@@ -80,6 +80,8 @@ To get you started, we used actions to go ahead and made a branch and pull reque
    on:
      pull_request:
        types: [opened]
+   permissions:
+     pull-requests: write
    ```
 1. To commit your changes, click **Commit new file**.
 1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
@@ -102,6 +104,8 @@ Here's what it means:
 
 - `name: Post welcome comment` gives your workflow a name. This name appears on any pull request or in the Actions tab of your repository.
 - `on: pull_request: types: [opened]` indicates that your workflow will execute anytime a pull request opens in your repository.
+- `permissions` is used to assign the workflow permissions to operate on the repository
+- `pull-requests: write` gives the workflow permission to write to pull requests. This is needed to create the welcome comment. 
 
 Next, we need to specify jobs to run.
 
@@ -118,6 +122,8 @@ In this step of our exercise, we will add a "build" job. We will specify `ubuntu
    on:
      pull_request:
        types: [opened]
+   permissions:
+     pull-requests: write
    jobs:
      build:
        name: Post welcome comment
@@ -155,6 +161,8 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
    on:
      pull_request:
        types: [opened]
+   permissions:
+     pull-requests: write
    jobs:
      build:
        name: Post welcome comment
