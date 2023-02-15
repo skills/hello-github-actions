@@ -69,6 +69,7 @@ To get you started, we used actions to go ahead and made a branch and pull reque
 ### :keyboard: Activity: Create a workflow file
 
 1. Open a new browser tab, and navigate to this same repository. Then, work on the steps in your second tab while you read the instructions in this tab.
+1. Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:welcome-workflow`.
 1. Navigate to the **Code** tab.
 1. From the **main** branch dropdown, click on the **welcome-workflow** branch.
 1. Navigate to the `.github/workflows/` folder, then select **Add file** and click on **Create new file**.
@@ -79,6 +80,8 @@ To get you started, we used actions to go ahead and made a branch and pull reque
    on:
      pull_request:
        types: [opened]
+   permissions:
+     pull-requests: write
    ```
 1. To commit your changes, click **Commit new file**.
 1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
@@ -101,6 +104,8 @@ Here's what it means:
 
 - `name: Post welcome comment` gives your workflow a name. This name appears on any pull request or in the Actions tab of your repository.
 - `on: pull_request: types: [opened]` indicates that your workflow will execute anytime a pull request opens in your repository.
+- `permissions` assigns the workflow permissions to operate on the repository
+- `pull-requests: write` gives the workflow permission to write to pull requests. This is needed to create the welcome comment. 
 
 Next, we need to specify jobs to run.
 
@@ -117,6 +122,8 @@ In this step of our exercise, we will add a "build" job. We will specify `ubuntu
    on:
      pull_request:
        types: [opened]
+   permissions:
+     pull-requests: write
    jobs:
      build:
        name: Post welcome comment
@@ -154,6 +161,8 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
    on:
      pull_request:
        types: [opened]
+   permissions:
+     pull-requests: write
    jobs:
      build:
        name: Post welcome comment
@@ -181,15 +190,15 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
 
 _You're now able to write and run an Actions workflow! :sparkles:_
 
-Merge your pull request so the action will be a part of the `main` branch.
+Merge your changes so the action will be a part of the `main` branch.
 
 ### :keyboard: Activity: Merge your workflow file
 
 1. In your repo, click on the **Pull requests** tab.
-2. Click on the **Post welcome comment workflow** pull request.
-3. Click **Merge pull request**, then click **Confirm merge**.
-4. Optionally, click **Delete branch** to delete your `welcome-workflow` branch.
-5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
+1. Click on the pull request you created in step 1.
+1. Click **Merge pull request**, then click **Confirm merge**.
+1. Optionally, click **Delete branch** to delete your `welcome-workflow` branch.
+1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
 </details>
 
