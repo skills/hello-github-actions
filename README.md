@@ -69,7 +69,7 @@ To get you started, we used actions to go ahead and made a branch and pull reque
 ### :keyboard: Activity: Create a workflow file
 
 1. Open a new browser tab, and navigate to this same repository. Then, work on the steps in your second tab while you read the instructions in this tab.
-1. Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:welcome-workflow`, click `Create pull request`.
+1. Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:welcome-workflow`, click **Create pull request**.
 1. Navigate to the **Code** tab.
 1. From the **main** branch dropdown, click on the **welcome-workflow** branch.
 1. Navigate to the `.github/workflows/` folder, then select **Add file** and click on **Create new file**.
