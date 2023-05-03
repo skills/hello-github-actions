@@ -31,12 +31,24 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 
 ## How to start this course
 
+<!-- For start course, run in JavaScript:
+'https://github.com/new?' + new URLSearchParams({
+  template_owner: 'skills',
+  template_name: 'hello-github-actions',
+  owner: '@me',
+  name: 'skills-hello-github-actions',
+  description: 'My clone repository',
+  visibility: 'public',
+}).toString()
+-->
+
+[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=hello-github-actions&owner=%40me&name=skills-hello-github-actions&description=My+clone+repository&visibility=public)
+
 1. Right-click **Start course** and open the link in a new tab.
-   <br />[![start-course](https://user-images.githubusercontent.com/1221423/218596841-0645fe1a-4aaf-4f51-9ab3-8aa2d3fdd487.svg)](https://github.com/skills/hello-github-actions/generate)
-2. In the new tab, follow the prompts to create a new repository.
+2. In the new tab, most of the prompts will automatically fill in for you.
    - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository—private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   ![Create a new repository](https://user-images.githubusercontent.com/1221423/218594143-e60462b6-9f2a-4fa3-80de-063ac5429aab.png)
+   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
+   - Scroll down and click the **Create repository** button at the bottom of the form.
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
 
 </details>
@@ -59,7 +71,7 @@ _Welcome to "Hello GitHub Actions"! :wave:_
 -  The GitHub Actions feature page, see  [GitHub Actions](https://github.com/features/actions).
 -  The "GitHub Actions" user documentation, see [GitHub Actions](https://docs.github.com/actions).
 
-**What is a _workflow_?**: A workflow is a configurable automated process that will run one or more jobs. Workflows are defined in special files in the `.github/workflows` directory and they execute based on your chosen event. For this exercise, we'll use a `pull_request` event. 
+**What is a _workflow_?**: A workflow is a configurable automated process that will run one or more jobs. Workflows are defined in special files in the `.github/workflows` directory and they execute based on your chosen event. For this exercise, we'll use a `pull_request` event.
 
 - To read more about workflows, jobs, and events, see "[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)".
 - If you want to learn more about the `pull_request` event before using it, see "[pull_request](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#pull_request)".
@@ -105,7 +117,7 @@ Here's what it means:
 - `name: Post welcome comment` gives your workflow a name. This name appears on any pull request or in the Actions tab of your repository.
 - `on: pull_request: types: [opened]` indicates that your workflow will execute anytime a pull request opens in your repository.
 - `permissions` assigns the workflow permissions to operate on the repository
-- `pull-requests: write` gives the workflow permission to write to pull requests. This is needed to create the welcome comment. 
+- `pull-requests: write` gives the workflow permission to write to pull requests. This is needed to create the welcome comment.
 
 Next, we need to specify jobs to run.
 
@@ -115,7 +127,7 @@ In this step of our exercise, we will add a "build" job. We will specify `ubuntu
 
 ### :keyboard: Activity: Add a job to your workflow file
 
-1. Open your `welcome.yml` file. 
+1. Open your `welcome.yml` file.
 2. Update the contents of the file to:
    ```yaml
    name: Post welcome comment
