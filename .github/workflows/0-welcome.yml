@@ -72,10 +72,10 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git commit --allow-empty --message="Create an empty commit"
-          
+
           echo "Push"
           git push --set-upstream origin $BRANCH
-          
+
           echo "Restore main"
           git checkout main
         env:

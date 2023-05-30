@@ -12,8 +12,8 @@ _Welcome to "Hello GitHub Actions"! :wave:_
 
 **What is _GitHub Actions_?**: GitHub Actions is a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn more, check out these resources:
 
--  The GitHub Actions feature page, see  [GitHub Actions](https://github.com/features/actions).
--  The "GitHub Actions" user documentation, see [GitHub Actions](https://docs.github.com/actions).
+- The GitHub Actions feature page, see [GitHub Actions](https://github.com/features/actions).
+- The "GitHub Actions" user documentation, see [GitHub Actions](https://docs.github.com/actions).
 
 **What is a _workflow_?**: A workflow is a configurable automated process that will run one or more jobs. Workflows are defined in special files in the `.github/workflows` directory and they execute based on your chosen event. For this exercise, we'll use a `pull_request` event.
 
