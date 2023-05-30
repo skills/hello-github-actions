@@ -15,8 +15,7 @@ _Create a GitHub Action and use it in a workflow._
   and tell the learner why they should take the course.
 -->
 
-<details id=0 open>
-<summary><h2>Welcome</h2></summary>
+## Welcome
 
 Automation is key for streamlining your work processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to supercharge your workflow.
 
@@ -54,7 +53,7 @@ In this course, you will:
    - Scroll down and click the **Create repository** button at the bottom of the form.
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
 
-</details>
+
 
 <!--
   <<< Author notes: Step 1 >>>
@@ -64,8 +63,7 @@ In this course, you will:
   Encourage users to open new tabs for steps!
 -->
 
-<details id=1>
-<summary><h2>Step 1: Create a workflow file</h2></summary>
+## Step 1: Create a workflow file
 
 _Welcome to "Hello GitHub Actions"! :wave:_
 
@@ -101,7 +99,7 @@ To get you started, we used actions to go ahead and made a branch and pull reque
 1. To commit your changes, click **Commit new file**.
 1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
-</details>
+
 
 <!--
   <<< Author notes: Step 2 >>>
@@ -110,8 +108,7 @@ To get you started, we used actions to go ahead and made a branch and pull reque
   Historic note: The previous course had troubleshooting steps for people not using the GitHub UI.
 -->
 
-<details id=2>
-<summary><h2>Step 2: Add a job to your workflow file</h2></summary>
+## Step 2: Add a job to your workflow file
 
 _Nice work! :tada: You added a workflow file!_
 
@@ -148,7 +145,7 @@ In this step of our exercise, we will add a "build" job. We will specify `ubuntu
 4. Type your commit message and commit your changes directly to your branch.
 5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
-</details>
+
 
 <!--
   <<< Author notes: Step 3 >>>
@@ -156,8 +153,7 @@ In this step of our exercise, we will add a "build" job. We will specify `ubuntu
   Define terms and link to docs.github.com.
 -->
 
-<details id=3>
-<summary><h2>Step 3: Add actions to your workflow file</h2></summary>
+## Step 3: Add actions to your workflow file
 
 _Nice work adding a job to your workflow! :dancer:_
 
@@ -192,7 +188,7 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
 4. Type your commit message and commit your changes directly to your branch.
 5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
-</details>
+
 
 <!--
   <<< Author notes: Step 4 >>>
@@ -200,8 +196,7 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
   Define terms and link to docs.github.com.
 -->
 
-<details id=4>
-<summary><h2>Step 4: Merge your workflow file</h2></summary>
+## Step 4: Merge your workflow file
 
 _You're now able to write and run an Actions workflow! :sparkles:_
 
@@ -215,7 +210,7 @@ Merge your changes so the action will be a part of the `main` branch.
 1. Optionally, click **Delete branch** to delete your `welcome-workflow` branch.
 1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
-</details>
+
 
 <!--
   <<< Author notes: Step 5 >>>
@@ -223,8 +218,7 @@ Merge your changes so the action will be a part of the `main` branch.
   Define terms and link to docs.github.com.
 -->
 
-<details id=5>
-<summary><h2>Step 5: Trigger the workflow</h2></summary>
+## Step 5: Trigger the workflow
 
 _You've now got a fully functioning workflow! :smile:_
 
@@ -242,15 +236,14 @@ Your new action will run any time a pull request has been opened.
 3. See your action run on your pull request.
 4. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
 
-</details>
+
 
 <!--
   <<< Author notes: Finish >>>
   Review what we learned, ask for feedback, provide next steps.
 -->
 
-<details id=X>
-<summary><h2>Finish</h2></summary>
+## Finish
 
 _Congratulations friend, you've completed this course!_
 
@@ -272,7 +265,7 @@ Here's a recap of all the tasks you've accomplished in your repository:
 - Learn more about GitHub by reading the "[Get started](https://docs.github.com/get-started)" docs.
 - To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
 
-</details>
+
 
 <!--
   <<< Author notes: Footer >>>
