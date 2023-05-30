@@ -1,7 +1,7 @@
 name: Step 5, Trigger the workflow
 
 # This step triggers after we finish running "Post welcome comment".
-# This workflow updates from step  to step X.
+# This workflow updates from step 5 to step X.
 
 # This will run every time we finish running "Post welcome comment".
 # Reference: https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
