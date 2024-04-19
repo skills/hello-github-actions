@@ -43,5 +43,5 @@ To get you started, we used actions to go ahead and made a branch and pull reque
      pull-requests: write
    ```
 1. To commit your changes, click **Commit changes**.
-1. Select **Commit directly to the welcome-workflow branch** and click **Commit changes**.
+1. Type a commit message, select **Commit directly to the welcome-workflow branch** and click **Commit changes**.
 1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
