@@ -11,7 +11,7 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
 ### :keyboard: Activity: Add a step to your workflow file
 
 1. Open your `welcome.yml` file.
-2. Update the contents of the file to:
+1. Update the contents of the file to:
    ```yaml
    name: Post welcome comment
    on:
@@ -29,6 +29,6 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
              PR_URL: ${{ github.event.pull_request.html_url }}
    ```
-3. Click **Commit changes...** in the top right of the workflow editor.
-4. Type your commit message and commit your changes directly to your branch.
-5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
+1. Click **Commit changes...** in the top right of the workflow editor.
+1. Type your commit message and commit your changes directly to your branch.
+1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace this content with instructions for the next step.
