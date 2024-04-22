@@ -1,14 +1,14 @@
-## Step 3: Add actions to your workflow file
+## Step 3: Add a step to your workflow file
 
 _Nice work adding a job to your workflow! :dancer:_
 
-Workflows have jobs, and jobs have steps. So now we'll add steps to your workflow.
+Workflows have jobs, and jobs have steps. So now we'll add a step to your workflow.
 
 **What are _steps_?**: Actions steps run - in the order they are specified, from the top down - when a workflow job is processed. Each step is either a shell script that's executed, or an action that's run. Each step must pass for the next step to run. Actions steps can be used from within the same repository, from any other public repository, or from a published Docker container image.
 
 In our action, we post a comment on the pull request using a [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script and [GitHub CLI](https://cli.github.com/).
 
-### :keyboard: Activity: Add Actions steps to your workflow file
+### :keyboard: Activity: Add a step to your workflow file
 
 1. Open your `welcome.yml` file.
 2. Update the contents of the file to:
