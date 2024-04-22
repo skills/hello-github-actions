@@ -19,7 +19,8 @@ In the following activity, you'll add a "build" job to your workflow. You'll spe
 
 1. In a separate browser tab, make sure you are on the `welcome-workflow` branch and open your `.github/workflows/welcome.yml` file.
 1. Update the contents of the file to:
-   ```yaml
+
+   ```yaml copy
    name: Post welcome comment
    on:
      pull_request:
@@ -31,6 +32,7 @@ In the following activity, you'll add a "build" job to your workflow. You'll spe
        name: Post welcome comment
        runs-on: ubuntu-latest
    ```
+
 1. Click **Commit changes** in the top right of the workflow editor.
 1. Type a commit message and commit your changes directly to the `welcome-workflow` branch.
 1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace this content with instructions for the next step.
