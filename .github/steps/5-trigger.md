@@ -1,9 +1,3 @@
-<!--
-  <<< Author notes: Step 5 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
-
 ## Step 5: Trigger the workflow
 
 _You've now got a fully functioning workflow! :smile:_

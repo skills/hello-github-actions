@@ -1,9 +1,3 @@
-<!--
-  <<< Author notes: Step 4 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
-
 ## Step 4: Merge your workflow file
 
 _You're now able to write and run an Actions workflow! :sparkles:_
