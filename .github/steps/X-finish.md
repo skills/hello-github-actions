@@ -2,7 +2,7 @@
 
 _Congratulations friend, you've completed this course!_
 
-<img src=https://octodex.github.com/images/jetpacktocat.png alt="An image of Mona the Octocat wearing a jetpack and smiling" width=300 align=right>
+<img src=https://octodex.github.com/images/jetpacktocat.png alt="Mona the Octocat wearing a jetpack and smiling." width=300 align=right>
 
 Here's a recap of all the tasks you've accomplished in your repository:
 
