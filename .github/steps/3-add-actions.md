@@ -1,24 +1,21 @@
-<!--
-  <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
-
-## Step 3: Add actions to your workflow file
+## Step 3: Add a step to your workflow file
 
 _Nice work adding a job to your workflow! :dancer:_
 
-Workflows have jobs, and jobs have steps. So now we'll add steps to your workflow.
+Workflows have jobs, and jobs have steps. So now we'll add a step to your workflow.
 
-**What are _steps_?**: Actions steps will run during our job in order. Each step is either a shell script that will be executed, or an action that will be run. Each step must pass for the next step to run. Actions steps can be used from within the same repository, from any other public repository, or from a published Docker container image.
+**What are _steps_?**: Actions steps run - in the order they are specified, from the top down - when a workflow job is processed. Each step must pass for the next step to run.
 
-In our action, we post a comment on the pull request using a [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script and [GitHub CLI](https://cli.github.com/).
+Each step consists of either a shell script that's executed, or a reference to an action that's run. When we talk about an action (with a lowercase "a") in this context, we mean a reusable unit of code. You can find out about actions in "[Finding and customizing actions](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions)," but for now we'll use a shell script in our workflow step.
 
-### :keyboard: Activity: Add Actions steps to your workflow file
+Update your workflow to make it post a comment on new pull requests. It will do this using a [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script and [GitHub CLI](https://cli.github.com/).
 
-1. Open your `welcome.yml` file.
-2. Update the contents of the file to:
-   ```yaml
+### :keyboard: Activity: Add a step to your workflow file
+
+1. Still working on the `welcome-workflow` branch, open your `welcome.yml` file.
+1. Update the contents of the file to:
+
+   ```yaml copy
    name: Post welcome comment
    on:
      pull_request:
@@ -35,6 +32,9 @@ In our action, we post a comment on the pull request using a [bash](https://en.w
              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
              PR_URL: ${{ github.event.pull_request.html_url }}
    ```
-3. Click **Commit changes...** in the top right of the workflow editor.
-4. Type your commit message and commit your changes directly to your branch.
-5. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
+
+   **Note:** The step you've added uses GitHub CLI (`gh`) to add a comment when a pull request is opened. To allow GitHub CLI to post a comment, we set the `GITHUB_TOKEN` environment variable to the value of the `GITHUB_TOKEN` secret, which is an installation access token, created when the workflow runs. For more information, see "[Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)." We set the `PR_URL` environment variable to the URL of the newly created pull request, and we use this in the `gh` command.
+   
+1. Click **Commit changes** in the top right of the workflow editor.
+1. Type your commit message and commit your changes directly to your branch.
+1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace this content with instructions for the next step.

@@ -1,23 +1,10 @@
 <header>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280x640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280x640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
-
 # Hello GitHub Actions
 
-_Create a GitHub Action and use it in a workflow._
+_Create and run a GitHub Actions workflow._
 
 </header>
-
-<!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
--->
 
 ## Welcome
 
@@ -33,22 +20,11 @@ In this course, you will:
 
 1. Create a workflow
 2. Add a job
-3. Add actions
+3. Add a run step
 4. Merge your pull request
-5. See the action run
+5. See effect of the workflow
 
 ### How to start this course
-
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'hello-github-actions',
-  owner: '@me',
-  name: 'skills-hello-github-actions',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
 
 [![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=hello-github-actions&owner=%40me&name=skills-hello-github-actions&description=My+clone+repository&visibility=public)
 
@@ -60,11 +36,6 @@ In this course, you will:
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
 
 <footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
 
 ---
 
