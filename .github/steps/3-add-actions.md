@@ -33,6 +33,8 @@ Update your workflow to make it post a comment on new pull requests. It will do 
              PR_URL: ${{ github.event.pull_request.html_url }}
    ```
 
+   **Note:** The step you've added uses GitHub CLI (`gh`) to add a comment when a pull request is opened. To allow GitHub CLI to post a comment, we set the `GITHUB_TOKEN` environment variable to the value of the `GITHUB_TOKEN` secret, which is an installation access token, created when the workflow runs. For more information, see "[Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)." We set the `PR_URL` environment variable to the URL of the newly created pull request, and we use this in the `gh` command.
+   
 1. Click **Commit changes** in the top right of the workflow editor.
 1. Type your commit message and commit your changes directly to your branch.
 1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace this content with instructions for the next step.
