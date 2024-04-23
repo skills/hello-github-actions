@@ -38,4 +38,4 @@ To get you started, we ran an Actions workflow in your new repository that, amon
 
 1. To commit your changes, click **Commit changes**.
 1. Type a commit message, select **Commit directly to the welcome-workflow branch** and click **Commit changes**.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). A separate Actions workflow in the repository (not the workflow you created) will run and will automatically replace this content with instructions for the next step.
+1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). A separate Actions workflow in the repository (not the workflow you created) will run and will automatically replace this contents of this README file with instructions for the next step.
