@@ -18,7 +18,7 @@ In the following activity, you'll add a "build" job to your workflow. You'll spe
 ### :keyboard: Activity: Add a job to your workflow file
 
 1. In a separate browser tab, make sure you are on the `welcome-workflow` branch and open your `.github/workflows/welcome.yml` file.
-1. Update the contents of the file to:
+1. Edit the file and update its contents to:
 
    ```yaml copy
    name: Post welcome comment
