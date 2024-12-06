@@ -1,0 +1,29 @@
+---
+pool: Default
+
+trigger: none
+
+pr:
+  - develop
+
+variables:
+  webproject: 'src/Presentation/Nop.Web/Nop.Web.csproj'
+  testproject: 'src/Tests/Nop.Tests/Nop.Tests.csproj'
+
+
+
+steps:
+  - task: DotNetCoreCLI@2
+    displayName: Build the code
+    inputs:
+      command: 'build'
+      projects: $(webproject)
+  - task: DotNetCoreCLI@2
+    displayName: publish nopCommerce
+    inputs:
+      command: 'publish'
+      publishWebProjects: false
+      projects: $(webproject)
+      arguments: '-o $(Build.ArtifactStagingDirectory)/Output'
+      zipAfterPublish: true
+      modifyOutputPath: true
