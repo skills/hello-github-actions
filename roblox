@@ -1,0 +1,6 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/GameList.lua"))()
+для PlaceID, Выполнить в парах(Игры) сделать
+    если PlaceID == game.PlaceId тогда
+        loadstring(игра:HttpGet(Выполнить))()
+    конец
+конец
