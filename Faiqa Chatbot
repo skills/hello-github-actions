@@ -1,0 +1,107 @@
+# Faiqha Chatbot - Automated Client & Vendor Communication
+# Created with AIPRM Prompt "ULTRAcoder-1 click create app from Idea"
+
+from fastapi import FastAPI, BackgroundTasks
+import smtplib, imaplib, email
+import sqlite3
+import time
+import requests
+
+app = FastAPI()
+DB_FILE = "chatbot.db"
+EMAIL_ADDRESS = "farooquerajper803@gmail.com"
+EMAIL_PASSWORD = "your-app-password"  # Generate an App Password for Gmail
+
+# Initialize database
+def init_db():
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY, email TEXT, responded INTEGER)''')
+    conn.commit()
+    conn.close()
+
+@app.on_event("startup")
+def startup():
+    init_db()
+    background_tasks = BackgroundTasks()
+    background_tasks.add_task(send_emails)
+    background_tasks.add_task(check_responses)
+
+# Function to send emails
+def send_email(to_email):
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.starttls()
+        server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+        message = f"Subject: Guest Post Inquiry\n\nHello, I would like to discuss guest posting opportunities."
+        server.sendmail(EMAIL_ADDRESS, to_email, message)
+
+# Function to send emails periodically
+def send_emails():
+    while True:
+        conn = sqlite3.connect(DB_FILE)
+        c = conn.cursor()
+        c.execute("SELECT email FROM contacts WHERE responded = 0")
+        contacts = c.fetchall()
+        for contact in contacts:
+            send_email(contact[0])
+        conn.close()
+        time.sleep(3600)  # Send emails every hour
+
+# Function to check email responses
+def check_responses():
+    while True:
+        mail = imaplib.IMAP4_SSL("imap.gmail.com")
+        mail.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+        mail.select("inbox")
+        result, data = mail.search(None, "UNSEEN")
+        for num in data[0].split():
+            result, msg_data = mail.fetch(num, "(RFC822)")
+            raw_email = msg_data[0][1]
+            msg = email.message_from_bytes(raw_email)
+            from_email = msg["From"]
+            notify_user(from_email)
+            update_db(from_email)
+        mail.logout()
+        time.sleep(1800)  # Check every 30 minutes
+
+# Function to update database
+def update_db(email):
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute("UPDATE contacts SET responded = 1 WHERE email = ?", (email,))
+    conn.commit()
+    conn.close()
+
+# Function to notify user
+def notify_user(email):
+    print(f"You have received a response from {email}!")
+
+# Social media promotion
+@app.get("/promote")
+def promote():
+    post_facebook("Check out our guest post services: www.site.google.com/Faiqahplaptopgeek")
+    post_instagram("We offer great guest post opportunities! DM us.")
+    post_linkedin("Expand your reach with guest posting!")
+    return {"message": "Promoted successfully!"}
+
+# Posting functions
+def post_facebook(message):
+    fb_access_token = "your-facebook-access-token"
+    fb_page_id = "your-facebook-page-id"
+    url = f"https://graph.facebook.com/{fb_page_id}/feed"
+    requests.post(url, data={"message": message, "access_token": fb_access_token})
+
+def post_instagram(message):
+    ig_access_token = "your-instagram-access-token"
+    url = "https://graph.facebook.com/v12.0/me/media"
+    requests.post(url, data={"caption": message, "access_token": ig_access_token})
+
+def post_linkedin(message):
+    linkedin_access_token = "your-linkedin-access-token"
+    url = "https://api.linkedin.com/v2/shares"
+    headers = {"Authorization": f"Bearer {linkedin_access_token}"}
+    requests.post(url, json={"content": {"title": message}}, headers=headers)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
