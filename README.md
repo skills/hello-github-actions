@@ -44,3 +44,113 @@ Get help: [Post in our discussion board](https://github.com/orgs/skills/discussi
 &copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
 </footer>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Futurista - Daniella Sapatinho</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+        }
+        .menu-category {
+            margin-bottom: 40px;
+        }
+        .menu-category h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #6a6a6a;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .item-description {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .item-name {
+            font-size: 1.2em;
+        }
+        .item-price {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Daniella Sapatinho</h1>
+    <p>Cardápio Futurista</p>
+</header>
+
+<section>
+    <div class="menu-category">
+        <h2>Pratos Principais</h2>
+        <div class="menu-item">
+            <img src="https://example.com/filé-mignon.jpg" alt="Filé Mignon">
+            <div class="item-description">
+                <div class="item-name">Filé Mignon</div>
+                <div class="item-price">R$ 80,00</div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://example.com/salmão.jpg" alt="Salmão">
+            <div class="item-description">
+                <div class="item-name">Salmão Grelhado</div>
+                <div class="item-price">R$ 95,00</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-category">
+        <h2>Sobremesas</h2>
+        <div class="menu-item">
+            <img src="https://example.com/sobremesa1.jpg" alt="Sobremesa 1">
+            <div class="item-description">
+                <div class="item-name">Torta de Chocolate</div>
+                <div class="item-price">R$ 20,00</div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://example.com/sobremesa2.jpg" alt="Sobremesa 2">
+            <div class="item-description">
+                <div class="item-name">Sorvete de Baunilha</div>
+                <div class="item-price">R$ 15,00</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
