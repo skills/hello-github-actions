@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF_8">
+	<meta http-equiv="X_UA_compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="style1
+	.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+</head>
+<body>
+	
+    <header class="header">
+		
+		<nav class="navbar">
+			<a href="#" class="logo">portfolio</a>
+			<ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="#">About</a></li>
+			
+		</ul>
+		</nav>
+	</header>
+	<section class="home">
+		<div class="home-info">
+			<h3>Hello,Its me</h3>
+			<h1>Vijay Padala</h1>
+			<p>Iam working as a front office manager</p>
+			<div class="btn-sci">
+				<a href="#" class="btn">More About Me</a>
+				<a href="#" class="btn">Download CV</a>
+				<div class="sci">
+			        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+			        <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+			         <a href="https://www.instagram.com/umaswathi.repuri/profilecard/?igsh=MWFsenhqNjRpMmJtNw=="><i class="fa-brands fa-square-instagram"></i></a>"
+
+			         <a href=""><i class="fa-brands fa-facebook"></i></a>
+			     </div>
+			 </div>
+			</div>
+			<div class="home-img">
+			<div class="img-box">
+				<div class="img-item">
+					<img src="C:\Users\umasw\Desktop\project\InShot_20250224_110630955-removebg-preview.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
