@@ -1,0 +1,32 @@
+name: Build KivyMD Invoice App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install buildozer cython kivy kivymd
+
+    - name: Build APK
+      run: |
+        buildozer android debug
