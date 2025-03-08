@@ -1,0 +1,39 @@
+<Windows>
+<PackageConfig xmlns="urn:schemas-Microsoft-com:Windows-ICD-Package-Config.v1.0">
+<ID>a8aa0d3f-a625-4b83-99c7-6ecf1cdae69d</ID>
+<Name>jumpcloud_ppkg</Name>
+<Version>1.20</Version>
+<OwnerType>ITAdmin</OwnerType>
+<Rank>0</Rank>
+<Notes/>
+</PackageConfig>
+<Settings xmlns="urn:schemas-microsoft-com:windows-provisioning">
+<Customizations>
+<Common>
+<Workplace>
+<Enrollments>
+<UPN UPN="JumpCloud@ppkg.enrolled" Name="JumpCloud@ppkg.enrolled">
+<AuthPolicy>OnPremise</AuthPolicy>
+<DiscoveryServiceFullUrl>https://67c9e88f1c7db44bdcc68a4b.microsoft-mdm.jumpcloud.com/discovery</DiscoveryServiceFullUrl>
+<Secret>jc67c9e88f1c7db44bdcc68a4bppkg1dc5af9e91b7ec4dffa7d03f9f9d3e337a5c7a6c38aa64d8d6b03bd407f04aab</Secret>
+</UPN>
+</Enrollments>
+</Workplace>
+<OOBE>
+<Desktop>
+<HideOobe>True</HideOobe>
+</Desktop>
+</OOBE>
+<ProvisioningCommands>
+<PrimaryContext>
+<Command>
+<CommandConfig Name="get_vc_redist">
+<CommandLine>cmd.exe /c curl https://aka.ms/vs/17/release/vc_redist.x64.exe -fsLo %TEMP%\vc_redist.x64.exe && cmd.exe /c %TEMP%\vc_redist.x64.exe /install /quiet /norestart</CommandLine>
+</CommandConfig>
+</Command>
+</PrimaryContext>
+</ProvisioningCommands>
+</Common>
+</Customizations>
+</Settings>
+</WindowsCustomizations>
