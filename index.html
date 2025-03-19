@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Découvrez le luxe du bien-être oriental avec Morocco Heaven Hammam. Hammam traditionnel, massages relaxants, soins du visage et beauté des mains et des pieds.">
+<meta name="keywords" content="hammam, spa marocain, massage, soin visage, beauté, bien-être, Winnipeg">
+<meta property="og:title" content="Morocco Heaven Hammam - Votre havre de paix au cœur de la tradition marocaine">
+<meta property="og:description" content="Découvrez le luxe du bien-être oriental avec Morocco Heaven Hammam. Une expérience sensorielle unique au cœur de Winnipeg.">
+<meta property="og:image" content="https://public.readdy.ai/ai/img_res/7f9437141fbe0bf6b50a5345a6e649e2.jpg">
+<meta property="og:url" content="https://morocco-heaven-hammam.ca">
+<link rel="icon" type="image/png" href="https://public.readdy.ai/ai/img_res/6e8f3b1d6cc1aa018fab6b1a663708b6.jpg">
+<title>Morocco Heaven Hammam - Spa & Bien-être Marocain à Winnipeg</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#B76E79',
+secondary: '#D4AF37'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+</style>
+</head>
+<body class="font-poppins">
+<nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="font-['Pacifico'] text-3xl text-primary">MHH</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#services" class="text-gray-700 hover:text-primary">Nos Services</a>
+<a href="#experience" class="text-gray-700 hover:text-primary">L'Expérience</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+<a href="https://morocco-heaven-hammam.ca/booking" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap inline-block">
+Réserver maintenant
+</a>
+</div>
+</div>
+</div>
+</nav>
+<header class="pt-24 relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img src="https://public.readdy.ai/ai/img_res/bba5eaa90bb160a1e948adee590cf955.jpg" class="w-full h-full object-cover object-top" alt="Hammam">
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+</div>
+<div class="container mx-auto px-6 py-24 relative z-10">
+<div class="max-w-3xl text-white">
+<h1 class="text-5xl md:text-6xl font-playfair mb-6">Découvrez le Luxe du Bien-être Oriental</h1>
+<p class="text-xl mb-8">Plongez dans un univers de détente et de tradition avec Morocco Heaven Hammam, où chaque soin est une invitation au voyage sensoriel.</p>
+<a href="https://readdy.ai/home/3045a216-6b79-4252-9a80-ad3b8f3533b3/82fa0323-150c-4622-afb5-634b586ea22f" data-readdy="true" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer text-lg whitespace-nowrap inline-block">
+Réserver votre expérience
+</a>
+</div>
+</div>
+</header>
+<section id="services" class="py-24 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-playfair text-center mb-16">Nos Services</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-steam-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Hammam Traditionnel</h3>
+<p class="text-gray-600 mb-6">Purification intense avec notre rituel ancestral au savon noir et gant Kessa.</p>
+<button onclick="openModal(this)" data-service="hammam" class="text-primary hover:text-opacity-80 flex items-center cursor-pointer whitespace-nowrap">
+En savoir plus
+<i class="ri-arrow-right-line ml-2"></i>
+</button>
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4 transform scale-95 opacity-0 transition-all duration-300">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-playfair" id="modalTitle"></h3>
+<button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<img id="modalImage" class="w-full h-64 object-cover rounded-lg mb-6" src="" alt="Service">
+<div class="space-y-4">
+<p id="modalDescription" class="text-gray-600"></p>
+<div class="flex items-center">
+<i class="ri-time-line text-primary mr-2"></i>
+<span id="modalDuration" class="text-gray-700"></span>
+</div>
+<div class="flex items-center">
+<i class="ri-money-euro-circle-line text-primary mr-2"></i>
+<span id="modalPrice" class="text-gray-700"></span>
+</div>
+</div>
+<div class="mt-8">
+<a href="https://morocco-heaven-hammam.ca/booking" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button hover:bg-opacity-90 transition-all">
+Réserver maintenant
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+const services = {
+hammam: {
+title: "Hammam Traditionnel",
+description: "Découvrez notre rituel de hammam traditionnel, une expérience authentique qui commence par une séance de vapeur purifiante suivie d'un gommage au savon noir et au gant Kessa. Ce soin ancestral élimine les cellules mortes, purifie la peau en profondeur et stimule la circulation sanguine. Le rituel se termine par une application d'huile d'argan pure pour nourrir et protéger votre peau.",
+duration: "1h30",
+price: "À partir de 125 CAD",
+image: "https://readdy.ai/api/search-image?query=traditional moroccan hammam treatment in progress, showing a person receiving a black soap scrub treatment on a heated marble slab, with steam and traditional hammam bowls visible&width=800&height=600&seq=3&orientation=landscape"
+},
+massage: {
+title: "Massages Relaxants",
+description: "Nos massages relaxants combinent des techniques traditionnelles marocaines et orientales pour vous offrir une expérience de détente absolue. Chaque massage est personnalisé selon vos besoins, utilisant des huiles essentielles précieuses pour détendre les muscles, apaiser l'esprit et restaurer l'équilibre énergétique.",
+duration: "1h",
+price: "À partir de 140 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan massage therapy in progress, showing therapist performing traditional massage techniques with argan oil, warm stones visible, in a luxurious treatment room&width=800&height=600&seq=4&orientation=landscape"
+},
+visage: {
+title: "Soins du Visage",
+description: "Nos soins du visage allient des techniques modernes aux secrets de beauté ancestraux marocains. Utilisant des produits naturels comme l'argile rhassoul, l'eau de rose et l'huile d'argan, nos soins sont adaptés à votre type de peau pour révéler votre éclat naturel.",
+duration: "1h",
+price: "À partir de 110 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan facial treatment in progress, showing application of natural clay mask and facial massage techniques, with traditional beauty products visible&width=800&height=600&seq=5&orientation=landscape"
+},
+mains: {
+title: "Beauté des Mains et des Pieds",
+description: "Un moment de pure détente pour vos mains et vos pieds, comprenant un bain relaxant aux huiles essentielles, un gommage délicat, un massage nourrissant et des soins des ongles professionnels. Nous utilisons des produits naturels de haute qualité pour des résultats durables.",
+duration: "1h15",
+price: "À partir de 95 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan pedicure and manicure treatment in progress, showing hands and feet being treated with natural products, traditional copper bowls with rose petals visible&width=800&height=600&seq=6&orientation=landscape"
+}
+};
+function openModal(button) {
+const service = button.dataset.service;
+const serviceData = services[service];
+document.getElementById('modalTitle').textContent = serviceData.title;
+document.getElementById('modalDescription').textContent = serviceData.description;
+document.getElementById('modalDuration').textContent = serviceData.duration;
+document.getElementById('modalPrice').textContent = serviceData.price;
+document.getElementById('modalImage').src = serviceData.image;
+const modal = document.getElementById('modal');
+modal.classList.remove('hidden');
+setTimeout(() => {
+modal.querySelector('.bg-white').classList.remove('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.add('scale-100', 'opacity-100');
+}, 10);
+}
+function closeModal() {
+const modal = document.getElementById('modal');
+modal.querySelector('.bg-white').classList.add('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.remove('scale-100', 'opacity-100');
+setTimeout(() => {
+modal.classList.add('hidden');
+}, 300);
+}
+document.getElementById('modal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeModal();
+}
+});
+</script>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-massage-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Massages Relaxants</h3>
+<p class="text-gray-600 mb-6">Des techniques ancestrales pour une relaxation profonde et revitalisante.</p>
+<button onclick="openModal(this)" data-service="hammam" class="text-primary hover:text-opacity-80 flex items-center cursor-pointer whitespace-nowrap">
+En savoir plus
+<i class="ri-arrow-right-line ml-2"></i>
+</button>
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4 transform scale-95 opacity-0 transition-all duration-300">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-playfair" id="modalTitle"></h3>
+<button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<img id="modalImage" class="w-full h-64 object-cover rounded-lg mb-6" src="" alt="Service">
+<div class="space-y-4">
+<p id="modalDescription" class="text-gray-600"></p>
+<div class="flex items-center">
+<i class="ri-time-line text-primary mr-2"></i>
+<span id="modalDuration" class="text-gray-700"></span>
+</div>
+<div class="flex items-center">
+<i class="ri-money-euro-circle-line text-primary mr-2"></i>
+<span id="modalPrice" class="text-gray-700"></span>
+</div>
+</div>
+<div class="mt-8">
+<a href="https://morocco-heaven-hammam.ca/booking" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button hover:bg-opacity-90 transition-all">
+Réserver maintenant
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+const services = {
+hammam: {
+title: "Hammam Traditionnel",
+description: "Découvrez notre rituel de hammam traditionnel, une expérience authentique qui commence par une séance de vapeur purifiante suivie d'un gommage au savon noir et au gant Kessa. Ce soin ancestral élimine les cellules mortes, purifie la peau en profondeur et stimule la circulation sanguine. Le rituel se termine par une application d'huile d'argan pure pour nourrir et protéger votre peau.",
+duration: "1h30",
+price: "À partir de 125 CAD",
+image: "https://readdy.ai/api/search-image?query=traditional moroccan hammam treatment in progress, showing a person receiving a black soap scrub treatment on a heated marble slab, with steam and traditional hammam bowls visible&width=800&height=600&seq=3&orientation=landscape"
+},
+massage: {
+title: "Massages Relaxants",
+description: "Nos massages relaxants combinent des techniques traditionnelles marocaines et orientales pour vous offrir une expérience de détente absolue. Chaque massage est personnalisé selon vos besoins, utilisant des huiles essentielles précieuses pour détendre les muscles, apaiser l'esprit et restaurer l'équilibre énergétique.",
+duration: "1h",
+price: "À partir de 140 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan massage therapy in progress, showing therapist performing traditional massage techniques with argan oil, warm stones visible, in a luxurious treatment room&width=800&height=600&seq=4&orientation=landscape"
+},
+visage: {
+title: "Soins du Visage",
+description: "Nos soins du visage allient des techniques modernes aux secrets de beauté ancestraux marocains. Utilisant des produits naturels comme l'argile rhassoul, l'eau de rose et l'huile d'argan, nos soins sont adaptés à votre type de peau pour révéler votre éclat naturel.",
+duration: "1h",
+price: "À partir de 110 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan facial treatment in progress, showing application of natural clay mask and facial massage techniques, with traditional beauty products visible&width=800&height=600&seq=5&orientation=landscape"
+},
+mains: {
+title: "Beauté des Mains et des Pieds",
+description: "Un moment de pure détente pour vos mains et vos pieds, comprenant un bain relaxant aux huiles essentielles, un gommage délicat, un massage nourrissant et des soins des ongles professionnels. Nous utilisons des produits naturels de haute qualité pour des résultats durables.",
+duration: "1h15",
+price: "À partir de 95 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan pedicure and manicure treatment in progress, showing hands and feet being treated with natural products, traditional copper bowls with rose petals visible&width=800&height=600&seq=6&orientation=landscape"
+}
+};
+function openModal(button) {
+const service = button.dataset.service;
+const serviceData = services[service];
+document.getElementById('modalTitle').textContent = serviceData.title;
+document.getElementById('modalDescription').textContent = serviceData.description;
+document.getElementById('modalDuration').textContent = serviceData.duration;
+document.getElementById('modalPrice').textContent = serviceData.price;
+document.getElementById('modalImage').src = serviceData.image;
+const modal = document.getElementById('modal');
+modal.classList.remove('hidden');
+setTimeout(() => {
+modal.querySelector('.bg-white').classList.remove('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.add('scale-100', 'opacity-100');
+}, 10);
+}
+function closeModal() {
+const modal = document.getElementById('modal');
+modal.querySelector('.bg-white').classList.add('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.remove('scale-100', 'opacity-100');
+setTimeout(() => {
+modal.classList.add('hidden');
+}, 300);
+}
+document.getElementById('modal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeModal();
+}
+});
+</script>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-face-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Soins du Visage</h3>
+<p class="text-gray-600 mb-6">Des soins personnalisés pour sublimer votre beauté naturelle.</p>
+<button onclick="openModal(this)" data-service="hammam" class="text-primary hover:text-opacity-80 flex items-center cursor-pointer whitespace-nowrap">
+En savoir plus
+<i class="ri-arrow-right-line ml-2"></i>
+</button>
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4 transform scale-95 opacity-0 transition-all duration-300">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-playfair" id="modalTitle"></h3>
+<button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<img id="modalImage" class="w-full h-64 object-cover rounded-lg mb-6" src="" alt="Service">
+<div class="space-y-4">
+<p id="modalDescription" class="text-gray-600"></p>
+<div class="flex items-center">
+<i class="ri-time-line text-primary mr-2"></i>
+<span id="modalDuration" class="text-gray-700"></span>
+</div>
+<div class="flex items-center">
+<i class="ri-money-euro-circle-line text-primary mr-2"></i>
+<span id="modalPrice" class="text-gray-700"></span>
+</div>
+</div>
+<div class="mt-8">
+<a href="https://morocco-heaven-hammam.ca/booking" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button hover:bg-opacity-90 transition-all">
+Réserver maintenant
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+const services = {
+hammam: {
+title: "Hammam Traditionnel",
+description: "Découvrez notre rituel de hammam traditionnel, une expérience authentique qui commence par une séance de vapeur purifiante suivie d'un gommage au savon noir et au gant Kessa. Ce soin ancestral élimine les cellules mortes, purifie la peau en profondeur et stimule la circulation sanguine. Le rituel se termine par une application d'huile d'argan pure pour nourrir et protéger votre peau.",
+duration: "1h30",
+price: "À partir de 125 CAD",
+image: "https://readdy.ai/api/search-image?query=traditional moroccan hammam treatment in progress, showing a person receiving a black soap scrub treatment on a heated marble slab, with steam and traditional hammam bowls visible&width=800&height=600&seq=3&orientation=landscape"
+},
+massage: {
+title: "Massages Relaxants",
+description: "Nos massages relaxants combinent des techniques traditionnelles marocaines et orientales pour vous offrir une expérience de détente absolue. Chaque massage est personnalisé selon vos besoins, utilisant des huiles essentielles précieuses pour détendre les muscles, apaiser l'esprit et restaurer l'équilibre énergétique.",
+duration: "1h",
+price: "À partir de 140 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan massage therapy in progress, showing therapist performing traditional massage techniques with argan oil, warm stones visible, in a luxurious treatment room&width=800&height=600&seq=4&orientation=landscape"
+},
+visage: {
+title: "Soins du Visage",
+description: "Nos soins du visage allient des techniques modernes aux secrets de beauté ancestraux marocains. Utilisant des produits naturels comme l'argile rhassoul, l'eau de rose et l'huile d'argan, nos soins sont adaptés à votre type de peau pour révéler votre éclat naturel.",
+duration: "1h",
+price: "À partir de 110 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan facial treatment in progress, showing application of natural clay mask and facial massage techniques, with traditional beauty products visible&width=800&height=600&seq=5&orientation=landscape"
+},
+mains: {
+title: "Beauté des Mains et des Pieds",
+description: "Un moment de pure détente pour vos mains et vos pieds, comprenant un bain relaxant aux huiles essentielles, un gommage délicat, un massage nourrissant et des soins des ongles professionnels. Nous utilisons des produits naturels de haute qualité pour des résultats durables.",
+duration: "1h15",
+price: "À partir de 95 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan pedicure and manicure treatment in progress, showing hands and feet being treated with natural products, traditional copper bowls with rose petals visible&width=800&height=600&seq=6&orientation=landscape"
+}
+};
+function openModal(button) {
+const service = button.dataset.service;
+const serviceData = services[service];
+document.getElementById('modalTitle').textContent = serviceData.title;
+document.getElementById('modalDescription').textContent = serviceData.description;
+document.getElementById('modalDuration').textContent = serviceData.duration;
+document.getElementById('modalPrice').textContent = serviceData.price;
+document.getElementById('modalImage').src = serviceData.image;
+const modal = document.getElementById('modal');
+modal.classList.remove('hidden');
+setTimeout(() => {
+modal.querySelector('.bg-white').classList.remove('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.add('scale-100', 'opacity-100');
+}, 10);
+}
+function closeModal() {
+const modal = document.getElementById('modal');
+modal.querySelector('.bg-white').classList.add('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.remove('scale-100', 'opacity-100');
+setTimeout(() => {
+modal.classList.add('hidden');
+}, 300);
+}
+document.getElementById('modal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeModal();
+}
+});
+</script>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-hand-heart-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Beauté des Mains et des Pieds</h3>
+<p class="text-gray-600 mb-6">Des soins experts pour des mains et des pieds sublimés.</p>
+<button onclick="openModal(this)" data-service="hammam" class="text-primary hover:text-opacity-80 flex items-center cursor-pointer whitespace-nowrap">
+En savoir plus
+<i class="ri-arrow-right-line ml-2"></i>
+</button>
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4 transform scale-95 opacity-0 transition-all duration-300">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-playfair" id="modalTitle"></h3>
+<button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<img id="modalImage" class="w-full h-64 object-cover rounded-lg mb-6" src="" alt="Service">
+<div class="space-y-4">
+<p id="modalDescription" class="text-gray-600"></p>
+<div class="flex items-center">
+<i class="ri-time-line text-primary mr-2"></i>
+<span id="modalDuration" class="text-gray-700"></span>
+</div>
+<div class="flex items-center">
+<i class="ri-money-euro-circle-line text-primary mr-2"></i>
+<span id="modalPrice" class="text-gray-700"></span>
+</div>
+</div>
+<div class="mt-8">
+<a href="https://morocco-heaven-hammam.ca/booking" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button hover:bg-opacity-90 transition-all">
+Réserver maintenant
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+const services = {
+hammam: {
+title: "Hammam Traditionnel",
+description: "Découvrez notre rituel de hammam traditionnel, une expérience authentique qui commence par une séance de vapeur purifiante suivie d'un gommage au savon noir et au gant Kessa. Ce soin ancestral élimine les cellules mortes, purifie la peau en profondeur et stimule la circulation sanguine. Le rituel se termine par une application d'huile d'argan pure pour nourrir et protéger votre peau.",
+duration: "1h30",
+price: "À partir de 125 CAD",
+image: "https://readdy.ai/api/search-image?query=traditional moroccan hammam treatment in progress, showing a person receiving a black soap scrub treatment on a heated marble slab, with steam and traditional hammam bowls visible&width=800&height=600&seq=3&orientation=landscape"
+},
+massage: {
+title: "Massages Relaxants",
+description: "Nos massages relaxants combinent des techniques traditionnelles marocaines et orientales pour vous offrir une expérience de détente absolue. Chaque massage est personnalisé selon vos besoins, utilisant des huiles essentielles précieuses pour détendre les muscles, apaiser l'esprit et restaurer l'équilibre énergétique.",
+duration: "1h",
+price: "À partir de 140 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan massage therapy in progress, showing therapist performing traditional massage techniques with argan oil, warm stones visible, in a luxurious treatment room&width=800&height=600&seq=4&orientation=landscape"
+},
+visage: {
+title: "Soins du Visage",
+description: "Nos soins du visage allient des techniques modernes aux secrets de beauté ancestraux marocains. Utilisant des produits naturels comme l'argile rhassoul, l'eau de rose et l'huile d'argan, nos soins sont adaptés à votre type de peau pour révéler votre éclat naturel.",
+duration: "1h",
+price: "À partir de 110 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan facial treatment in progress, showing application of natural clay mask and facial massage techniques, with traditional beauty products visible&width=800&height=600&seq=5&orientation=landscape"
+},
+mains: {
+title: "Beauté des Mains et des Pieds",
+description: "Un moment de pure détente pour vos mains et vos pieds, comprenant un bain relaxant aux huiles essentielles, un gommage délicat, un massage nourrissant et des soins des ongles professionnels. Nous utilisons des produits naturels de haute qualité pour des résultats durables.",
+duration: "1h15",
+price: "À partir de 95 CAD",
+image: "https://readdy.ai/api/search-image?query=moroccan pedicure and manicure treatment in progress, showing hands and feet being treated with natural products, traditional copper bowls with rose petals visible&width=800&height=600&seq=6&orientation=landscape"
+}
+};
+function openModal(button) {
+const service = button.dataset.service;
+const serviceData = services[service];
+document.getElementById('modalTitle').textContent = serviceData.title;
+document.getElementById('modalDescription').textContent = serviceData.description;
+document.getElementById('modalDuration').textContent = serviceData.duration;
+document.getElementById('modalPrice').textContent = serviceData.price;
+document.getElementById('modalImage').src = serviceData.image;
+const modal = document.getElementById('modal');
+modal.classList.remove('hidden');
+setTimeout(() => {
+modal.querySelector('.bg-white').classList.remove('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.add('scale-100', 'opacity-100');
+}, 10);
+}
+function closeModal() {
+const modal = document.getElementById('modal');
+modal.querySelector('.bg-white').classList.add('scale-95', 'opacity-0');
+modal.querySelector('.bg-white').classList.remove('scale-100', 'opacity-100');
+setTimeout(() => {
+modal.classList.add('hidden');
+}, 300);
+}
+document.getElementById('modal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeModal();
+}
+});
+</script>
+</div>
+</div>
+</div>
+</section>
+<section id="experience" class="py-24 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/506472999ed9c58e1d081b6c1e16561a.jpg" class="rounded-lg shadow-lg" alt="Experience">
+</div>
+<div class="lg:w-1/2">
+<h2 class="text-4xl font-playfair mb-8">Une Expérience Sensorielle Unique</h2>
+<p class="text-gray-600 mb-6">Chez Morocco Heaven Hammam, nous vous offrons bien plus qu'un simple moment de détente. C'est une véritable invitation au voyage des sens, où chaque détail est pensé pour votre bien-être absolu.</p>
+<div class="space-y-4 mb-8">
+<div class="flex items-center">
+<i class="ri-check-line text-primary mr-3"></i>
+<span>Ambiance feutrée et relaxante</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line text-primary mr-3"></i>
+<span>Produits naturels et authentiques</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line text-primary mr-3"></i>
+<span>Équipe de professionnels expérimentés</span>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap">
+Découvrir notre univers
+</button>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-16">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<div class="font-['Pacifico'] text-3xl text-white mb-6">MHH</div>
+<p class="text-gray-400">Votre havre de paix au cœur de la tradition marocaine.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Contact</h4>
+<div class="space-y-4 text-gray-400">
+<p>xxx Marion Street</p>
+<p>Winnipeg, Canada</p>
+<p>Bfaye@monusb.ca</p>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Horaires</h4>
+<div class="space-y-4 text-gray-400">
+<p>Lundi - Vendredi: 10h - 20h</p>
+<p>Samedi: 9h - 22h</p>
+<p>Dimanche: 10h - 18h</p>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+<p class="text-gray-400 mb-4">Recevez nos offres exclusives</p>
+<div class="flex">
+<input type="email" placeholder="Votre email" class="px-4 py-2 !rounded-button rounded-r-none border-none text-gray-900 flex-1">
+<button class="bg-primary text-white px-6 py-2 !rounded-button rounded-l-none hover:bg-opacity-90 transition-all cursor-pointer whitespace-nowrap">
+S'inscrire
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400">© 2025 Morocco Heaven Hammam. Tous droits réservés.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white">
+<i class="ri-facebook-fill text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white">
+<i class="ri-instagram-fill text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white">
+<i class="ri-twitter-fill text-xl"></i>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
