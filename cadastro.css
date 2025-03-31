@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #b3e0ff;
+}
+.sidebar {
+    width: 120px;
+    height: 100%;
+    background-color: #ffffff;
+    padding-top: px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.title img {
+    max-width: 35%;
+    height: auto;
+    padding-right: 13%;
+}
+.sidebar a {
+    color: rgb(17, 0, 112);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #e4140d;
+}
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title .red {
+    color: #ff0000;
+}
+.title .blue {
+    color: #043c79;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.info {
+    text-align: center;
+    width: 50%;
+}
+.info img {
+    width: 100%;
+    max-width: 300px;
+}
+.info p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+.form-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.form-container button {
+    width: 80%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form-container button:hover {
+    background-color: #218838;
+}
+
