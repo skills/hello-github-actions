@@ -1,0 +1,32 @@
+name: Node.js CI
+
+# このワークフローをトリガーするイベントを定義します
+on:
+  push:
+    branches: [main]  # mainブランチにpushされたとき
+  pull_request:
+    branches: [main]  # mainブランチにプルリクエストが作成されたとき
+
+# ジョブを定義します
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用するOS（Ubuntu）
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # コードをチェックアウト
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2  # Node.jsのセットアップ
+        with:
+          node-version: '14'  # Node.jsのバージョンを指定
+
+      - name: Install dependencies
+        run: npm install  # 依存関係をインストール
+
+      - name: Run tests
+        run: npm test  # テストを実行
+
+      - name: Deploy
+        run: npm run deploy  # デプロイ（必要な場合）
+
