@@ -1,0 +1,6 @@
+name: Simran Shaikh
+on:
+  pull_request:
+    types: [welcome comment]
+permissions:
+  pull-requests: write
