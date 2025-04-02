@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #BFD7EA;
+}
+
+.sidebar {
+    width: 130px;
+    height: 100vh;
+    background-color: #F5F5F5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    
+}
+
+.sidebar nav {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar a {
+    color: rgb(17, 0, 112);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #e4140d;
+    color: white;
+}
+
+.sidebar hr {
+    width: 80%;
+    border: none;
+    height: 3px;
+    background-color: #3efc0f;
+    margin: 5px 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: calc(100% - 160px);
+    margin-left: 160px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.info {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.info img {
+    max-width: 300px;
+    width: 100%;
+    
+}
+
+.info p {
+    font-size: 22px;
+    color: #333;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.info p strong {
+    font-weight: bold;
+}
+
+.info p u {
+    text-decoration: underline;
+}
+.titulo-form {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    
+}
+
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.form-container input {
+    width: 90%;
+    padding: 8px;
+    background-color: #F5F5F5;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    
+}
+
+.form-container button {
+    width: 40%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #f8f5f5;
+    color: rgb(245, 23, 23);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #D43F3F;
+}
