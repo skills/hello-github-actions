@@ -1,0 +1,29 @@
+name: Build and Deploy Plugin
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adoptopenjdk'
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: plugin-artifact
+        path: build/libs/*.jar
