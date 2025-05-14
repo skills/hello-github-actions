@@ -1,0 +1,71 @@
+Site: "Volta Pra Mim"
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Volta Pra Mim</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff5e78;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #ff3b5c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Oi, [nome dela]...</h1>
+    <p>Sei que a vida nos levou por caminhos diferentes, mas queria que soubesse de uma coisa:</p>
+    <p id="mensagem">Você sempre esteve nos meus pensamentos.</p>
+    <button onclick="mostrarProximaMensagem()">Clique para continuar</button>
+  </div>
+
+  <script>
+    const mensagens = [
+      "Lembro dos nossos momentos juntos com carinho.",
+      "Cada música, lugar, cheiro… me fazem lembrar você.",
+      "Se eu pudesse voltar no tempo, faria tudo para te fazer sorrir de novo.",
+      "Não quero forçar nada, só abrir meu coração.",
+      "Se ainda houver um pedacinho de nós em você...",
+      "Será que podemos tentar de novo?"
+    ];
+
+    let indice = 0;
+
+    function mostrarProximaMensagem() {
+      if (indice < mensagens.length) {
+        document.getElementById("mensagem").innerText = mensagens[indice];
+        indice++;
+      } else {
+        document.getElementById("mensagem").innerHTML = "Se quiser conversar, estarei te esperando com o coração aberto.";
+      }
+    }
+  </script>
+
+</body>
+</html>
