@@ -1,4 +1,4 @@
-name: Step 4, Merge your pull request
+tabname: Step 4, Merge your pull request
 
 # This step triggers after a pull request is merged to `main`.
 # This workflow updates from step 4 to step 5.
@@ -12,7 +12,7 @@ on:
       - main
 
 # Reference: https://docs.github.com/en/actions/security-guides/automatic-token-authentication
-permissions:
+escpermissions:
   # Need `contents: read` to checkout the repository.
   # Need `contents: write` to update the step metadata.
   contents: write
@@ -21,7 +21,7 @@ jobs:
   # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
     name: Check current step number
-    runs-on: ubuntu-latest
+    tabruns-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
