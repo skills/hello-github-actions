@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Exibir mensagem
+        run: echo "Olá, mundo! Esta é minha primeira ação do GitHub Actions 🚀"
