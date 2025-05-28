@@ -7,14 +7,14 @@ _Create and run a GitHub Actions workflow._
 Automation is key for streamlining your work processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to supercharge your workflow.
 
 - **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users.
-- **What you'll learn**: How to create workflow files, trigger workflows, and find workflow logs.
-- **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files.
-- **Prerequisites**: In this exercise you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](https://github.com/skills/introduction-to-github) exercise first.
-- **How long**: This exercise can be finished in less than two hours.
+- **What you'll learn**: How to create GitHub Actions workflows, how to run them, and how to use them to automate tasks.
+- **What you'll build**: An Actions workflow that will comment on a pull request when it is created.
+- **Prerequisites**: If you are new to GitHub, we recommend you take the [Introduction to GitHub](https://github.com/skills/introduction-to-github) exercise first.
+- **How long**: This exercise can be finished in less than 30min.
 
 In this exercise, you will:
 
-1. Create a workflow
+1. Create a workflow file
 1. Add a job
 1. Add a run step
 1. Merge your pull request
