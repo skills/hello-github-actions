@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - welcome-workflow
+    paths:
+      - ".github/**"
 
 permissions:
   contents: read

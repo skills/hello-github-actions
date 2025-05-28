@@ -15,7 +15,7 @@ Steps are the building blocks of jobs, allowing you to automate tasks like check
 ### ⌨️ Activity: Add a step to your workflow file
 
 1. In the `welcome-workflow` branch, open your `.github/workflows/welcome.yml` file.
-1. Add a step to the `build` job to post a comment on new pull requests using GitHub CLI:
+1. Add a step to the `welcome` job to post a comment on new pull requests using GitHub CLI:
 
    ```yaml
    steps:

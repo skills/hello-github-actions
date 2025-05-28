@@ -16,7 +16,7 @@ Workflows let you automate tasks like building, testing, or deploying your code,
 ### ⌨️ Activity: Create a workflow file and open a pull request
 
 1. Open this repository in a new browser tab so you can work on the steps while you read the instructions in this tab.
-1. Create a new branch named `welcome-workflow`.
+1. In the **Code** tab of your repository, create a new branch named `welcome-workflow`.
    <!-- TODO: Add screenshot -->
 1. In the `welcome-workflow` branch, navigate to the `.github/workflows` directory.
 1. Create a new file named `welcome.yml` in the `.github/workflows` directory with the following content:
