@@ -1,4 +1,4 @@
-## Step 5: Merge your workflow and experiment
+## Step 5: Merge and experiment
 
 _Great job! You have created and tested your first GitHub Actions workflow!_ :rocket:
 

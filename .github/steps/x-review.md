@@ -13,9 +13,6 @@ Here's a recap of all the tasks you've accomplished in your repository:
 
 ### What's next?
 
+- [Take another exercise](https://skills.github.com/)
 - [Learn more about GitHub Actions](https://docs.github.com/actions/)
 - [Awesome Actions](https://github.com/sdras/awesome-actions)
-- [Discussion board](https://github.com/orgs/skills/discussions/categories/hello-github-actions)
-- [Take another exercise](https://skills.github.com/#automate-workflows-with-github-actions)
-- [Get started with GitHub](https://docs.github.com/get-started)
-- [GitHub Explore](https://github.com/explore)

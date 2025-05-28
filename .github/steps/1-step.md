@@ -2,7 +2,7 @@
 
 Welcome to "Hello GitHub Actions" exercise! :wave:
 
-### 📖 Theory: Introduction to workflows, workflow files, and event triggers
+### 📖 Theory: Introduction to workflows
 
 A **workflow** is an automated process that you define in your repository. Workflows are described in YAML files stored in the `.github/workflows` directory. Each workflow is triggered by specific **events**—such as opening a pull request, pushing code, or creating an issue—that happen in your repository.
 
@@ -13,7 +13,7 @@ Workflows let you automate tasks like building, testing, or deploying your code,
 > - [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 > - [Events that trigger workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request)
 
-### ⌨️ Activity: Create a workflow file and open a pull request
+### ⌨️ Activity: Create a workflow file
 
 1. Open this repository in a new browser tab so you can work on the steps while you read the instructions in this tab.
 1. In the **Code** tab of your repository, create a new branch named `welcome-workflow`.

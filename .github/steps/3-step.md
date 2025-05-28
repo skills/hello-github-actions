@@ -25,6 +25,8 @@ Steps are the building blocks of jobs, allowing you to automate tasks like check
          PR_URL: ${{ github.event.pull_request.html_url }}
    ```
 
+   > ❗ **Caution:** The `steps` section must be indented under the `welcome` job. At the same level as `name` and `runs-on` parameters. Ensure that the indentation is correct to avoid syntax errors.
+
 1. Commit your changes directly to `welcome-workflow` branch.
 1. As you commit your changes Mona will prepare the next step in this exercise!
 

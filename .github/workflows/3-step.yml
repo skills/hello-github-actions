@@ -95,7 +95,7 @@ jobs:
             step_number: 3
             passed: ${{ !contains(steps.*.outcome, 'failure') }}
             results_table:
-              - description: "Workflow file passes actionlint syntax validation"
+              - description: "Workflow file syntax validation"
                 passed: ${{ steps.actionlint-check.outcome == 'success' }}
               - description: "Added steps section to welcome job"
                 passed: ${{ steps.check-steps-section.outcome == 'success' }}

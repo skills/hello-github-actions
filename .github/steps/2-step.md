@@ -2,7 +2,7 @@
 
 Nice work! :tada: You added a workflow file!
 
-### 📖 Theory: Introduction to jobs in GitHub Actions workflows
+### 📖 Theory: Introduction to jobs
 
 A **job** is a group of steps that run together on the same runner within a workflow. Jobs are defined in the workflow file under the `jobs` section. Each job runs independently by default, but you can configure jobs to depend on each other.
 
