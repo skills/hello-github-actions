@@ -2,21 +2,24 @@
 
 Welcome to "Hello GitHub Actions" exercise! :wave:
 
-### 📖 Theory: What is GitHub Actions and a workflow?
+### 📖 Theory: Introduction to workflows, workflow files, and event triggers
+
+A **workflow** is an automated process that you define in your repository. Workflows are described in YAML files stored in the `.github/workflows` directory. Each workflow is triggered by specific **events**—such as opening a pull request, pushing code, or creating an issue—that happen in your repository.
+
+Workflows let you automate tasks like building, testing, or deploying your code, and can respond to almost any activity in your project.
 
 > [!NOTE]
-> GitHub Actions is a flexible way to automate nearly every aspect of your team's software workflow. Workflows are defined in special files in the `.github/workflows` directory and execute based on your chosen event.
-
-- [GitHub Actions feature page](https://github.com/features/actions)
-- [GitHub Actions documentation](https://docs.github.com/actions)
-- [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
-- [pull_request event](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#pull_request)
+> If you want to learn more check out these resources:
+> - [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+> - [Events that trigger workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request)
 
 ### ⌨️ Activity: Create a workflow file and open a pull request
 
 1. Open this repository in a new browser tab so you can work on the steps while you read the instructions in this tab.
 1. Create a new branch named `welcome-workflow`.
-1. In the `welcome-workflow` branch, create a new file at `.github/workflows/welcome.yml` with the following content:
+   <!-- TODO: Add screenshot -->
+1. In the `welcome-workflow` branch, navigate to the `.github/workflows` directory.
+1. Create a new file named `welcome.yml` in the `.github/workflows` directory with the following content:
 
    ```yaml
    name: Post welcome comment

@@ -19,7 +19,6 @@ The shell script in the workflow will run whenever a new pull request is opened.
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 
-- Make sure your workflow file is in the correct location and named properly.
 - Check the **Actions** tab for workflow run details and errors.
 
 </details>
