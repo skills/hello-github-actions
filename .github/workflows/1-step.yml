@@ -16,7 +16,7 @@ env:
 jobs:
   find_exercise:
     name: Find Exercise Issue
-    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.4.0
+    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.5.0
 
   check_step_work:
     name: Check step work
@@ -34,7 +34,7 @@ jobs:
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.4.0
+          ref: v0.5.0
 
       - name: Update comment - checking work
         run: |
@@ -47,7 +47,7 @@ jobs:
       - name: Check if welcome.yml file exists
         id: check-file-exists
         continue-on-error: true
-        uses: skills/exercise-toolkit/actions/file-exists@v0.4.0
+        uses: skills/exercise-toolkit/actions/file-exists@v0.5.0
         with:
           file: .github/workflows/welcome.yml
 
@@ -67,13 +67,13 @@ jobs:
           text-file: .github/workflows/welcome.yml
           keyphrase: "pull_request:"
 
-      - name: Check for opened type in welcome.yml
+      - name: Check for types filter
         id: check-opened-type
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
           text-file: .github/workflows/welcome.yml
-          keyphrase: "types: [opened]"
+          keyphrase: "types:"
 
       - name: Check for permissions in welcome.yml
         id: check-permissions
@@ -98,7 +98,7 @@ jobs:
                 passed: ${{ steps.check-workflow-name.outcome == 'success' }}
               - description: "Configured pull_request event trigger"
                 passed: ${{ steps.check-pull-request-event.outcome == 'success' }}
-              - description: "Set types to [opened] for pull_request event"
+              - description: "Set types filter for pull_request event"
                 passed: ${{ steps.check-opened-type.outcome == 'success' }}
               - description: "Added pull-requests: write permission"
                 passed: ${{ steps.check-permissions.outcome == 'success' }}
@@ -146,7 +146,7 @@ jobs:
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.4.0
+          ref: v0.5.0
       - name: Create comment - add step content
         run: |
           gh issue comment "$ISSUE_URL" \
