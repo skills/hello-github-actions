@@ -4,18 +4,18 @@ Nice work! :tada: You added a workflow file!
 
 ### 📖 Theory: Introduction to jobs
 
-A **job** is a group of steps that run together on the same runner within a workflow. Jobs are defined in the workflow file under the `jobs` section. Each job runs independently by default, but you can configure jobs to depend on each other.
+A [job](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions#jobs) is a group of steps that run together on the same [runner](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners) within a workflow. Each job is defined under the `jobs` section and runs independently and in parallel by default.
 
-Jobs help you organize your workflow into logical units, such as building, testing, or deploying your code. Each job can run on different environments and can be configured to run in parallel or sequentially.
+Jobs help you organize your workflow into logical units, such as building, testing, or deploying your code.
 
-> [!NOTE]
->
-> - [Jobs in GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#jobs)
+> [!Tip]
+> You can define a job to run with multiple [variations using a matrix strategy](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow).
 
 ### ⌨️ Activity: Add a job to your workflow file
 
 1. In the `welcome-workflow` branch, open your `.github/workflows/welcome.yml` file.
-1. Edit the file to add a job section as shown below:
+
+1. Edit the file to add the `jobs` section and 1 job named `welcome`, which will run on the latest Ubuntu operating system.
 
    ```yaml
    name: Post welcome comment
@@ -30,8 +30,9 @@ Jobs help you organize your workflow into logical units, such as building, testi
        runs-on: ubuntu-latest
    ```
 
-1. Commit your changes directly to the `welcome-workflow` branch.
-1. As you commit your changes Mona will prepare the next step in this exercise!
+1. Commit your changes to the `welcome-workflow` branch.
+
+1. With the job information added, Mona will review your work and prepare the next step in this exercise!
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>

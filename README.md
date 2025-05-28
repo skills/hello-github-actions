@@ -4,12 +4,12 @@ _Create and run a GitHub Actions workflow._
 
 ## Welcome
 
-Automation is key for streamlining your work processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to supercharge your workflow.
+Automation is key for repetitive tasks like testing, scanning, review, and deployment processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to streamline that workflow.
 
-- **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users.
+- **Who is this for**: Developers, DevOps engineers, Security engineers
 - **What you'll learn**: How to create GitHub Actions workflows, how to run them, and how to use them to automate tasks.
 - **What you'll build**: An Actions workflow that will comment on a pull request when it is created.
-- **Prerequisites**: If you are new to GitHub, we recommend you take the [Introduction to GitHub](https://github.com/skills/introduction-to-github) exercise first.
+- **Prerequisites**: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
 - **How long**: This exercise can be finished in less than 30min.
 
 In this exercise, you will:
@@ -17,14 +17,14 @@ In this exercise, you will:
 1. Create a workflow file
 1. Add a job
 1. Add a run step
+1. See the workflow run
 1. Merge your pull request
-1. See effect of the workflow
 
 ### How to start this exercise
 
 Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=FidelusAleksander&template_name=hello-github-actions&owner=%40me&name=skills-hello-github-actions&description=Exercise:Create+and+run+a+GitHub+Actions+Workflow&visibility=public)
+[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=FidelusAleksander&template_name=hello-github-actions&owner=%40me&name=skills-hello-github-actions&description=Exercise:+Create+and+run+a+GitHub+Actions+Workflow&visibility=public)
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
