@@ -28,8 +28,7 @@ Welcome to "Hello GitHub Actions" exercise! :wave:
    ```
 
 1. Commit your changes directly to the `welcome-workflow` branch.
-1. Create a pull request from the `welcome-workflow` branch to `main`.
-1. Wait about 20 seconds, then refresh this page.
+1. As you commit your changes Mona will prepare the next step in this exercise!
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>

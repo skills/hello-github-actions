@@ -13,7 +13,7 @@ permissions:
   issues: write
 
 env:
-  REVIEW_FILE: ".github/steps/X-finish.md"
+  REVIEW_FILE: ".github/steps/x-review.md"
 
 jobs:
   find_exercise:

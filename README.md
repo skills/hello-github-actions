@@ -9,16 +9,16 @@ Automation is key for streamlining your work processes, and [GitHub Actions](htt
 - **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users.
 - **What you'll learn**: How to create workflow files, trigger workflows, and find workflow logs.
 - **What you'll build**: An Actions workflow that will check emoji shortcode references in Markdown files.
-- **Prerequisites**: In this course you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](https://github.com/skills/introduction-to-github) course first.
-- **How long**: This course can be finished in less than two hours.
+- **Prerequisites**: In this exercise you will work with issues and pull requests, as well as edit files. We recommend you take the [Introduction to GitHub](https://github.com/skills/introduction-to-github) exercise first.
+- **How long**: This exercise can be finished in less than two hours.
 
-In this course, you will:
+In this exercise, you will:
 
 1. Create a workflow
-2. Add a job
-3. Add a run step
-4. Merge your pull request
-5. See effect of the workflow
+1. Add a job
+1. Add a run step
+1. Merge your pull request
+1. See effect of the workflow
 
 ### How to start this exercise
 

@@ -15,6 +15,7 @@ The shell script in the workflow will run whenever a new pull request is opened.
 1. Watch the workflow running in the checks section of the pull request.
 1. Notice the comment that the workflow adds to the pull request.
 
+
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 

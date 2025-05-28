@@ -28,7 +28,7 @@ Nice work! :tada: You added a workflow file!
    ```
 
 1. Commit your changes directly to the `welcome-workflow` branch.
-1. Wait about 20 seconds, then refresh this page.
+1. As you commit your changes Mona will prepare the next step in this exercise!
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>

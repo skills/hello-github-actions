@@ -23,7 +23,7 @@ _Nice work adding a job to your workflow! :dancer:_
    ```
 
 1. Commit your changes directly to your branch.
-1. Wait about 20 seconds, then refresh this page.
+1. As you commit your changes Mona will prepare the next step in this exercise!
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
