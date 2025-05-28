@@ -19,7 +19,7 @@ Steps are the building blocks of jobs, allowing you to automate tasks like check
 
    ```yaml
    steps:
-     - run: gh pr comment $PR_URL --body "Welcome to the repository!"
+     - run: gh pr comment "$PR_URL" --body "Welcome to the repository!"
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          PR_URL: ${{ github.event.pull_request.html_url }}
