@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Giusti del Re</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+color: #333;
+}
+header, footer {
+background-color: #444;
+color: white;
+text-align: center;
+padding: 1rem 0;
+}
+main {
+max-width: 900px;
+margin: auto;
+padding: 20px;
+background-color: white;
+}
+section {
+margin-bottom: 2rem;
+}
+h1, h2 {
+color: #2c3e50;
+}
+a {
+color: #007acc;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>I Giusti del Re</h1>
+<p>Vivere il Vangelo nel servizio ai fratelli</p>
+</header>
+
+<main>
+<section>
+<h2>Chi siamo</h2>
+<p>“I Giusti del Re” è una via spirituale fondata sul Vangelo di Matteo 25.
+Riconosciamo Cristo nei poveri, nei malati, negli stranieri e nei dimenticati.
+Viviamo la fede nel servizio silenzioso.</p>
+</section>
+
+<section>
+<h2>Fede e Regola</h2>
+<ul>
+<li>Crediamo che Dio è presente nei fratelli più piccoli.</li>
+<li>La nostra liturgia è l’azione silenziosa dell’amore.</li>
+<li>Non chiediamo sacrifici, ma gesti concreti di giustizia e compassione.</li>
+</ul>
+<p>
+📄 <a href="Statuto_I_Giusti_del_Re.docx" download>Scarica lo Statuto</a><br>
+📄 <a href="Regola_di_Vita_I_Giusti_del_Re.docx" download>Scarica la Regola di Vita</a>
+</p>
+</section>
+
+<section>
+<h2>Liturgia di Ingresso</h2>
+<p>L’ingresso avviene con una semplice Liturgia del Servizio, nella quale il candidato porta un gesto concreto d’amore, ascolta il Vangelo e riceve la benedizione del Re.</p>
+<p>📄 <a href="Liturgia_Ingresso_I_Giusti_del_Re.docx" download>Scarica la Liturgia di Ingresso</a></p>
+</section>
+
+<section>
+<h2>Unisciti a noi</h2>
+<p>Vuoi far parte dei Giusti del Re? Scrivici, raccontaci chi vuoi servire e unisciti a una comunità che prega, ama e dona in silenzio.</p>
+<p>Email: <a href="mailto:contatto@giustidelre.org">contatto@giustidelre.org</a></p>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2025 I Giusti del Re – Tutti i diritti riservati</p>
+</footer>
+
+</body>
+</html>
