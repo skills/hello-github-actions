@@ -1,0 +1,10 @@
+name: Hello GitHub Actions
+
+on: [pull_request]
+
+jobs:
+  comment-on-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello in PR
+        run: echo "¡Hola! Gracias por tu pull request ��"
