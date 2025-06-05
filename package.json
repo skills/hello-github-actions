@@ -1,0 +1,12 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "description": "Automatización de pruebas API con Newman",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run API\\ Tareas.postman_collection.json -e Entorno\\ de\\ pruebas.postman_environment.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
