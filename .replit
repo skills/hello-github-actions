@@ -1,0 +1,6 @@
+run = "git add"
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "git add"]
