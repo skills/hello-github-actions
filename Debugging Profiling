@@ -2031,7 +2031,6 @@ License
 dats is licensed under the MIT license. See the LICENSE file for more information.
 
 Templating.
-
 Marko.
 
 ⭐️ Marko 6 is here! Visit next.markojs.com for latest docs ⭐️
@@ -2558,7 +2557,6 @@ Full documentation is at pugjs.org
 Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers. For bug reports, feature requests and questions, open an issue. For discussion join the chat room.
 
 You can test drive Pug online here.
-
 Professionally supported pug is now available
 
 Build Status Rolling Versions NPM version Join Gitter Chat
