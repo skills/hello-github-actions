@@ -790,7 +790,6 @@ npm run test-only   # runs only unit tests without other checks
 npm run test-debug  # runs tests with a chrome inspector connected to the node process
 npm run build-docs  # builds the documentation html file.
 
-
 Hardware.
 Johnny-five.
 Johnny-Five
