@@ -2030,5 +2030,693 @@ We'd love for you to contribute to dats! If you have any questions on how to use
 License
 dats is licensed under the MIT license. See the LICENSE file for more information.
 
+Templating.
+
+Marko.
+
+⭐️ Marko 6 is here! Visit next.markojs.com for latest docs ⭐️
+Marko Home
+Docs
+Try Online
+GitHub
+☰
+✕
+Marko 
+5.37.29
+GUIDES
+Installing
+Getting started
+Conditionals and lists
+Custom tags
+State
+Styles
+Events
+Body content
+TypeScript
+Marko 5 upgrade
+Troubleshooting Streaming
+TUTORIALS
+Color Picker
+REFERENCE
+Rendering
+Syntax
+Core tags
+Class components
+marko.json
+Compiler
+BUNDLER INTEGRATIONS
+Vite
+Webpack
+Rollup
+Lasso
+SERVER INTEGRATIONS
+Cloudflare Workers
+Express
+Fastify
+Koa
+HTTP
+TOOLING
+Editor plugins
+ARTICLES
+Marko vs React
+Why is Marko Fast
+10 Awesome Marko Features
+Getting started
+Setup
+Marko Run (Recommended)
+Marko Run makes it easy to get started with little to no config and is the recommended starting point for a new Marko project.
+
+To set up your project:
+
+npm init marko -- -t basic
+cd ./<PROJECT_NAME>
+npm run dev
+Open src/routes/_index/+page.marko in your editor to change the index page. See the routing documentation to learn how to add additional pages to your project.
+
+Other setups
+If you just want to test out Marko in your browser, use the Try Online feature. You can open it in another tab and follow along. For other setups, check out the Installation page.
+
+Hello world
+Marko makes it easy to represent your UI using a syntax that is like HTML:
+
+hello.marko
+⇄
+<h1>Hello World</h1>
+In fact, Marko is so much like HTML, that you can use it as a replacement for a templating language like handlebars, mustache, or pug:
+
+template.marko
+⇄
+<!doctype html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+However, Marko is much more than a templating language. It's a language that allows you to declaratively build an application by describing how the application view changes over time and in response to user actions.
+
+In the browser, when the data representing your UI changes, Marko will automatically and efficiently update the DOM to reflect the changes.
+
+A simple component
+Let's say we want to perform an action once a <button> is clicked:
+
+button.marko
+⇄
+<button>Click me!</button>
+Marko makes this really easy, allowing you to define a class for a component right in the .marko view and call methods of that class with on- attributes:
+
+button.marko
+⇄
+class {
+    sayHi() {
+        alert("Hi!");
+    }
+}
+
+<button on-click("sayHi")>Click me!</button>
+Adding state
+Alerting when a button is clicked is great, but what about updating your UI in response to an action? Marko's stateful components make this easy. All you need to do is set this.state from inside your component's class. This makes a new state variable available to your view. When a value in this.state is changed, the view will automatically re-render and only update the part of the DOM that changed.
+
+counter.marko
+⇄
+class {
+    onCreate() {
+        this.state = {
+            count: 0
+        };
+    }
+    increment() {
+        this.state.count++;
+    }
+}
+
+<div>The current count is ${state.count}</div>
+<button on-click("increment")>Click me!</button>
+EDIT on GitHub
+Contributors
+Helpful? You can thank these awesome people! You can also edit this doc if you see any issues or want to improve it.
+
+DylanPiercey
+mlrawlings
++
+You.
+
+OpenJS Foundation
+MIT License
+eBayopen source. Chat in Marko's Discord Server.
+
+
+Nunjucks.
+
+Nunjucks
+NPM Version NPM Downloads CI Codecov
+
+Nunjucks is a full featured templating engine for javascript. It is heavily inspired by jinja2. View the docs here.
+
+Installation
+npm install nunjucks
+
+To use the file watcher built-in to Nunjucks, Chokidar must be installed separately.
+
+npm install nunjucks chokidar
+
+(View the CHANGELOG)
+
+Documentation
+Nunjucks info and documentation source is in /docs and publishes to https://mozilla.github.io/nunjucks/
+
+Browser Support
+Supported in all modern browsers. For IE8 support, use es5-shim.
+
+Tests
+Run the tests with npm test.
+
+Get in touch
+If you have ideas or questions, or need help, you can reach us in the #nunjucks:mozilla.org room on Matrix.
+
+Want to help.
+Contributions are always welcome! Before you submit an issue or pull request, please read our contribution guidelines.
+
+Contributors
+Contributors graph. Avatars provided by https://contrib.rocks.
+
+
+
+Handlebars.js.
+
+CI Build Status jsDelivr Hits npm downloads npm version Bundle size Install size
+
+Handlebars.js
+Handlebars provides the power necessary to let you build semantic templates effectively with no frustration. Handlebars is largely compatible with Mustache templates. In most cases it is possible to swap out Mustache with Handlebars and continue using your current templates.
+
+Checkout the official Handlebars docs site at handlebarsjs.com and try our live demo.
+
+Installing
+See our installation documentation.
+
+Usage
+In general, the syntax of Handlebars.js templates is a superset of Mustache templates. For basic syntax, check out the Mustache manpage.
+
+Once you have a template, use the Handlebars.compile method to compile the template into a function. The generated function takes a context argument, which will be used to render the template.
+
+var source = "<p>Hello, my name is {{name}}. I am from {{hometown}}. I have " +
+             "{{kids.length}} kids:</p>" +
+             "<ul>{{#kids}}<li>{{name}} is {{age}}</li>{{/kids}}</ul>";
+var template = Handlebars.compile(source);
+
+var data = { "name": "Alan", "hometown": "Somewhere, TX",
+             "kids": [{"name": "Jimmy", "age": "12"}, {"name": "Sally", "age": "4"}]};
+var result = template(data);
+
+// Would render:
+// <p>Hello, my name is Alan. I am from Somewhere, TX. I have 2 kids:</p>
+// <ul>
+// <li>Jimmy is 12</li>
+// <li>Sally is 4</li>
+// </ul>
+Full documentation and more examples are at handlebarsjs.com.
+
+Precompiling Templates
+Handlebars allows templates to be precompiled and included as javascript code rather than the handlebars template allowing for faster startup time. Full details are located here.
+
+Differences Between Handlebars.js and Mustache
+Handlebars.js adds a couple of additional features to make writing templates easier and also changes a tiny detail of how partials work.
+
+Nested Paths
+Helpers
+Block Expressions
+Literal Values
+Delimited Comments
+Block expressions have the same syntax as mustache sections but should not be confused with one another. Sections are akin to an implicit each or with statement depending on the input data and helpers are explicit pieces of code that are free to implement whatever behavior they like. The mustache spec defines the exact behavior of sections. In the case of name conflicts, helpers are given priority.
+
+Compatibility
+There are a few Mustache behaviors that Handlebars does not implement.
+
+Handlebars deviates from Mustache slightly in that it does not perform recursive lookup by default. The compile time compat flag must be set to enable this functionality. Users should note that there is a performance cost for enabling this flag. The exact cost varies by template, but it's recommended that performance sensitive operations should avoid this mode and instead opt for explicit path references.
+The optional Mustache-style lambdas are not supported. Instead Handlebars provides its own lambda resolution that follows the behaviors of helpers.
+Handlebars does not allow space between the opening {{ and a command character such as #, / or >. The command character must immediately follow the braces, so for example {{> partial }} is allowed but {{ > partial }} is not.
+Alternative delimiters are not supported.
+Supported Environments
+Handlebars has been designed to work in any ECMAScript 2020 environment. This includes
+
+Node.js
+Chrome
+Firefox
+Safari
+Edge
+If you need to support older environments, use Handlebars version 4.
+
+Performance
+In a rough performance test, precompiled Handlebars.js templates (in the original version of Handlebars.js) rendered in about half the time of Mustache templates. It would be a shame if it were any other way, since they were precompiled, but the difference in architecture does have some big performance advantages. Justin Marney, a.k.a. gotascii, confirmed that with an independent test. The rewritten Handlebars (current version) is faster than the old version, with many performance tests being 5 to 7 times faster than the Mustache equivalent.
+
+Upgrading
+See release-notes.md for upgrade notes.
+
+If you are using Handlebars in production, please regularly look for issues labeled possibly breaking. If this label is applied to an issue, it means that the requested change is probably not a breaking change, but since Handlebars is widely in use by a lot of people, there's always a chance that it breaks somebody's build.
+
+Known Issues
+See FAQ.md for known issues and common pitfalls.
+
+Handlebars in the Wild
+apiDoc apiDoc uses handlebars as parsing engine for api documentation view generation.
+Assemble, by @jonschlinkert and @doowb, is a static site generator that uses Handlebars.js as its template engine.
+CoSchedule An editorial calendar for WordPress that uses Handlebars.js.
+Ember.js makes Handlebars.js the primary way to structure your views, also with automatic data binding support.
+express-handlebars A Handlebars view engine for Express which doesn't suck.
+express-hbs Express Handlebars template engine with inheritance, partials, i18n and async helpers.
+Ghost Just a blogging platform.
+handlebars-action A GitHub action to transform files in your repository with Handlebars templating.
+handlebars_assets A Rails Asset Pipeline gem from Les Hill (@leshill).
+handlebars-helpers is an extensive library with 100+ handlebars helpers.
+handlebars-layouts is a set of helpers which implement extensible and embeddable layout blocks as seen in other popular templating languages.
+handlebars-loader A handlebars template loader for webpack.
+handlebars-wax The missing Handlebars API. Effortless registration of data, partials, helpers, and decorators using file-system globs, modules, and plain-old JavaScript objects.
+hbs An Express.js view engine adapter for Handlebars.js, from Don Park.
+html-bundler-webpack-plugin The webpack plugin to compile templates, supports Handlebars.
+incremental-bars adds support for incremental-dom as template target to Handlebars.
+jblotus created http://tryhandlebarsjs.com for anyone who would like to try out Handlebars.js in their browser.
+jQuery plugin allows you to use Handlebars.js with jQuery.
+just-handlebars-helpers A fully tested lightweight package with common Handlebars helpers.
+koa-hbs koa generator based renderer for Handlebars.js.
+Marionette.Handlebars adds support for Handlebars and Mustache templates to Marionette.
+openVALIDATION a natural language compiler for validation rules. Generates program code in Java, JavaScript, C#, Python and Rust with handlebars.
+Plop is a micro-generator framework that makes it easy to create files with a level of uniformity.
+promised-handlebars is a wrapper for Handlebars that allows helpers to return Promises.
+sammy.js by Aaron Quint, a.k.a. quirkey, supports Handlebars.js as one of its template plugins.
+Swag by @elving is a growing collection of helpers for handlebars.js. Give your handlebars.js templates some swag son!
+SproutCore uses Handlebars.js as its main templating engine, extending it with automatic data binding support.
+vite-plugin-handlebars A package for Vite 2. Allows for running your HTML files through the Handlebars compiler.
+YUI implements a port of handlebars.
+External Resources
+Gist about Synchronous and asynchronous loading of external handlebars templates
+Have a project using Handlebars? Send us a pull request!
+
+License
+Handlebars.js is released under the MIT license.
+
+
+EJS.
+
+Embedded JavaScript templates
+Known Vulnerabilities
+Security
+Security professionals, before reporting any security issues, please reference the SECURITY.md in this project, in particular, the following: "EJS is effectively a JavaScript runtime. Its entire job is to execute JavaScript. If you run the EJS render method without checking the inputs yourself, you are responsible for the results."
+
+In short, DO NOT submit 'vulnerabilities' that include this snippet of code:
+
+app.get('/', (req, res) => {
+  res.render('index', req.query);
+});
+Installation
+$ npm install ejs
+Features
+Control flow with <% %>
+Escaped output with <%= %> (escape function configurable)
+Unescaped raw output with <%- %>
+Newline-trim mode ('newline slurping') with -%> ending tag
+Whitespace-trim mode (slurp all whitespace) for control flow with <%_ _%>
+Custom delimiters (e.g. [? ?] instead of <% %>)
+Includes
+Client-side support
+Static caching of intermediate JavaScript
+Static caching of templates
+Complies with the Express view system
+Example
+<% if (user) { %>
+  <h2><%= user.name %></h2>
+<% } %>
+Try EJS online at: https://ionicabizau.github.io/ejs-playground/.
+
+Basic usage
+let template = ejs.compile(str, options);
+template(data);
+// => Rendered HTML string
+
+ejs.render(str, data, options);
+// => Rendered HTML string
+
+ejs.renderFile(filename, data, options, function(err, str){
+    // str => Rendered HTML string
+});
+It is also possible to use ejs.render(dataAndOptions); where you pass everything in a single object. In that case, you'll end up with local variables for all the passed options. However, be aware that your code could break if we add an option with the same name as one of your data object's properties. Therefore, we do not recommend using this shortcut.
+
+Important
+You should never give end-users unfettered access to the EJS render method, If you do so you are using EJS in an inherently un-secure way.
+
+Options
+cache Compiled functions are cached, requires filename
+filename The name of the file being rendered. Not required if you are using renderFile(). Used by cache to key caches, and for includes.
+root Set template root(s) for includes with an absolute path (e.g, /file.ejs). Can be array to try to resolve include from multiple directories.
+views An array of paths to use when resolving includes with relative paths.
+context Function execution context
+compileDebug When false no debug instrumentation is compiled
+client When true, compiles a function that can be rendered in the browser without needing to load the EJS Runtime (ejs.min.js).
+delimiter Character to use for inner delimiter, by default '%'
+openDelimiter Character to use for opening delimiter, by default '<'
+closeDelimiter Character to use for closing delimiter, by default '>'
+debug Outputs generated function body
+strict When set to true, generated function is in strict mode
+_with Whether or not to use with() {} constructs. If false then the locals will be stored in the locals object. Set to false in strict mode.
+destructuredLocals An array of local variables that are always destructured from the locals object, available even in strict mode.
+localsName Name to use for the object storing local variables when not using with Defaults to locals
+rmWhitespace Remove all safe-to-remove whitespace, including leading and trailing whitespace. It also enables a safer version of -%> line slurping for all scriptlet tags (it does not strip new lines of tags in the middle of a line).
+escape The escaping function used with <%= construct. It is used in rendering and is .toString()ed in the generation of client functions. (By default escapes XML).
+outputFunctionName Set to a string (e.g., 'echo' or 'print') for a function to print output inside scriptlet tags.
+async When true, EJS will use an async function for rendering. (Depends on async/await support in the JS runtime).
+includer Custom function to handle EJS includes, receives (originalPath, parsedPath) parameters, where originalPath is the path in include as-is and parsedPath is the previously resolved path. Should return an object { filename, template }, you may return only one of the properties, where filename is the final parsed path and template is the included content.
+This project uses JSDoc. For the full public API documentation, clone the repository and run jake doc. This will run JSDoc with the proper options and output the documentation to out/. If you want the both the public & private API docs, run jake devdoc instead.
+
+Tags
+<% 'Scriptlet' tag, for control-flow, no output
+<%_ 'Whitespace Slurping' Scriptlet tag, strips all whitespace before it
+<%= Outputs the value into the template (escaped)
+<%- Outputs the unescaped value into the template
+<%# Comment tag, no execution, no output
+<%% Outputs a literal '<%'
+%%> Outputs a literal '%>'
+%> Plain ending tag
+-%> Trim-mode ('newline slurp') tag, trims following newline
+_%> 'Whitespace Slurping' ending tag, removes all whitespace after it
+For the full syntax documentation, please see docs/syntax.md.
+
+Includes
+Includes either have to be an absolute path, or, if not, are assumed as relative to the template with the include call. For example if you are including ./views/user/show.ejs from ./views/users.ejs you would use <%- include('user/show') %>.
+
+You must specify the filename option for the template with the include call unless you are using renderFile().
+
+You'll likely want to use the raw output tag (<%-) with your include to avoid double-escaping the HTML output.
+
+<ul>
+  <% users.forEach(function(user){ %>
+    <%- include('user/show', {user: user}) %>
+  <% }); %>
+</ul>
+Includes are inserted at runtime, so you can use variables for the path in the include call (for example <%- include(somePath) %>). Variables in your top-level data object are available to all your includes, but local variables need to be passed down.
+
+NOTE: Include preprocessor directives (<% include user/show %>) are not supported in v3.0+.
+
+Custom delimiters
+Custom delimiters can be applied on a per-template basis, or globally:
+
+let ejs = require('ejs'),
+    users = ['geddy', 'neil', 'alex'];
+
+// Just one template
+ejs.render('<p>[?= users.join(" | "); ?]</p>', {users: users}, {delimiter: '?', openDelimiter: '[', closeDelimiter: ']'});
+// => '<p>geddy | neil | alex</p>'
+
+// Or globally
+ejs.delimiter = '?';
+ejs.openDelimiter = '[';
+ejs.closeDelimiter = ']';
+ejs.render('<p>[?= users.join(" | "); ?]</p>', {users: users});
+// => '<p>geddy | neil | alex</p>'
+Caching
+EJS ships with a basic in-process cache for caching the intermediate JavaScript functions used to render templates. It's easy to plug in LRU caching using Node's lru-cache library:
+
+let ejs = require('ejs'),
+    LRU = require('lru-cache');
+ejs.cache = LRU(100); // LRU cache with 100-item limit
+If you want to clear the EJS cache, call ejs.clearCache. If you're using the LRU cache and need a different limit, simple reset ejs.cache to a new instance of the LRU.
+
+Custom file loader
+The default file loader is fs.readFileSync, if you want to customize it, you can set ejs.fileLoader.
+
+let ejs = require('ejs');
+let myFileLoad = function (filePath) {
+  return 'myFileLoad: ' + fs.readFileSync(filePath);
+};
+
+ejs.fileLoader = myFileLoad;
+With this feature, you can preprocess the template before reading it.
+
+Layouts
+EJS does not specifically support blocks, but layouts can be implemented by including headers and footers, like so:
+
+<%- include('header') -%>
+<h1>
+  Title
+</h1>
+<p>
+  My page
+</p>
+<%- include('footer') -%>
+Client-side support
+Go to the Latest Release, download ./ejs.js or ./ejs.min.js. Alternately, you can compile it yourself by cloning the repository and running jake build (or $(npm bin)/jake build if jake is not installed globally).
+
+Include one of these files on your page, and ejs should be available globally.
+
+Example
+<div id="output"></div>
+<script src="ejs.min.js"></script>
+<script>
+  let people = ['geddy', 'neil', 'alex'],
+      html = ejs.render('<%= people.join(", "); %>', {people: people});
+  // With jQuery:
+  $('#output').html(html);
+  // Vanilla JS:
+  document.getElementById('output').innerHTML = html;
+</script>
+Caveats
+Most of EJS will work as expected; however, there are a few things to note:
+
+Obviously, since you do not have access to the filesystem, ejs.renderFile() won't work.
+For the same reason, includes do not work unless you use an include callback. Here is an example:
+let str = "Hello <%= include('file', {person: 'John'}); %>",
+    fn = ejs.compile(str, {client: true});
+
+fn(data, null, function(path, d){ // include callback
+  // path -> 'file'
+  // d -> {person: 'John'}
+  // Put your code here
+  // Return the contents of file as a string
+}); // returns rendered string
+See the examples folder for more details.
+
+CLI
+EJS ships with a full-featured CLI. Options are similar to those used in JavaScript code:
+
+-o / --output-file FILE Write the rendered output to FILE rather than stdout.
+-f / --data-file FILE Must be JSON-formatted. Use parsed input from FILE as data for rendering.
+-i / --data-input STRING Must be JSON-formatted and URI-encoded. Use parsed input from STRING as data for rendering.
+-m / --delimiter CHARACTER Use CHARACTER with angle brackets for open/close (defaults to %).
+-p / --open-delimiter CHARACTER Use CHARACTER instead of left angle bracket to open.
+-c / --close-delimiter CHARACTER Use CHARACTER instead of right angle bracket to close.
+-s / --strict When set to true, generated function is in strict mode
+-n / --no-with Use 'locals' object for vars rather than using with (implies --strict).
+-l / --locals-name Name to use for the object storing local variables when not using with.
+-w / --rm-whitespace Remove all safe-to-remove whitespace, including leading and trailing whitespace.
+-d / --debug Outputs generated function body
+-h / --help Display this help message.
+-V/v / --version Display the EJS version.
+Here are some examples of usage:
+
+$ ejs -p [ -c ] ./template_file.ejs -o ./output.html
+$ ejs ./test/fixtures/user.ejs name=Lerxst
+$ ejs -n -l _ ./some_template.ejs -f ./data_file.json
+Data input
+There is a variety of ways to pass the CLI data for rendering.
+
+Stdin:
+
+$ ./test/fixtures/user_data.json | ejs ./test/fixtures/user.ejs
+$ ejs ./test/fixtures/user.ejs < test/fixtures/user_data.json
+A data file:
+
+$ ejs ./test/fixtures/user.ejs -f ./user_data.json
+A command-line option (must be URI-encoded):
+
+./bin/cli.js -i %7B%22name%22%3A%20%22foo%22%7D ./test/fixtures/user.ejs
+Or, passing values directly at the end of the invocation:
+
+./bin/cli.js -m $ ./test/fixtures/user.ejs name=foo
+Output
+The CLI by default send output to stdout, but you can use the -o or --output-file flag to specify a target file to send the output to.
+
+IDE Integration with Syntax Highlighting
+VSCode:Javascript EJS by DigitalBrainstem
+
+Related projects
+There are a number of implementations of EJS:
+
+TJ's implementation, the v1 of this library: https://github.com/tj/ejs
+EJS Embedded JavaScript Framework on Google Code: https://code.google.com/p/embeddedjavascript/
+Sam Stephenson's Ruby implementation: https://rubygems.org/gems/ejs
+Erubis, an ERB implementation which also runs JavaScript: http://www.kuwata-lab.com/erubis/users-guide.04.html#lang-javascript
+DigitalBrainstem EJS Language support: https://github.com/Digitalbrainstem/ejs-grammar
+License
+Licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+EJS Embedded JavaScript templates copyright 2112 mde@fleegix.org.
+
+
+Pug.
+Pug
+Full documentation is at pugjs.org
+Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers. For bug reports, feature requests and questions, open an issue. For discussion join the chat room.
+
+You can test drive Pug online here.
+
+Professionally supported pug is now available
+
+Build Status Rolling Versions NPM version Join Gitter Chat
+
+Packages
+Package Name Version
+pug NPM version
+pug-attrs NPM version
+pug-code-gen NPM version
+pug-error NPM version
+pug-filters NPM version
+pug-lexer NPM version
+pug-linker NPM version
+pug-load NPM version
+pug-parser NPM version
+pug-runtime NPM version
+pug-strip-comments NPM version
+pug-walk NPM version
+Rename from "Jade"
+This project was formerly known as "Jade". However, it was revealed to us that "Jade" is a registered trademark; as a result, a rename was needed. After some discussion among the maintainers, "Pug" was chosen as the new name for this project. As of version 2, "pug" is the official package name.
+
+If your package or app currently uses jade, don't worry: we have secured permissions to continue to occupy that package name, although all new versions will be released under pug.
+
+Before the renaming, work had already begun on “Jade 2.0.0”. Therefore, the rename to Pug coincided with the major version bump. As a result, upgrading from Jade to Pug will be the same process as upgrading any other package with a major version bump.
+
+The syntax of Pug has several differences, deprecations, and removals compared to its predecessor. These differences are documented in #2305.
+
+The website and documentation for Pug are still being updated. But if you are new to Pug, you should get started with the new syntax and install the Pug package from npm.
+
+Installation
+Package
+To use Pug in your own JavaScript projects:
+
+$ npm install pug
+Command Line
+After installing the latest version of Node.js, install with:
+
+$ npm install pug-cli -g
+and run with
+
+$ pug --help
+Syntax
+Pug is a clean, whitespace sensitive syntax for writing HTML. Here is a simple example:
+
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) bar(1 + 5);
+  body
+    h1 Pug - node template engine
+    #container.col
+      if youAreUsingPug
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Pug is a terse and simple templating language with a
+        strong focus on performance and powerful features.
+Pug transforms the above to:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pug</title>
+    <script type="text/javascript">
+      if (foo) bar(1 + 5);
+    </script>
+  </head>
+  <body>
+    <h1>Pug - node template engine</h1>
+    <div id="container" class="col">
+      <p>You are amazing</p>
+      <p>
+        Pug is a terse and simple templating language with a strong focus on
+        performance and powerful features.
+      </p>
+    </div>
+  </body>
+</html>
+API
+For full API, see pugjs.org/api/reference.html
+
+var pug = require('pug');
+
+// compile
+var fn = pug.compile('string of pug', options);
+var html = fn(locals);
+
+// render
+var html = pug.render('string of pug', merge(options, locals));
+
+// renderFile
+var html = pug.renderFile('filename.pug', merge(options, locals));
+Options
+filename Used in exceptions, and required when using includes
+compileDebug When false no debug instrumentation is compiled
+pretty Add pretty-indentation whitespace to output (false by default)
+Browser Support
+The latest version of pug can be downloaded for the browser in standalone form. It only supports the very latest browsers, though, and is a large file. It is recommended that you pre-compile your pug templates to JavaScript.
+
+To compile a template for use on the client using the command line, do:
+
+$ pug --client --no-debug filename.pug
+which will produce filename.js containing the compiled template.
+
+Tutorials
+cssdeck interactive Pug syntax tutorial
+cssdeck interactive Pug logic tutorial
+Pug について。 (A Japanese Tutorial)
+Implementations in other languages
+Ports in other languages
+Ports to other languages, with very close syntax:
+
+PHP
+Java
+Python
+Ruby
+C# (ASP.NET Core)
+RPG/ILE
+Equivalents in other languages
+Templates engines for other languages with a different syntax, but a similar philosophy:
+
+Scaml for Scala
+Slim for Ruby (should not be confused with Slim PHP framework)
+HAML for Ruby
+Framework implementations/adapters
+Embedded view engines for frameworks:
+
+Laravel
+Symfony
+Phalcon
+CodeIgniter
+Yii 2
+Slim 3
+Silex (implementation example)
+Lumen
+Rails
+CMS plugins
+WordPress
+Additional Resources
+Emacs Mode
+Vim Syntax
+TextMate Bundle
+Coda/SubEtha syntax Mode
+html2pug converter
+pug2php converter
+Pug Server Ideal for building local prototypes apart from any application
+cache-pug-templates Cache Pug templates for Lad/Koa/Express/Connect with Redis
+Prettier Plugin.                    
+
+Sponsors
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [Become a sponsor]
+                             
+License
+MIT.
+
+
 
 
