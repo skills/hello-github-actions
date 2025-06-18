@@ -528,19 +528,12 @@ Changes are tracked as Github releases.
 License
 Immutable.js is MIT-licensed.
 
-
-
-
-
 Ramda.
-
 Ramda
 A practical functional library for JavaScript programmers.
-
 Build Status npm module deno land nest badge 
 
 Ramda.
-
 
 There are already several excellent libraries with a functional flavor. Typically, they are meant to be general-purpose toolkits, suitable for working in multiple paradigms. Ramda has a more focused goal. We wanted a library designed specifically for a functional programming style, one that makes it easy to create functional pipelines, one that never mutates user data.
 
@@ -715,11 +708,9 @@ We also have an IRC channel #moutjs on irc.freenode.net
 License
 Released under the MIT License.
 
-
 RxJS.
 
 RxJS Logo RxJS: Reactive Extensions For JavaScript
-
 
 RxJS 8 Monorepo
 Look for RxJS and related packages under the /packages directory. Applications like the rxjs.dev documentation site are under the /apps directory.
@@ -800,4 +791,2753 @@ npm run test-debug  # runs tests with a chrome inspector connected to the node p
 npm run build-docs  # builds the documentation html file.
 
 
+Hardware.
+Johnny-five.
+Johnny-Five
+The JavaScript Robotics Programming Framework
+Artwork by Mike Sgier
+Build, Lint, Test and Measure Coverage Appveyor Build Status Coverage Status Install Size Gitter
+
+Johnny-Five is an Open Source, Firmata Protocol based, IoT and Robotics programming framework, developed by the Nodebots Community. Johnny-Five programs can be written for Arduino (all models), Electric Imp, Beagle Bone, Intel Galileo & Edison, Linino One, Pinoccio, pcDuino3, Raspberry Pi, Particle/Spark Core & Photon, Tessel 2, TI Launchpad and more!
+
+Johnny-Five has grown from a passion project into a tool for inspiring learning and creativity for people of all ages, backgrounds, and from all across the world.
+
+Just interested in learning and building awesome things. You might want to start with the official Johnny-Five website.
+
+If you want to find the API documentation, that’s right here.
+Need to figure out what platform to use for a project? We put that stuff here.
+Need inspiration for your next NodeBot? Check out the examples.
+Want to stay up-to-date with projects in the community? Check this out.
+Need NodeBots community or Johnny-Five project updates and announcements? This is what you’re looking for.
+Johnny-Five does not attempt to provide "all the things", but instead focuses on delivering robust, reality tested, highly composable APIs that behave consistently across all supported hardware platforms. Johnny-Five wants to be a baseline control kit for hardware projects, allowing you the freedom to build, grow and experiment with diverse JavaScript libraries of your own choice. Johnny-Five couples comfortably with:
+
+Popular application libraries such as Express.js and Socket.io.
+Fellow hardware projects like ar-drone, Aerogel and Spheron
+Bluetooth game controllers like XBox Controller and DualShock
+IoT frameworks, such as Octoblu
+...And that's only a few of the many explorable possibilities. Check out these exciting projects: node-pulsesensor, footballbot-workshop-ui, nodebotui, dublin-disco, node-slot-car-bot, servo-calibrator, node-ardx, nodebot-workshop, phone-home, purple-unicorn, webduino, leapduino, lasercat-workshop, simplesense, five-redbot, robotnik, the-blender
+
+Why JavaScript? NodeBots: The Rise of JavaScript Robotics
+
+Hello Johnny
+The ubiquitous "Hello World" program of the microcontroller and SoC world is "blink an LED". The following code demonstrates how this is done using the Johnny-Five framework.
+
+const { Board, Led } = require("johnny-five");
+const board = new Board();
+
+board.on("ready", () => {
+  // Create an Led on pin 13
+  const led = new Led(13);
+  // Blink every half second
+  led.blink(500);
+});
+
+Note: Node will crash if you try to run johnny-five in the node REPL, but board instances will create their own contextual REPL. Put your script in a file.
+
+Supported Hardware
+Johnny-Five has been tested on a variety of Arduino-compatible Boards.
+
+For non-Arduino based projects, a number of platform-specific IO Plugins are available. IO Plugins allow Johnny-Five code to communicate with any non-Arduino based hardware in whatever language that platforms speaks!
+
+Documentation
+Documentation for the Johnny-Five API can be found here and example programs here.
+
+Guidance
+Need help? Ask a question on the NodeBots Community Forum. If you just have a quick question or are interested in ongoing design discussions, join us in the Johnny-Five Gitter Chat.
+
+For step-by-step examples, including an electronics primer, check out Arduino Experimenter's Guide for NodeJS by @AnnaGerber
+
+Here is a list of prerequisites for Linux, OSX or Windows.
+
+Check out the bluetooth guide if you want to remotely control your robot.
+
+Setup and Assemble Arduino
+Recommended Starting Kit: Sparkfun Inventor's Kit
+Download Arduino IDE
+Plug in your Arduino or Arduino compatible microcontroller via USB
+Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmataPlus
+StandardFirmataPlus is available in Firmata v2.5.0 or greater
+Click the "Upload" button.
+If the upload was successful, the board is now prepared and you can close the Arduino IDE.
+
+For non-Arduino projects, each IO Plugin's repo will provide its own platform specific setup instructions.
+
+Hey you, here's Johnny!
+Source Code:
+git clone git://github.com/rwaldron/johnny-five.git && cd johnny-five
+
+npm install
+npm package:
+Install the module with:
+
+npm install johnny-five
+Example Programs
+To get you up and running quickly, we provide a variety of examples for using each Johnny-Five component. One thing we’re especially excited about is the extensive collection of Fritzing diagrams you’ll find throughout the site. A huge part of doing any Johnny-Five project is handling the actual hardware, and we’ve included these as part of the documentation because we realised that instructions on how to write code to control a servo are insufficient without instructions on how to connect a servo!
+
+To interactively navigate the examples, visit the Johnny-Five examples page on the official website. If you want to link directly to the examples in this repo, you can use one of the following links.
+
+There are presently 362 example programs with code and diagrams!
+
+Board
+Board - Basic Initialization
+Board - Cleanup in 'exit' event
+Board - Multiple in one program
+Board - Specify Sampling Interval
+Board - Specify port
+Custom Data Properties
+Pin
+REPL
+LED
+LED
+LED - Blink
+LED - Demo sequence
+LED - Fade
+LED - Fade callback
+LED - Fade with animation
+LED - PCA9685
+LED - Pulse
+LED - Pulse with animation
+LED - Slider
+LED - Tessel Servo Module
+LEDs - An array of LEDs
+LEDs - Controlling an array of LEDs
+LED: RGB
+LED - RGB (Common Anode)
+LED - RGB (Common Anode) PCA9685
+LED - RGB Intensity
+LED - Rainbow
+LED - Rainbow BlinkM
+LED: Digits & Matrix
+LED - Digital Clock
+LED - Digital Clock, Dual Displays
+LED - Digital Clock, HT16K33
+LED - Draw Matrix Characters Demo
+LED - Enumerate Matrix Characters & Symbols
+LED - Matrix
+LED - Matrix Demo
+LED - Matrix HT16K33
+LED - Matrix HT16K33 16x8
+Servo
+Servo
+Servo - Continuous
+Servo - Drive
+Servo - Multi-Turn
+Servo - PCA9685
+Servo - Prompt
+Servo - Slider control
+Servo - Tessel Servo Module
+Servos - An array of servos
+GPS
+GPS - Adafruit Ultimate GPS Breakout
+GPS - Default GPS
+GPS - Hardware Serial
+GPS - Sparkfun GP-20U7
+Servo Animation
+Servo - Animation
+Servo - Leg Animation
+Color
+Color - EVShield EV3 (Code)
+Color - EVShield EV3 (Raw)
+Color - EVShield NXT (Code)
+Color - ISL29125
+Motor
+Motor
+Motor - 3 pin
+Motor - Adafruit DRV8871 DC Motor Driver Breakout
+Motor - Brake
+Motor - Current
+Motor - Directional
+Motor - EVShield EV3
+Motor - EVShield NXT
+Motor - Enable Pin
+Motor - GROVE_I2C_MOTOR_DRIVER
+Motor - H-Bridge
+Motor - LUDUS
+Motor - PCA9685
+Motor - Pololu VNH5019 Dual Motor Driver Breakout
+Motor - Sparkfun Dual H-bridge Edison Block
+Motor - Sparkfun TB6612FNG
+Motor - l298 Breakout
+Motors - Dual H-Bridge
+Stepper Motor
+Stepper - Driver
+Stepper - Four Wire
+Stepper - Sweep
+ESC & Brushless Motor
+ESC - Bidirectional
+ESC - Keypress controlled ESCs
+ESC - PCA9685
+Button / Switch
+Button
+Button - Bumper
+Button - EVShield EV3
+Button - EVShield NXT
+Button - Options
+Button - Pullup
+Buttons - Collection w/ AT42QT1070
+Switch
+Switch - Magnetic Door
+Switch - Tilt SW-200D
+Toggle Switch
+Keypad
+Keypad - 3x4 I2C Nano Backpack
+Keypad - 4x4 I2C Nano Backpack
+Keypad - VKEY
+Keypad - Waveshare AD
+Touchpad - Grove QTouch
+Touchpad - MPR121
+Touchpad - MPR121, Sensitivity
+Touchpad - MPR121QR2_SHIELD
+Touchpad - MPR121_KEYPAD
+Touchpad - MPR121_SHIELD
+Relay
+Relay
+Relay - Collection
+Relay On Analog Pin
+Shift Register
+Shift Register
+Shift Register - Common Anode Seven Segment controller
+Shift Register - Common Anode Seven segments, Chained
+Shift Register - Seven Segment controller
+Shift Register - Seven segments, Chained
+Infrared Reflectance
+IR Motion
+IR Proximity
+IR Reflectance
+IR Reflectance Array
+Proximity
+Proximity
+Proximity - EVShield EV3 (IR)
+Proximity - EVShield EV3 (IR)
+Proximity - EVShield EV3 (Ultrasonic)
+Proximity - EVShield EV3 (Ultrasonic)
+Proximity - GP2Y0A710K0F
+Proximity - HC-SR04
+Proximity - HC-SR04 (Analog)
+Proximity - HC-SR04 I2C Backpack
+Proximity - LIDAR-Lite
+Proximity - MB1000
+Proximity - MB1003
+Proximity - MB1010
+Proximity - MB1230
+Proximity - SRF10
+Motion
+Motion
+Motion - GP2Y0A60SZLF
+Motion - GP2Y0D805Z0F
+Motion - GP2Y0D810Z0F
+Motion - GP2Y0D810Z0F
+Joystick
+Joystick
+Joystick - Esplora
+Joystick - Pan + Tilt control
+Joystick - Sparkfun Shield
+LCD
+Grove - RGB LCD Color Previewer
+LCD
+LCD - Enumerate characters
+LCD - I2C
+LCD - I2C PCF8574
+LCD - I2C Runner
+LCD - Runner 16x2
+LCD - Runner 20x4
+LCD - Tessel 2 16x2
+Tessel 2 + Grove - RGB LCD Color Previewer
+Tessel 2 + Grove - RGB LCD Display
+Compass/Magnetometer
+Compass - Find north
+Compass - HMC5883L
+Compass - HMC6352
+Compass - Logger
+Compass - MAG3110
+Compass - MAG3110 on Tessel 2
+Compass / Magnetometer
+Piezo
+Piezo
+IMU/Multi
+IMU - BNO055
+IMU - BNO055 (Orientation)
+IMU - LSM303C
+IMU - MPU6050
+Multi - BME280
+Multi - BMP085
+Multi - BMP180
+Multi - DHT11_I2C_NANO_BACKPACK
+Multi - DHT21_I2C_NANO_BACKPACK
+Multi - DHT22_I2C_NANO_BACKPACK
+Multi - HIH6130
+Multi - HTU21D
+Multi - MPL115A2
+Multi - MPL3115A2
+Multi - MS5611
+Multi - SHT31D
+Multi - SI7020
+Multi - SI7021
+Multi - TH02
+Sensors
+Accelerometer
+Accelerometer - ADXL335
+Accelerometer - ADXL345
+Accelerometer - LIS3DH
+Accelerometer - MMA7361
+Accelerometer - MMA8452
+Accelerometer - MPU6050
+Accelerometer - Pan + Tilt
+Altimeter - BMP085
+Altimeter - BMP180
+Altimeter - MPL3115A2
+Altimeter - MS5611
+Barometer - BMP085
+Barometer - BMP180
+Barometer - MPL115A2
+Barometer - MPL3115A2
+Barometer - MS5611
+Gyro
+Gyro - Analog LPR5150AL
+Gyro - I2C MPU6050
+Hygrometer - DHT11_I2C_NANO_BACKPACK
+Hygrometer - DHT21_I2C_NANO_BACKPACK
+Hygrometer - DHT22_I2C_NANO_BACKPACK
+Hygrometer - HIH6130
+Hygrometer - HTU21D
+Hygrometer - SHT31D
+Hygrometer - SI7021
+Hygrometer - TH02
+Sensor
+Sensor - Digital Microwave
+Sensor - Flex sensor
+Sensor - Force sensitive resistor
+Sensor - Microphone
+Sensor - Photoresistor
+Sensor - Potentiometer
+Sensor - Slide potentiometer
+Thermometer - BMP085
+Thermometer - BMP180
+Thermometer - DHT11_I2C_NANO_BACKPACK
+Thermometer - DHT21_I2C_NANO_BACKPACK
+Thermometer - DHT22_I2C_NANO_BACKPACK
+Thermometer - DS18B20
+Thermometer - Dual DS18B20
+Thermometer - HIH6130
+Thermometer - HTU21D
+Thermometer - LM335
+Thermometer - LM35
+Thermometer - MAX31850
+Thermometer - MCP9808
+Thermometer - MPL115A2
+Thermometer - MPL3115A2
+Thermometer - MPU6050
+Thermometer - MS5611
+Thermometer - SHT31D
+Thermometer - SI7020
+Thermometer - SI7021
+Thermometer - TH02
+Thermometer - TMP102
+Thermometer - TMP36
+Expander
+Expander - 74HC595
+Expander - CD74HC4067, 16 Channel Analog Input Breakout
+Expander - LIS3DH
+Expander - MCP23008
+Expander - MCP23017
+Expander - MUXSHIELD2, Analog Sensors
+Expander - MUXSHIELD2, Digital Input and Output
+Expander - PCA9685
+Expander - PCF8574
+Expander - PCF8575
+Expander - PCF8591
+Photon Weather Shield
+Photon Weather Shield: Moisture
+Lego EVShield
+Button - EVShield EV3
+Button - EVShield NXT
+Color - EVShield EV3 (Code)
+Color - EVShield EV3 (Raw)
+Color - EVShield NXT (Code)
+Light - BH1750
+Light - EVShield EV3 (Ambient)
+Light - EVShield EV3 (Reflected)
+Light - EVShield NXT (Ambient)
+Light - EVShield NXT (Reflected)
+Light - TSL2561
+Motor - EVShield EV3
+Motor - EVShield NXT
+Proximity - EVShield EV3 (IR)
+Proximity - EVShield EV3 (Ultrasonic)
+Intel Edison + Grove IoT Kit
+Intel Edison + Grove - Accelerometer (ADXL345)
+Intel Edison + Grove - Accelerometer (MMA7660)
+Intel Edison + Grove - Air quality sensor
+Intel Edison + Grove - Barometer (BMP180)
+Intel Edison + Grove - Button
+Intel Edison + Grove - Compass (HMC588L)
+Intel Edison + Grove - Flame Sensor
+Intel Edison + Grove - Gas (MQ2)
+Intel Edison + Grove - Humidity & Temperature (TH02)
+Intel Edison + Grove - I2C Motor Driver
+Intel Edison + Grove - Joystick
+Intel Edison + Grove - LED
+Intel Edison + Grove - Light Sensor (TSL2561)
+Intel Edison + Grove - Moisture Sensor
+Intel Edison + Grove - Q Touch
+Intel Edison + Grove - RGB LCD
+Intel Edison + Grove - RGB LCD Color Previewer
+Intel Edison + Grove - RGB LCD temperature display
+Intel Edison + Grove - Relay
+Intel Edison + Grove - Rotary Potentiometer
+Intel Edison + Grove - Servo
+Intel Edison + Grove - Touch
+Grove IoT Kit (Seeed Studio)
+Grove - Button
+Grove - Joystick
+Grove - LED
+Grove - Motor (I2C Driver)
+Grove - RGB LCD
+Grove - RGB LCD temperature display
+Grove - Rotary Potentiometer
+Grove - Servo
+Grove - Touch
+Micro Magician V2
+Micro Magician V2 - Accelerometer
+Micro Magician V2 - Motor
+Micro Magician V2 - Servo
+TinkerKit
+TinkerKit - Accelerometer
+TinkerKit - Blink
+TinkerKit - Button
+TinkerKit - Combo
+TinkerKit - Continuous servo
+TinkerKit - Gyro
+TinkerKit - Joystick
+TinkerKit - Linear potentiometer
+TinkerKit - Rotary potentiometer
+TinkerKit - Temperature
+TinkerKit - Tilt
+TinkerKit - Touch
+Wii
+Wii Classic Controller
+Wii Nunchuck
+Complete Bots / Projects
+Bug
+Kinect Robotic Arm Controller
+Laser Trip Wire
+Line Follower
+Lynxmotion Biped BRAT
+Motobot
+Navigator
+Nodebot
+Phoenix Hexapod
+Radar
+Robotic Claw
+Whisker
+Component Plugin Template
+Example plugin
+IO Plugins
+Led Blink on Electric Imp
+Led Blink on Intel Edison Arduino Board
+Led Blink on Intel Edison Mini Board
+Led Blink on Intel Galileo Gen 2
+Led Blink on Raspberry Pi
+Led Blink on Spark Core
+Led Blink on pcDuino3
+Many fragments. Some large, some small.
+Wireless Nodebot
+Kinect Controlled Robot Arm
+Biped Nodebot
+LCD Running Man
+Slider Controlled Panning Servo
+Joystick Controlled Laser (pan/tilt) 1
+Joystick Controlled Laser (pan/tilt) 2
+Joystick Controlled Claw
+Robot Claw
+Joystick, Motor & Led
+Build you own drone
+Make: JavaScript Robotics.
+
+Contributing
+All contributions must adhere to the Idiomatic.js Style Guide, by maintaining the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using grunt.
+
+License
+Copyright (c) 2012, 2013, 2014 Rick Waldron waldron.rick@gmail.com Licensed under the MIT license. Copyright (c) 2014, 2015 The Johnny-Five Contributors Licensed under the MIT license.
+
+
+Serialport.
+
+Node Serialport
+Backers on Open Collective Sponsors on Open Collective lerna codecov Test / Lint
+
+Access serial ports with JavaScript. Linux, OSX and Windows. Welcome your robotic JavaScript overlords. Better yet, program them!
+
+Go to https://serialport.io/ to learn more, find guides and api documentation.
+
+Quick Links
+Guides
+The serialport package api docs (most people start here)
+Developing
+Developing node serialport projects
+Clone this repo git clone git@github.com:serialport/node-serialport.git
+Run npm install to setup local package dependencies (run this any time you depend on a package local to this repo)
+Run npm test to ensure everything is working properly
+Add dev dependencies to the root package.json and package dependencies to the package's one.
+Developing Docs
+See https://github.com/serialport/website
+
+License
+SerialPort packages are all MIT licensed and all it's dependencies are MIT licensed.
+
+Code of Conduct
+SerialPort follows the Nodebots Code of Conduct. While the code is MIT licensed participation in the community has some rules to make this a good place to work and learn.
+
+TLDR
+Be respectful.
+Abusive behavior is never tolerated.
+Data published to NodeBots is hosted at the discretion of the service administrators, and may be removed.
+Don't build evil robots.
+Violations of this code may result in swift and permanent expulsion from the NodeBots community.
+Governance and Community
+SerialPort is currently employees a governance with a group of maintainers, committers and contributors, all fixing bugs and adding features and improving documentation. You need not apply to work on SerialPort, all are welcome to join, build, and maintain this project.
+
+A Contributor is any individual creating or commenting on an issue or pull request. By participating, this is you.
+Committers are contributors who have been given write access to the repository. They can review and merge pull requests.
+Maintainers are committers representing the required technical expertise to resolve rare disputes.
+If you have a PR that improves the project people in any or all of the above people will help you land it.
+
+
+USB.
+
+USB Library for Node.JS
+Build Status npm Licence MIT
+
+Node.JS library for communicating with USB devices.
+
+This is a refactoring / rewrite of Christopher Klein's node-usb.
+
+Prerequisites
+Node.js >= v10.20.0, which includes npm.
+
+Windows
+On Windows, if you get LIBUSB_ERROR_NOT_SUPPORTED when attempting to open your device, it's possible your device doesn't have a WinUSB driver for libusb to use.
+
+You can install one using Zadig or another approach is to use the UsbDK Backend of libusb by immediately calling usb.useUsbDkBackend().
+
+Note that you cannot use multiple drivers on Windows as they get exclusive access to the device. So if you want to switch between drivers (e.g. using a printer with this software or the system), you will need to uninstall/install drivers as required.
+
+For further info, check How to use libusb on Windows in the libusb's wiki.
+
+Linux
+On Linux, you'll need libudev to build libusb if a prebuild is not available. On Ubuntu/Debian:
+
+sudo apt-get install build-essential libudev-dev
+You may need to modify your udev and permission rules in order to access your desired device. Along the lines of:
+
+SUBSYSTEM=="usb", ATTR"USB-VENDOR-ID", ATTR"USB-PRODUCT-ID", MODE="0660", GROUP="GROUP-YOUR-USER-IS-IN"
+
+Troubleshooting
+For libusb issues, please refer to the FAQ at https://github.com/libusb/libusb/wiki/FAQ
+
+Installation
+Native modules are bundled using prebuildify, so installation should be as simple as installing the package.
+
+With npm:
+
+npm install usb
+With yarn:
+
+yarn add usb
+Note: the library is now written in TypeScript, so a separate types file is not longer required to be installed (e.g. don't install @types/usb).
+
+License
+MIT
+
+Note that the compiled Node extension includes libusb, and is thus subject to the LGPL.
+
+Limitations
+Does not support:
+
+Configurations other than the default one
+Isochronous transfers
+Getting Started
+Use the following examples to kickstart your development. Once you have a desired device, use the APIs below to interact with it.
+
+Migrating to v2.0.0
+The legacy API exists on an object called usb on the main import and the convenience functions exist as top level objects.
+
+To use v2.0.0 simply update your import statements and the function calls;
+
+// import * as usb from 'usb';
+// const devices: usb.Device[] = usb.getDeviceList();
+
+import { usb, getDeviceList } from 'usb';
+const devices: usb.Device[] = getDeviceList();
+List all legacy devices
+import { getDeviceList } from 'usb';
+
+const devices = getDeviceList();
+
+for (const device of devices) {
+    console.log(device); // Legacy device
+}
+Find legacy device by vid/pid
+import { findByIds } from 'usb';
+
+const device = findByIds(0x59e3, 0x0a23);
+
+if (device) {
+    console.log(device); // Legacy device
+}
+Find legacy device by SerialNumber
+import { findBySerialNumber } from 'usb';
+
+(async () => {
+    // Uses a blocking call, so is async
+    const device = await findBySerialNumber('TEST_DEVICE');
+
+    if (device) {
+        console.log(device); // Legacy device
+    }
+})();
+Turn legacy Device into WebUSB compatible device
+import { findBySerialNumber, WebUSBDevice } from 'usb';
+
+(async () => {
+    // Uses a blocking call, so is async
+    const device = await findBySerialNumber('TEST_DEVICE');
+
+    // Uses blocking calls, so is async
+    const webDevice = await WebUSBDevice.createInstance(device);
+
+    if (webDevice) {
+        console.log(webDevice); // WebUSB device
+    }
+})();
+Use WebUSB approach to find a device
+import { webusb } from 'usb';
+
+(async () => {
+    // Returns first matching device
+    const device = await webusb.requestDevice({
+        filters: [{}]
+    })
+
+    console.log(device); // WebUSB device
+})();
+Use WebUSB approach to find a device with custom selection method
+import { WebUSB } from 'usb';
+
+(async () => {
+    const customWebUSB = new WebUSB({
+        // This function can return a promise which allows a UI to be displayed if required
+        devicesFound: devices => devices.find(device => device.serialNumber === 'TEST_DEVICE')
+    });
+
+    // Returns device based on injected 'devicesFound' function
+    const device = await customWebUSB.requestDevice({
+        filters: [{}]
+    })
+
+    console.log(device); // WebUSB device
+})();
+Use WebUSB approach to list authorised devices
+import { webusb } from 'usb';
+
+(async () => {
+    // The default webusb instance follows the WebUSB spec and only returns authorised devices
+    const devices = await webusb.getDevices();
+
+    for (const device of devices) {
+        console.log(device); // WebUSB device
+    }
+})();
+Use WebUSB approach to list all devices
+import { WebUSB } from 'usb';
+
+(async () => {
+    const customWebUSB = new WebUSB({
+        // Bypass checking for authorised devices
+        allowAllDevices: true
+    });
+
+    // Uses blocking calls, so is async
+    const devices = await customWebUSB.getDevices();
+
+    for (const device of devices) {
+        console.log(device); // WebUSB device
+    }
+})();
+Electron
+Please refer to the maintained example for using node-usb in electron:
+
+https://github.com/node-usb/node-usb-example-electron
+
+If using a packaging system for electron, ensure the node-usb library does not get recompiled as the correct binaries are already shipped with the package. For example, for electron-builder, use these settings:
+
+buildDependenciesFromSource: true
+nodeGypRebuild: false
+npmRebuild: false
+APIs
+Since v2.0.0, the node-usb library supports two APIs:
+
+WebUSB which follows the WebUSB Specification (recommended)
+Legacy API which retains the previous 'non-blocking' API
+Convenience methods also exist to easily list or find devices as well as convert between a legacy usb.Device device and WebUSB device.
+
+Full auto-generated API documentation can be seen here:
+
+https://node-usb.github.io/node-usb/
+
+Convenience Functions
+getDeviceList()
+Return a list of legacy Device objects for the USB devices attached to the system.
+
+findByIds(vid, pid)
+Convenience method to get the first legacy device with the specified VID and PID, or undefined if no such device is present.
+
+findBySerialNumber(serialNumber)
+Convenience method to get a promise of the legacy device with the specified serial number, or undefined if no such device is present.
+
+getWebUsb()
+Return the navigator.usb instance if it exists, otherwise a webusb instance.
+
+WebUSBDevice
+WebUSB Device class for wrapping a legacy Device into a WebUSB device
+
+WebUSBDevice.createInstance(device)
+Convenience method to return a promise of a WebUSB device based on a legacy device
+
+WebUSB
+Please refer to the WebUSB specification which be found here:
+
+https://wicg.github.io/webusb/
+
+Implementation Status
+USB
+ getDevices()
+ requestDevice()
+USBDevice
+ usbVersionMajor
+ usbVersionMinor
+ usbVersionSubminor
+ deviceClass
+ deviceSubclass
+ deviceProtocol
+ vendorId
+ productId
+ deviceVersionMajor
+ deviceVersionMinor
+ deviceVersionSubminor
+ manufacturerName
+ productName
+ serialNumber
+ configuration
+ configurations
+ opened
+ open()
+ close()
+ selectConfiguration()
+ claimInterface()
+ releaseInterface()
+ selectAlternateInterface()
+ controlTransferIn()
+ controlTransferOut() - bytesWritten always equals the initial buffer length
+ transferIn()
+ transferOut() - bytesWritten always equals the initial buffer length
+ clearHalt()
+ reset()
+ isochronousTransferIn()
+ isochronousTransferOut()
+ forget()
+Events
+ connect
+ disconnect
+Legacy API
+usb
+Legacy usb object.
+
+usb.LIBUSB_*
+Constant properties from libusb
+
+usb.getDeviceList()
+Return a list of legacy Device objects for the USB devices attached to the system.
+
+usb.pollHotplug
+Force polling loop for hotplug events.
+
+usb.setDebugLevel(level : int)
+Set the libusb debug level (between 0 and 4)
+
+usb.useUsbDkBackend()
+On Windows, use the USBDK backend of libusb instead of WinUSB
+
+Device
+Represents a USB device.
+
+.busNumber
+Integer USB device number
+
+.deviceAddress
+Integer USB device address
+
+.portNumbers
+Array containing the USB device port numbers, or undefined if not supported on this platform.
+
+.deviceDescriptor
+Object with properties for the fields of the device descriptor:
+
+bLength
+bDescriptorType
+bcdUSB
+bDeviceClass
+bDeviceSubClass
+bDeviceProtocol
+bMaxPacketSize0
+idVendor
+idProduct
+bcdDevice
+iManufacturer
+iProduct
+iSerialNumber
+bNumConfigurations
+.configDescriptor
+Object with properties for the fields of the configuration descriptor:
+
+bLength
+bDescriptorType
+wTotalLength
+bNumInterfaces
+bConfigurationValue
+iConfiguration
+bmAttributes
+bMaxPower
+extra (Buffer containing any extra data or additional descriptors)
+.allConfigDescriptors
+Contains all config descriptors of the device (same structure as .configDescriptor above)
+
+.parent
+Contains the parent of the device, such as a hub. If there is no parent this property is set to null.
+
+.open()
+Open the device. All methods below require the device to be open before use.
+
+.close()
+Close the device.
+
+.controlTransfer(bmRequestType, bRequest, wValue, wIndex, data_or_length, callback(error, data))
+Perform a control transfer with libusb_control_transfer.
+
+Parameter data_or_length can be a integer length for an IN transfer, or a Buffer for an out transfer. The type must match the direction specified in the MSB of bmRequestType.
+
+The data parameter of the callback is always undefined for OUT transfers, or will be passed a Buffer for IN transfers.
+
+A package is available to calculate bmRequestType if needed.
+
+.setConfiguration(id, callback(error))
+Set the device configuration to something other than the default (0). To use this, first call .open(false) (which tells it not to auto configure), then before claiming an interface, call this method.
+
+.getStringDescriptor(index, callback(error, data))
+Perform a control transfer to retrieve a string descriptor
+
+.getBosDescriptor(callback(error, bosDescriptor))
+Perform a control transfer to retrieve an object with properties for the fields of the Binary Object Store descriptor:
+
+bLength
+bDescriptorType
+wTotalLength
+bNumDeviceCaps
+.getCapabilities(callback(error, capabilities))
+Retrieve a list of Capability objects for the Binary Object Store capabilities of the device.
+
+.interface(interface)
+Return the interface with the specified interface number.
+
+.interfaces
+List of Interface objects for the interfaces of the default configuration of the device.
+
+.timeout
+Timeout in milliseconds to use for control transfers.
+
+.reset(callback(error))
+Performs a reset of the device. Callback is called when complete.
+
+.setAutoDetachKernelDriver(enable)
+Enable/disable libusb's automatic kernel driver detachment (defaults to true in the WebUSB API)
+
+Interface
+.endpoint(address)
+Return the InEndpoint or OutEndpoint with the specified address.
+
+.endpoints
+List of endpoints on this interface: InEndpoint and OutEndpoint objects.
+
+.interface
+Integer interface number.
+
+.altSetting
+Integer alternate setting number.
+
+.setAltSetting(altSetting, callback(error))
+Sets the alternate setting. It updates the interface.endpoints array to reflect the endpoints found in the alternate setting.
+
+.claim()
+Claims the interface. This method must be called before using any endpoints of this interface.
+
+.release([closeEndpoints], callback(error))
+Releases the interface and resets the alternate setting. Calls callback when complete.
+
+It is an error to release an interface with pending transfers. If the optional closeEndpoints parameter is true, any active endpoint streams are stopped (see Endpoint.stopStream), and the interface is released after the stream transfers are cancelled. Transfers submitted individually with Endpoint.transfer are not affected by this parameter.
+
+.isKernelDriverActive()
+Returns false if a kernel driver is not active; true if active.
+
+.detachKernelDriver()
+Detaches the kernel driver from the interface. If a LIBUSB_ERROR_ACCESS error is raised, you may need to execute this with elevated privileges.
+
+.attachKernelDriver()
+Re-attaches the kernel driver for the interface.
+
+.descriptor
+Object with fields from the interface descriptor -- see libusb documentation or USB spec.
+
+bLength
+bDescriptorType
+bInterfaceNumber
+bAlternateSetting
+bNumEndpoints
+bInterfaceClass
+bInterfaceSubClass
+bInterfaceProtocol
+iInterface
+extra (Buffer containing any extra data or additional descriptors)
+Capability
+.type
+Integer capability type.
+
+.data
+Buffer capability data.
+
+.descriptor
+Object with fields from the capability descriptor -- see libusb documentation or USB spec.
+
+bLength
+bDescriptorType
+bDevCapabilityType
+Endpoint
+Common base for InEndpoint and OutEndpoint, see below.
+
+.direction
+Endpoint direction: "in" or "out".
+
+.transferType
+Endpoint type: usb.LIBUSB_TRANSFER_TYPE_BULK, usb.LIBUSB_TRANSFER_TYPE_INTERRUPT, or usb.LIBUSB_TRANSFER_TYPE_ISOCHRONOUS.
+
+.descriptor
+Object with fields from the endpoint descriptor -- see libusb documentation or USB spec.
+
+bLength
+bDescriptorType
+bEndpointAddress
+bmAttributes
+wMaxPacketSize
+bInterval
+bRefresh
+bSynchAddress
+extra (Buffer containing any extra data or additional descriptors)
+.timeout
+Sets the timeout in milliseconds for transfers on this endpoint. The default, 0, is infinite timeout.
+
+.clearHalt(callback(error))
+Clear the halt/stall condition for this endpoint.
+
+InEndpoint
+Endpoints in the IN direction (device->PC) have this type.
+
+.transfer(length, callback(error, data))
+Perform a transfer to read data from the endpoint.
+
+If length is greater than maxPacketSize, libusb will automatically split the transfer in multiple packets, and you will receive one callback with all data once all packets are complete.
+
+this in the callback is the InEndpoint object.
+
+.startPoll(nTransfers=3, transferSize=maxPacketSize)
+Start polling the endpoint.
+
+The library will keep nTransfers transfers of size transferSize pending in the kernel at all times to ensure continuous data flow. This is handled by the libusb event thread, so it continues even if the Node v8 thread is busy. The data and error events are emitted as transfers complete.
+
+.stopPoll(cb)
+Stop polling.
+
+Further data may still be received. The end event is emitted and the callback is called once all transfers have completed or canceled.
+
+Event: data(data : Buffer)
+Emitted with data received by the polling transfers
+
+Event: error(error)
+Emitted when polling encounters an error. All in flight transfers will be automatically canceled and no further polling will be done. You have to wait for the end event before you can start polling again.
+
+Event: end
+Emitted when polling has been canceled
+
+OutEndpoint
+Endpoints in the OUT direction (PC->device) have this type.
+
+.transfer(data, callback(error))
+Perform a transfer to write data to the endpoint.
+
+If length is greater than maxPacketSize, libusb will automatically split the transfer in multiple packets, and you will receive one callback once all packets are complete.
+
+this in the callback is the OutEndpoint object.
+
+Event: error(error)
+Emitted when the stream encounters an error.
+
+Event: end
+Emitted when the stream has been stopped and all pending requests have been completed.
+
+UsbDetection
+usb.on('attach', function(device) );
+Attaches a callback to plugging in a device.
+
+usb.on('detach', function(device) );
+Attaches a callback to unplugging a device.
+
+usb.refHotplugEvents();
+Restore (re-reference) the hotplug events unreferenced by unrefHotplugEvents()
+
+usb.unrefHotplugEvents();
+Listening to events will prevent the process to exit. By calling this function, hotplug events will be unreferenced by the event loop, allowing the process to exit even when listening for the attach and detach events.
+
+Migrating from node-usb-detection
+If you have been referred here by node-usb-detection, the following may be helpful for you to update your existing code.
+
+usbDetect.startMonitoring() & usbDetect.stopMonitoring()
+There is no direct equivalent to these methods. This is handled automatically for you when you add and remove event listeners.
+
+You may find usb.unrefHotplugEvents() useful as it is intended to help with exit conditions.
+
+usbDetect.find()
+You can instead use usb.getDeviceList(). Be aware that this will do an enumeration to find all of the devices, and not look at a cache of the known devices. If you call it too often it may have a performance impact.
+
+To find a specific device by vid and pid, call usb.findByIds. e.g. usb.findByIds(0x12, 0x34).
+
+usbDetect.on('add', function(device) )
+These should be changed to usb.on('attach', function(device) { ... }).
+
+There is no equivalent to filter based on the vid or pid, instead you should do a check inside the callback you provide.
+The contents of the device object has also changed.
+
+usbDetect.on('remove', function(device) )
+These should be changed to usb.on('detach', function(device) { ... }).
+
+There is no equivalent to filter based on the vid or pid, instead you should do a check inside the callback you provide.
+The contents of the device object has also changed.
+
+usbDetect.on('change', function(device) )
+There is no direct equivalent to this. Instead you can listen to both attach and detach to get the same behaviour.
+
+Development
+The library is based on native bindings wrapping the libusb library.
+
+Setup
+Libusb is included as a submodule, clone this repository and then the submodule as follows:
+
+git clone https://github.com/node-usb/node-usb
+cd node-usb
+git submodule update --init
+Alternatively, if you want to build this library against your system libusb set the use_system_libusb variable to true in the binding.gyp and libusb.gypi files.
+
+Building
+The package uses prebuildify to generate the native binaries using an install script and TypeScript for the binding code using the compile script. The package can be built as follows:
+
+yarn
+yarn compile
+The native binaries can be rebuilt with:
+
+yarn rebuild
+Note: On Linux, you'll need libudev to build libusb. On Ubuntu/Debian:
+
+sudo apt-get install build-essential libudev-dev
+Testing
+To execute the unit tests, Run:
+
+yarn test
+Some tests require an attached STM32F103 Microprocessor USB device with specific firmware.
+
+yarn full-test
+yarn valgrind
+Releasing
+Please refer to the Wiki for release instructions.
+
+
+i2c-bus.
+
+Build Status Coverage Status npm Version Downloads Per Month Mentioned in Awesome Node.js
+
+i2c-bus
+I2C serial bus access with Node.js on Linux boards like the Raspberry Pi or BeagleBone. The i2c-bus API supports promises and async/await, asynchronous callbacks and synchronous execution.
+
+i2c-bus supports Node.js versions 10, 12, 14, 16, 18 and 20.
+
+Contents
+Installation
+Usage
+API
+TypeScript Type Definitions
+Installation
+npm install i2c-bus
+The way in which I2C is configured varies from board to board. Sometimes no configuraton is required, but sometimes it is:
+
+Configuring I2C on the Raspberry Pi
+Configuring Software I2C on the Raspberry Pi
+Consider software I2C when there are issues communicating with a device on a Raspberry Pi
+Usage
+The example programs below show how to use a MCP9808 I2C temperature sensor to determine the temperature.
+
+MCP9808 I2C temperature sensor connected to a Raspberry Pi 
+
+Example 1 - Promises
+Determine the temperature with a MCP9808 I2C temperature sensor using promises.
+
+const i2c = require('i2c-bus');
+
+const MCP9808_ADDR = 0x18;
+const TEMP_REG = 0x05;
+
+const toCelsius = rawData => {
+  rawData = (rawData >> 8) + ((rawData & 0xff) << 8);
+  let celsius = (rawData & 0x0fff) / 16;
+  if (rawData & 0x1000) {
+    celsius -= 256;
+  }
+  return celsius;
+};
+
+i2c.openPromisified(1).
+then(i2c1 => i2c1.readWord(MCP9808_ADDR, TEMP_REG).
+  then(rawData => console.log(toCelsius(rawData))).
+  then(_ => i2c1.close())
+).catch(console.log);
+Example 2 - Promises, Plain I2C and Buffers
+Determine the temperature with a MCP9808 I2C temperature sensor using promises, plain I2C and Buffer objects.
+
+const i2c = require('i2c-bus');
+
+const MCP9808_ADDR = 0x18;
+const TEMP_REG = 0x05;
+
+const toCelsius = rawData => {
+  let celsius = (rawData & 0x0fff) / 16;
+  if (rawData & 0x1000) {
+    celsius -= 256;
+  }
+  return celsius;
+};
+
+const wbuf = Buffer.from([TEMP_REG]);
+const rbuf = Buffer.alloc(2);
+
+i2c.openPromisified(1).
+then(i2c1 => i2c1.i2cWrite(MCP9808_ADDR, wbuf.length, wbuf).
+  then(_ => i2c1.i2cRead(MCP9808_ADDR, rbuf.length, rbuf)).
+  then(data => console.log(toCelsius(data.buffer.readUInt16BE()))).
+  then(_ => i2c1.close())
+).catch(console.log);
+Example 3 - Asynchronous Callbacks
+Determine the temperature with a MCP9808 I2C temperature sensor using asynchronous callbacks.
+
+const i2c = require('i2c-bus');
+
+const MCP9808_ADDR = 0x18;
+const TEMP_REG = 0x05;
+
+const toCelsius = rawData => {
+  rawData = (rawData >> 8) + ((rawData & 0xff) << 8);
+  let celsius = (rawData & 0x0fff) / 16;
+  if (rawData & 0x1000) {
+    celsius -= 256;
+  }
+  return celsius;
+};
+
+const i2c1 = i2c.open(1, err => {
+  if (err) throw err;
+
+  i2c1.readWord(MCP9808_ADDR, TEMP_REG, (err, rawData) => {
+    if (err) throw err;
+
+    console.log(toCelsius(rawData));
+
+    i2c1.close(err => {
+      if (err) throw err;
+    });
+  });
+});
+Example 4 - Synchronous Methods
+Determine the temperature with a MCP9808 I2C temperature sensor using synchronous methods.
+
+const i2c = require('i2c-bus');
+
+const MCP9808_ADDR = 0x18;
+const TEMP_REG = 0x05;
+
+const toCelsius = rawData => {
+  rawData = (rawData >> 8) + ((rawData & 0xff) << 8);
+  let celsius = (rawData & 0x0fff) / 16;
+  if (rawData & 0x1000) {
+    celsius -= 256;
+  }
+  return celsius;
+};
+
+const i2c1 = i2c.openSync(1);
+const rawData = i2c1.readWordSync(MCP9808_ADDR, TEMP_REG);
+console.log(toCelsius(rawData));
+i2c1.closeSync();
+API
+Functions
+Class Bus
+Class PromisifiedBus
+Class I2cFuncs
+Functions
+open(busNumber [, options], cb)
+openSync(busNumber [, options])
+openPromisified(busNumber [, options])
+Class Bus
+All methods in class Bus have asynchronous callback and synchronous forms. For promise support see class PromisifiedBus.
+
+The asynchronous callback form always take a completion callback as its last argument. The arguments passed to the completion callback depend on the method, but the first argument is always reserved for an exception. If the operation was completed successfully, then the first argument will be null or undefined.
+
+When using the synchronous form any exceptions are immediately thrown. You can use try/catch to handle exceptions or allow them to bubble up.
+
+Free resources
+
+bus.close(cb)
+bus.closeSync()
+Information
+
+bus.i2cFuncs(cb)
+bus.i2cFuncsSync()
+bus.scan([startAddr,] [endAddr,] cb)
+bus.scanSync([startAddr,] [endAddr])
+bus.deviceId(addr, cb)
+bus.deviceIdSync(addr)
+Plain I2C
+
+bus.i2cRead(addr, length, buffer, cb)
+bus.i2cReadSync(addr, length, buffer)
+bus.i2cWrite(addr, length, buffer, cb)
+bus.i2cWriteSync(addr, length, buffer)
+SMBus
+
+bus.readByte(addr, cmd, cb)
+bus.readByteSync(addr, cmd)
+bus.readWord(addr, cmd, cb)
+bus.readWordSync(addr, cmd)
+bus.readI2cBlock(addr, cmd, length, buffer, cb)
+bus.readI2cBlockSync(addr, cmd, length, buffer)
+bus.receiveByte(addr, cb)
+bus.receiveByteSync(addr)
+bus.sendByte(addr, byte, cb)
+bus.sendByteSync(addr, byte)
+bus.writeByte(addr, cmd, byte, cb)
+bus.writeByteSync(addr, cmd, byte)
+bus.writeWord(addr, cmd, word, cb)
+bus.writeWordSync(addr, cmd, word)
+bus.writeQuick(addr, bit, cb)
+bus.writeQuickSync(addr, bit)
+bus.writeI2cBlock(addr, cmd, length, buffer, cb)
+bus.writeI2cBlockSync(addr, cmd, length, buffer)
+Promises
+
+bus.promisifiedBus()
+Class PromisifiedBus
+All methods in class PromisifiedBus have the asynchronous promise form. For asynchronous callback and synchronous forms see class Bus.
+
+Free resources
+
+promisifiedBus.close()
+Information
+
+promisifiedBus.i2cFuncs()
+promisifiedBus.scan([startAddr,] [endAddr])
+promisifiedBus.deviceId(addr)
+Plain I2C
+
+promisifiedBus.i2cRead(addr, length, buffer)
+promisifiedBus.i2cWrite(addr, length, buffer)
+SMBus
+
+promisifiedBus.readByte(addr, cmd)
+promisifiedBus.readWord(addr, cmd)
+promisifiedBus.readI2cBlock(addr, cmd, length, buffer)
+promisifiedBus.receiveByte(addr)
+promisifiedBus.sendByte(addr, byte)
+promisifiedBus.writeByte(addr, cmd, byte)
+promisifiedBus.writeWord(addr, cmd, word)
+promisifiedBus.writeQuick(addr, bit)
+promisifiedBus.writeI2cBlock(addr, cmd, length, buffer)
+Asynchronous callbacks and synchronous execution
+
+promisifiedBus.bus()
+Class I2cFuncs
+funcs.i2c
+funcs.tenBitAddr
+funcs.protocolMangling
+funcs.smbusPec
+funcs.smbusBlockProcCall
+funcs.smbusQuick
+funcs.smbusReceiveByte
+funcs.smbusSendByte
+funcs.smbusReadByte
+funcs.smbusWriteByte
+funcs.smbusReadWord
+funcs.smbusWriteWord
+funcs.smbusProcCall
+funcs.smbusReadBlock
+funcs.smbusWriteBlock
+funcs.smbusReadI2cBlock
+funcs.smbusWriteI2cBlock
+open(busNumber [, options], cb)
+busNumber - the number of the I2C bus/adapter to open, 0 for /dev/i2c-0, 1 for /dev/i2c-1, ...
+options - an optional options object
+cb - completion callback
+Asynchronous open. Returns a new Bus object. The callback gets one argument (err).
+
+The following options are supported:
+
+forceAccess - A boolean value specifying whether access to devices on the I2C bus should be allowed even if they are already in use by a kernel driver/module. Corresponds to I2C_SLAVE_FORCE on Linux. The valid values for forceAccess are true and false. Optional, the default value is false.
+openSync(busNumber [, options])
+busNumber - the number of the I2C bus/adapter to open, 0 for /dev/i2c-0, 1 for /dev/i2c-1, ...
+options - an optional options object
+Synchronous open. Returns a new Bus object.
+
+The following options are supported:
+
+forceAccess - A boolean value specifying whether access to devices on the I2C bus should be allowed even if they are already in use by a kernel driver/module. Corresponds to I2C_SLAVE_FORCE on Linux. The valid values for forceAccess are true and false. Optional, the default value is false.
+openPromisified(busNumber [, options])
+busNumber - the number of the I2C bus/adapter to open, 0 for /dev/i2c-0, 1 for /dev/i2c-1, ...
+options - an optional options object
+Asynchronous open. Returns a Promise that, when resolved, yields a PromisifiedBus object.
+
+The following options are supported:
+
+forceAccess - A boolean value specifying whether access to devices on the I2C bus should be allowed even if they are already in use by a kernel driver/module. Corresponds to I2C_SLAVE_FORCE on Linux. The valid values for forceAccess are true and false. Optional, the default value is false.
+bus.close(cb)
+cb - completion callback
+Asynchronous close. Frees system resources used by this instance. The callback gets one argument (err).
+
+bus.closeSync()
+Synchronous close. Frees system resources used by this instance.
+
+bus.i2cFuncs(cb)
+cb - completion callback
+Determine functionality of the bus/adapter asynchronously. The callback gets two argument (err, funcs). funcs is a frozen I2cFuncs object describing the functionality available. See also I2C functionality.
+
+bus.i2cFuncsSync()
+Determine functionality of the bus/adapter Synchronously. Returns a frozen I2cFuncs object describing the functionality available. See also I2C functionality.
+
+bus.scan([startAddr,] [endAddr,] cb)
+startAddr - an integer specifying the start address of the scan range, optional
+endAddr - an integer specifying the end addrerss of the scan range, optional
+cb - completion callback
+bus.scan(cb) - scan for I2C devices in address range 0x03 through 0x77
+bus.scan(addr, cb) - scan for an I2C device at address addr
+bus.scan(startAddr, endAddr, cb) - scan for I2C devices in address range startAddr through endAddr
+
+Scans the I2C bus asynchronously for devices. The default address range 0x03 through 0x77 is the same as the default address range used by the i2cdetect command line tool. The callback gets two arguments (err, devices). devices is an array of numbers where each number represents the I2C address of a device which was detected.
+
+bus.scanSync([startAddr,] [endAddr])
+startAddr - an integer specifying the start address of the scan range, optional
+endAddr - an integer specifying the end addrerss of the scan range, optional
+bus.scan() - scan for I2C devices in address range 0x03 through 0x77
+bus.scan(addr) - scan for an I2C device at address addr
+bus.scan(startAddr, endAddr) - scan for I2C devices in address range startAddr through endAddr
+
+Scans the I2C bus synchronously for devices. The default address range 0x03 through 0x77 is the same as the default address range used by the i2cdetect command line tool. Returns an array of numbers where each number represents the I2C address of a device which was detected.
+
+bus.deviceId(addr, cb)
+addr - I2C device address
+cb - completion callback
+Asynchronous I2C device Id. The callback gets two arguments (err, id). id is an object with the properties manufacturer, product and if known a human readable name for the associated manufacturer. manufacturer and product are numbers, name is a string.
+
+bus.deviceIdSync(addr)
+addr - I2C device address
+Synchronous I2C device Id. Returns an object with the properties manufacturer, product and if known a human readable name for the associated manufacturer. manufacturer and product are numbers, name is a string.
+
+bus.i2cRead(addr, length, buffer, cb)
+addr - I2C device address
+length - an integer specifying the number of bytes to read
+buffer - the Buffer instance that the data will be written to (must conatin at least length bytes)
+cb - completion callback
+Asynchronous plain I2C read. The callback gets three argument (err, bytesRead, buffer). bytesRead is the number of bytes read.
+
+bus.i2cReadSync(addr, length, buffer)
+addr - I2C device address
+length - an integer specifying the number of bytes to read
+buffer - the Buffer instance that the data will be written to (must conatin at least length bytes)
+Synchronous plain I2C read. Returns the number of bytes read.
+
+bus.i2cWrite(addr, length, buffer, cb)
+addr - I2C device address
+length - an integer specifying the number of bytes to write
+buffer - the Buffer instance containing the data to write (must conatin at least length bytes)
+cb - completion callback
+Asynchronous plain I2C write. The callback gets three argument (err, bytesWritten, buffer). bytesWritten is the number of bytes written.
+
+bus.i2cWriteSync(addr, length, buffer)
+addr - I2C device address
+length - an integer specifying the number of bytes to write
+buffer - the Buffer instance containing the data to write (must conatin at least length bytes)
+Synchronous plain I2C write. Returns the number of bytes written.
+
+bus.readByte(addr, cmd, cb)
+addr - I2C device address
+cmd - command code
+cb - completion callback
+Asynchronous SMBus read byte. The callback gets two arguments (err, byte). byte is an unsigned integer in the range 0 to 255.
+
+bus.readByteSync(addr, cmd)
+addr - I2C device address
+cmd - command code
+Synchronous SMBus read byte. Returns the byte read. byte is an unsigned integer in the range 0 to 255.
+
+bus.readWord(addr, cmd, cb)
+addr - I2C device address
+cmd - command code
+cb - completion callback
+Asynchronous SMBus read word. The callback gets two arguments (err, word). word is an unsigned integer in the range 0 to 65535.
+
+bus.readWordSync(addr, cmd)
+addr - I2C device address
+cmd - command code
+Synchronous SMBus read word. Returns the word read. word is an unsigned integer in the range 0 to 65535.
+
+bus.readI2cBlock(addr, cmd, length, buffer, cb)
+addr - I2C device address
+cmd - command code
+length - an integer specifying the number of bytes to read (max 32)
+buffer - the Buffer instance that the data will be written to (must conatin at least length bytes)
+cb - completion callback
+Asynchronous I2C block read (not defined by the SMBus specification). Reads a block of bytes from a device, from a designated register that is specified by cmd. The callback gets three arguments (err, bytesRead, buffer). bytesRead is the number of bytes read.
+
+bus.readI2cBlockSync(addr, cmd, length, buffer)
+addr - I2C device address
+cmd - command code
+length - an integer specifying the number of bytes to read (max 32)
+buffer - the Buffer instance that the data will be written to (must conatin at least length bytes)
+Synchronous I2C block read (not defined by the SMBus specification). Reads a block of bytes from a device, from a designated register that is specified by cmd. Returns the number of bytes read.
+
+bus.receiveByte(addr, cb)
+addr - I2C device address
+cb - completion callback
+Asynchronous SMBus receive byte. The callback gets two arguments (err, byte). byte is an unsigned integer in the range 0 to 255.
+
+bus.receiveByteSync(addr)
+addr - I2C device address
+Synchronous SMBus receive byte. Returns the byte received. byte is an unsigned integer in the range 0 to 255.
+
+bus.sendByte(addr, byte, cb)
+addr - I2C device address
+byte - data byte. byte is an unsigned integer in the range 0 to 255.
+cb - completion callback
+Asynchronous SMBus send byte. The callback gets one argument (err).
+
+bus.sendByteSync(addr, byte)
+addr - I2C device address
+byte - data byte. byte is an unsigned integer in the range 0 to 255.
+Synchronous SMBus send byte.
+
+bus.writeByte(addr, cmd, byte, cb)
+addr - I2C device address
+cmd - command code
+byte - data byte. byte is an unsigned integer in the range 0 to 255.
+cb - completion callback
+Asynchronous SMBus write byte. The callback gets one argument (err).
+
+bus.writeByteSync(addr, cmd, byte)
+addr - I2C device address
+cmd - command code
+byte - data byte. byte is an unsigned integer in the range 0 to 255.
+Synchronous SMBus write byte.
+
+bus.writeWord(addr, cmd, word, cb)
+addr - I2C device address
+cmd - command code
+word - data word. word is an unsigned integer in the range 0 to 65535.
+cb - completion callback
+Asynchronous SMBus write word. The callback gets one argument (err).
+
+bus.writeWordSync(addr, cmd, word)
+addr - I2C device address
+cmd - command code
+word - data word. word is an unsigned integer in the range 0 to 65535.
+Synchronous SMBus write word.
+
+bus.writeQuick(addr, bit, cb)
+addr - I2C device address
+bit - bit to write (0 or 1)
+cb - completion callback
+Asynchronous SMBus quick command. Writes a single bit to the device. The callback gets one argument (err).
+
+bus.writeQuickSync(addr, bit)
+addr - I2C device address
+bit - bit to write (0 or 1)
+Synchronous SMBus quick command. Writes a single bit to the device.
+
+bus.writeI2cBlock(addr, cmd, length, buffer, cb)
+addr - I2C device address
+cmd - command code
+length - an integer specifying the number of bytes to write (max 32)
+buffer - the Buffer instance containing the data to write (must conatin at least length bytes)
+cb - completion callback
+Asynchronous I2C block write (not defined by the SMBus specification). Writes a block of bytes to a device, to a designated register that is specified by cmd. The callback gets three argument (err, bytesWritten, buffer). bytesWritten is the number of bytes written.
+
+bus.writeI2cBlockSync(addr, cmd, length, buffer)
+addr - I2C device address
+cmd - command code
+length - an integer specifying the number of bytes to write (max 32)
+buffer - the Buffer instance containing the data to write (must conatin at least length bytes)
+Synchronous I2C block write (not defined by the SMBus specification). Writes a block of bytes to a device, to a designated register that is specified by cmd.
+
+bus.promisifiedBus()
+Return the PromisifiedBus instance for this Bus instance.
+
+promisifiedBus.close()
+Asynchronous close. Returns a Promise that will be resolved with no arguments once the underlying resources have been released, or will be rejected if an error occurs while closing.
+
+promisifiedBus.i2cFuncs()
+Determine functionality of the bus/adapter asynchronously. Returns a Promise that on success will be resolved with a frozen I2cFuncs object describing the functionality available. The returned Promise will be rejected if an error occurs. See also I2C functionality.
+
+promisifiedBus.scan([startAddr,] [endAddr])
+startAddr - an integer specifying the start address of the scan range, optional
+endAddr - an integer specifying the end addrerss of the scan range, optional
+bus.scan() - scan for I2C devices in address range 0x03 through 0x77
+bus.scan(addr) - scan for an I2C device at address addr
+bus.scan(startAddr, endAddr) - scan for I2C devices in address range startAddr through endAddr
+
+Scans the I2C bus asynchronously for devices. The default address range 0x03 through 0x77 is the same as the default address range used by the i2cdetect command line tool. Returns a Promise that on success will be resolved with an array of numbers where each number represents the I2C address of a device which was detected. The returned Promise will be rejected if an error occurs.
+
+promisifiedBus.deviceId(addr)
+addr - I2C device address
+Asynchronous I2C device Id. Returns a Promise that will be resolved with an id object on success, or will be rejected if an error occurs. id is an object with the properties manufacturer, product and if known a human readable name for the associated manufacturer. manufacturer and product are numbers, name is a string.
+
+promisifiedBus.i2cRead(addr, length, buffer)
+addr - I2C device address
+length - an integer specifying the number of bytes to read
+buffer - the Buffer instance that the data will be written to (must conatin at least length bytes)
+Asynchronous plain I2C read. Returns a Promise that on success will be resolved with an object with a bytesRead property identifying the number of bytes read, and a buffer property that is a reference to the passed in buffer argument. The returned Promise will be rejected if an error occurs.
+
+promisifiedBus.i2cWrite(addr, length, buffer)
+addr - I2C device address
+length - an integer specifying the number of bytes to write
+buffer - the Buffer instance containing the data to write (must conatin at least length bytes)
+Asynchronous plain I2C write. Returns a Promise that on success will be resolved with an object with a bytesWritten property identifying the number of bytes written, and a buffer property that is a reference to the passed in buffer argument. The returned promise will be rejected if an error occurs.
+
+promisifiedBus.readByte(addr, cmd)
+addr - I2C device address
+cmd - command code
+Asynchronous SMBus read byte. Returns a Promise that will be resolved with a number representing the byte read on success, or will be rejected if an error occurs. byte is an unsigned integer in the range 0 to 255.
+
+promisifiedBus.readWord(addr, cmd)
+addr - I2C device address
+cmd - command code
+Asynchronous SMBus read word. Returns a Promise that will be resolved with a number representing the word read on success, or will be rejected if an error occurs. word is an unsigned integer in the range 0 to 65535.
+
+promisifiedBus.readI2cBlock(addr, cmd, length, buffer)
+addr - I2C device address
+cmd - command code
+length - an integer specifying the number of bytes to read (max 32)
+buffer - the Buffer instance that the data will be written to (must conatin at least length bytes)
+Asynchronous I2C block read (not defined by the SMBus specification). Reads a block of bytes from a device, from a designated register that is specified by cmd. Returns a Promise that on success will be resolved with an object with a bytesRead property identifying the number of bytes read, and a buffer property that is a reference to the passed in buffer argument. The returned Promise will be rejected if an error occurs.
+
+promisifiedBus.receiveByte(addr)
+addr - I2C device address
+Asynchronous SMBus receive byte. Returns a Promise that will be resolved with a number representing the byte received on success, or will be rejected if an error occurs. byte is an unsigned integer in the range 0 to 255.
+
+promisifiedBus.sendByte(addr, byte)
+addr - I2C device address
+byte - data byte. byte is an unsigned integer in the range 0 to 255.
+Asynchronous SMBus send byte. Returns a Promise that will be resolved with no arguments on success, or will be rejected if an error occurs.
+
+promisifiedBus.writeByte(addr, cmd, byte)
+addr - I2C device address
+cmd - command code
+byte - data byte. byte is an unsigned integer in the range 0 to 255.
+Asynchronous SMBus write byte. Returns a Promise that will be resolved with no arguments on success, or will be rejected if an error occurs.
+
+promisifiedBus.writeWord(addr, cmd, word)
+addr - I2C device address
+cmd - command code
+word - data word. word is an unsigned integer in the range 0 to 65535.
+Asynchronous SMBus write word. Returns a Promise that will be resolved with no arguments on success, or will be rejected if an error occurs.
+
+promisifiedBus.writeQuick(addr, bit)
+addr - I2C device address
+bit - bit to write (0 or 1)
+Asynchronous SMBus quick command. Writes a single bit to the device. Returns a Promise that will be resolved with no arguments on success, or will be rejected if an error occurs.
+
+promisifiedBus.writeI2cBlock(addr, cmd, length, buffer)
+addr - I2C device address
+cmd - command code
+length - an integer specifying the number of bytes to write (max 32)
+buffer - the Buffer instance containing the data to write (must conatin at least length bytes)
+Asynchronous I2C block write (not defined by the SMBus specification). Writes a block of bytes to a device, to a designated register that is specified by cmd. Returns a Promise that on success will be resolved with an object with a bytesWritten property identifying the number of bytes written, and a buffer property that is a reference to the passed in buffer argument. The returned promise will be rejected if an error occurs.
+
+promisifiedBus.bus()
+Return the Bus instance for this PromisifiedBus instance.
+
+funcs.i2c - boolean
+Specifies whether or not the adapter handles plain I2C-level commands (Pure SMBus adapters typically can not do these, I2C_FUNC_I2C).
+
+funcs.tenBitAddr - boolean
+Specifies whether or not the adapter handles the 10-bit address extensions (I2C_FUNC_10BIT_ADDR).
+
+funcs.protocolMangling - boolean
+Specifies whether or not the adapter knows about the I2C_M_IGNORE_NAK, I2C_M_REV_DIR_ADDR and I2C_M_NO_RD_ACK flags (which modify the I2C protocol! I2C_FUNC_PROTOCOL_MANGLING).
+
+funcs.smbusPec - boolean
+Specifies whether or not the adapter handles packet error checking (I2C_FUNC_SMBUS_PEC).
+
+funcs.smbusBlockProcCall - boolean
+Specifies whether or not the adapter handles the SMBus block process call command (I2C_FUNC_SMBUS_BLOCK_PROC_CALL).
+
+funcs.smbusQuick - boolean
+Specifies whether or not the adapter handles the SMBus quick command (I2C_FUNC_SMBUS_QUICK).
+
+funcs.smbusReceiveByte - boolean
+Specifies whether or not the adapter handles the SMBus receive byte command (I2C_FUNC_SMBUS_READ_BYTE).
+
+funcs.smbusSendByte - boolean
+Specifies whether or not the adapter handles the SMBus send byte command (I2C_FUNC_SMBUS_WRITE_BYTE).
+
+funcs.smbusReadByte - boolean
+Specifies whether or not the adapter handles the SMBus read byte command (I2C_FUNC_SMBUS_READ_BYTE_DATA).
+
+funcs.smbusWriteByte - boolean
+Specifies whether or not the adapter handles the SMBus write byte command (I2C_FUNC_SMBUS_WRITE_BYTE_DATA).
+
+funcs.smbusReadWord - boolean
+Specifies whether or not the adapter handles the SMBus read word command (I2C_FUNC_SMBUS_READ_WORD_DATA).
+
+funcs.smbusWriteWord - boolean
+Specifies whether or not the adapter handles the SMBus write word command (I2C_FUNC_SMBUS_WRITE_WORD_DATA).
+
+funcs.smbusProcCall - boolean
+Specifies whether or not the adapter handles the SMBus process call command (I2C_FUNC_SMBUS_PROC_CALL).
+
+funcs.smbusReadBlock - boolean
+Specifies whether or not the adapter handles the SMBus read block command (I2C_FUNC_SMBUS_READ_BLOCK_DATA).
+
+funcs.smbusWriteBlock - boolean
+Specifies whether or not the adapter handles the SMBus write block command (I2C_FUNC_SMBUS_WRITE_BLOCK_DATA).
+
+funcs.smbusReadI2cBlock - boolean
+Specifies whether or not the adapter handles the SMBus read I2C block command (I2C_FUNC_SMBUS_READ_I2C_BLOCK).
+
+funcs.smbusWriteI2cBlock - boolean
+Specifies whether or not the adapter handles the SMBus write i2c block command (I2C_FUNC_SMBUS_WRITE_I2C_BLOCK).
+
+TypeScript Type Definitions
+TypeScript type definitions for i2c-bus can be found in the Definitely Typed repository at https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/i2c-bus.
+
+
+
+Onoff.
+
+Build Status codecov npm Version Downloads Per Month Mentioned in Awesome Node.js
+
+onoff
+GPIO access and interrupt detection with Node.js on Linux boards like the Raspberry Pi or BeagleBone.
+
+onoff supports Node.js versions 10, 12, 14, 15 and 16.
+
+Contents
+Installation
+Usage
+LEDs and Buttons
+Debouncing Buttons
+Blink an LED Using the Synchronous API
+Blink an LED Using the Asynchronous API and Completion Callbacks
+Blink an LED Using the Asynchronous API and Promises
+API
+How Does onoff Work?
+Configuring Pullup and Pulldown Resistors
+Benchmarks
+Related Packages
+Additional Information
+Installation
+npm install onoff
+Note that although it's possible to install onoff on non-Linux systems the functionality offered by onoff is only available on Linux systems.
+
+Usage
+LEDs and Buttons
+Assume that there's an LED connected to GPIO17 and a momentary push button connected to GPIO4.
+
+
+When the button is pressed the LED should turn on, when it's released the LED should turn off. This can be achieved with the following code:
+
+const Gpio = require('onoff').Gpio;
+const led = new Gpio(17, 'out');
+const button = new Gpio(4, 'in', 'both');
+
+button.watch((err, value) => led.writeSync(value));
+Here two Gpio objects are being created. One called led for the LED connected to GPIO17 which is an output, and one called button for the momentary push button connected to GPIO4 which is an input. In addition to specifying that the button is an input, the constructors optional third argument is used to specify that 'both' rising and falling interrupt edges should be configured for the button GPIO as both button presses and releases should be handled.
+
+After everything has been setup correctly, the buttons watch method is used to specify a callback function to execute every time the button is pressed or released. The value argument passed to the callback function represents the state of the button which will be 1 for pressed and 0 for released. This value is used by the callback to turn the LED on or off using its writeSync method.
+
+When the above program is running it can be terminated with ctrl-c. However, it doesn't free its resources. It also ignores the err argument passed to the callback. Here's a slightly modified variant of the program that handles ctrl-c gracefully and bails out on error. The resources used by the led and button Gpio objects are released by invoking their unexport method.
+
+const Gpio = require('onoff').Gpio;
+const led = new Gpio(17, 'out');
+const button = new Gpio(4, 'in', 'both');
+
+button.watch((err, value) => {
+  if (err) {
+    throw err;
+  }
+
+  led.writeSync(value);
+});
+
+process.on('SIGINT', _ => {
+  led.unexport();
+  button.unexport();
+});
+Debouncing Buttons
+When working with buttons there will often be button bounce issues which result in the hardware thinking that a button was pressed several times although it was only pressed once. onoff provides a software debouncing solution for resolving bounce issues.
+
+Assume again that there's an LED connected to GPIO17 and a momentary push button connected to GPIO4.
+
+When the button is pressed the LED should toggle its state. This is a typical example of a situation where there will be button bounce issues. The issue can be resolved by using the debounceTimeout option when creating the Gpio object for the button. In the below program the debounceTimeout is set to 10 milliseconds. This delays invoking the watch callback for the button while the button is bouncing. The watch callback will not be invoked until the button stops bouncing and has been in a stable state for 10 milliseconds.
+
+const Gpio = require('onoff').Gpio;
+const led = new Gpio(17, 'out');
+const button = new Gpio(4, 'in', 'rising', {debounceTimeout: 10});
+
+button.watch((err, value) => {
+  if (err) {
+    throw err;
+  }
+
+  led.writeSync(led.readSync() ^ 1);
+});
+
+process.on('SIGINT', _ => {
+  led.unexport();
+  button.unexport();
+});
+Blink an LED Using the Synchronous API
+Blink an LED connected to GPIO17 for 5 seconds using the synchronous readSync and writeSync methods.
+
+const Gpio = require('../onoff').Gpio; // Gpio class
+const led = new Gpio(17, 'out'); // Export GPIO17 as an output
+
+// Toggle the state of the LED connected to GPIO17 every 200ms
+const iv = setInterval(_ => led.writeSync(led.readSync() ^ 1), 200);
+
+// Stop blinking the LED after 5 seconds
+setTimeout(_ => {
+  clearInterval(iv); // Stop blinking
+  led.unexport(); // Unexport GPIO and free resources
+}, 5000);
+Blink an LED Using the Asynchronous API and Completion Callbacks
+Blink an LED connected to GPIO17 for 5 seconds using the asynchronous read and write methods and completion callbacks.
+
+const Gpio = require('../onoff').Gpio; // Gpio class
+const led = new Gpio(17, 'out'); // Export GPIO17 as an output
+let stopBlinking = false;
+
+// Toggle the state of the LED connected to GPIO17 every 200ms
+const blinkLed = _ => {
+  if (stopBlinking) {
+    return led.unexport();
+  }
+
+  led.read((err, value) => { // Asynchronous read
+    if (err) {
+      throw err;
+    }
+
+    led.write(value ^ 1, err => { // Asynchronous write
+      if (err) {
+        throw err;
+      }
+    });
+  });
+
+  setTimeout(blinkLed, 200);
+};
+
+blinkLed();
+
+// Stop blinking the LED after 5 seconds
+setTimeout(_ => stopBlinking = true, 5000);
+Blink an LED Using the Asynchronous API and Promises
+Blink an LED connected to GPIO17 for 5 seconds using the asynchronous read and write methods and Promises.
+
+const Gpio = require('../onoff').Gpio; // Gpio class
+const led = new Gpio(17, 'out'); // Export GPIO17 as an output
+let stopBlinking = false;
+
+// Toggle the state of the LED connected to GPIO17 every 200ms
+const blinkLed = _ => {
+  if (stopBlinking) {
+    return led.unexport();
+  }
+
+  led.read()
+    .then(value => led.write(value ^ 1))
+    .then(_ => setTimeout(blinkLed, 200))
+    .catch(err => console.log(err));
+};
+
+blinkLed();
+
+// Stop blinking the LED after 5 seconds
+setTimeout(_ => stopBlinking = true, 5000);
+Check accessibility
+Sometimes it may be necessary to determine if the current system supports GPIOs programmatically and mock functionality if it doesn't. Gpio.accessible can be used to achieve this.
+
+const Gpio = require('onoff').Gpio;
+
+const useLed = (led, value) => led.writeSync(value);
+
+let led;
+
+if (Gpio.accessible) {
+  led = new Gpio(17, 'out');
+  // more real code here
+} else {
+  led = {
+    writeSync: value => {
+      console.log('virtual led now uses value: ' + value);
+    }
+  };
+}
+
+useLed(led, 1);
+API
+Class Gpio
+Gpio(gpio, direction [, edge] [, options]) - Constructor
+read([callback]) - Read GPIO value asynchronously
+readSync() - Read GPIO value synchronously
+write(value[, callback]) - Write GPIO value asynchronously
+writeSync(value) - Write GPIO value synchronously
+watch(callback) - Watch for hardware interrupts on the GPIO
+unwatch([callback]) - Stop watching for hardware interrupts on the GPIO
+unwatchAll() - Remove all watchers for the GPIO
+direction() - Get GPIO direction
+setDirection(direction) - Set GPIO direction
+edge() - Get GPIO interrupt generating edge
+setEdge(edge) - Set GPIO interrupt generating edge
+activeLow() - Get GPIO activeLow setting
+setActiveLow(invert) - Set GPIO activeLow setting
+unexport() - Reverse the effect of exporting the GPIO to userspace
+static accessible - Determine whether or not GPIO access is possible
+HIGH / LOW - Constants used when reading or writing a GPIO value
+Gpio(gpio, direction [, edge] [, options])
+gpio - An unsigned integer specifying the GPIO number.
+direction - A string specifying whether the GPIO should be configured as an input or output. The valid values are: 'in', 'out', 'high', and 'low'. If 'out' is specified the GPIO will be configured as an output and the value of the GPIO will be set to 0. 'high' and 'low' are variants of 'out' that configure the GPIO as an output with an initial level of 1 or 0 respectively.
+[edge] - An optional string specifying the interrupt generating edge or edges for an input GPIO. The valid values are: 'none', 'rising', 'falling' or 'both'. The default value is 'none' indicating that the GPIO will not generate interrupts. Whether or not interrupts are supported by an input GPIO is GPIO specific. If interrupts are not supported by a GPIO the edge argument should not be specified. The edge argument is ignored for output GPIOs.
+[options] - An optional options object.
+Configures the GPIO based on the passed arguments and returns a new Gpio object that can be used to access the GPIO.
+
+The following options are supported:
+
+debounceTimeout - An unsigned integer specifying a millisecond delay. Delays invoking the watch callback for an interrupt generating input GPIO while the input is bouncing. The watch callback will not be invoked until the input stops bouncing and has been in a stable state for debounceTimeout milliseconds. Optional, if unspecified the input GPIO will not be debounced.
+activeLow - A boolean value specifying whether the values read from or written to the GPIO should be inverted. The interrupt generating edge for the GPIO also follow this this setting. The valid values for activeLow are true and false. Setting activeLow to true inverts. Optional, the default value is false.
+reconfigureDirection - A boolean value specifying whether the direction for the GPIO should be reconfigured even though the direction is already configured correctly. When an application starts, the direction of a GPIO used by that application may already be configured correctly, for example, from a previous run of the application. Reconfiguring the direction of that GPIO can result in unwanted side effects. For example, if a GPIO is already configured as an output and it is reconfigured as an output by passing 'out' to the constructor, the value of that output will be set to 0. In some applications this is not desirable and the value of the output should not be modified. The reconfigureDirection option can help here. If reconfigureDirection is set to false the direction of a GPIO that is already correctly configured will not be reconfigured. Optional, the default value is true.
+GPIOs on Linux are identified by unsigned integers. These are the numbers that should be passed to the onoff Gpio constructor when exporting GPIOs to userspace. For example, pin 11 on the Raspberry Pi expansion header corresponds to GPIO17 in Raspbian Linux. 17 is therefore the number to pass to the onoff Gpio constructor when using pin 11 on the expansion header.
+
+read([callback])
+[callback] - An optional completion callback that gets two arguments (err, value), where err is reserved for an Error object and value is the number 0 or 1 and represents the state of the GPIO.
+Read GPIO value asynchronously. If no completion callback is specified read returns a Promise which resolves to the value of the GPIO on success or rejects with an Error object on failure.
+
+Note that most systems support readback of GPIOs configured as outputs. The read method can therefore be invoked for any GPIO, irrespective of whether it was configured as an input or an output. The Raspberry Pi and BeagleBone are examples of such systems.
+
+readSync()
+Read GPIO value synchronously. Returns the number 0 or 1 to represent the state of the GPIO.
+
+Note that most systems support readback of GPIOs configured as outputs. The readSync method can therefore be invoked for any GPIO, irrespective of whether it was configured as an input or an output. The Raspberry Pi and BeagleBone are examples of such systems.
+
+write(value[, callback])
+value - The number 0 or 1.
+[callback] - An optional completion callback that gets one argument (err), where err is reserved for an error object.
+Write GPIO value asynchronously. If no completion callback is specified write returns a Promise that resolves with no value on success or rejects with an Error object on failure.
+
+Note that on most systems invoking write for a GPIO configured as an input will result in an EPERM error indicating that the operation is not permitted. The Raspberry Pi and BeagleBone are examples of such systems.
+
+writeSync(value)
+value - The number 0 or 1.
+Write GPIO value synchronously.
+
+Note that on most systems invoking writeSync for a GPIO configured as an input will result in an EPERM error indicating that the operation is not permitted. The Raspberry Pi and BeagleBone are examples of such systems.
+
+watch(callback)
+callback - A callback that gets two arguments (err, value), where err is reserved for an error object and value is the number 0 or 1 and represents the state of the GPIO. The value can also be used to determine whether the interrupt occurred on a rising or falling edge. A value of 0 implies a falling edge interrupt and a value of 1 implies a rising edge interrupt.
+Watch for hardware interrupts on the GPIO. The edge argument that was passed to the constructor determines which hardware interrupts to watch for.
+
+unwatch([callback])
+[callback] - The callback to remove.
+Stop watching for hardware interrupts on the GPIO. If callback is specified, only that particular callback is removed. Otherwise all callbacks are removed.
+
+unwatchAll()
+Remove all hardware interrupt watchers for the GPIO.
+
+direction()
+Returns the string 'in' or 'out' indicating whether the GPIO is an input or output.
+
+setDirection(direction)
+direction - A string specifying whether the GPIO should be configured as an input or output. The valid values are 'in', 'out', 'high', and 'low'. If 'out' is specified the GPIO will be configured as an output and the value of the GPIO will be set to 0. 'high' and 'low' are variants of 'out' that configure the GPIO as an output with an initial level of 1 or 0 respectively.
+Set GPIO direction.
+
+edge()
+Returns the string 'none', 'falling', 'rising', or 'both' indicating the interrupt generating edge or edges for the GPIO. Whether or not interrupts are supported by an input GPIO is GPIO specific. If interrupts are not supported the edge method should not be used. Interrupts are not supported by output GPIOs.
+
+setEdge(edge)
+edge - A string specifying the interrupt generating edge or edges for an input GPIO. The valid values are: 'none', 'rising', 'falling' or 'both'. Whether or not interrupts are supported by an input GPIO is GPIO specific. If interrupts are not supported the setEdge method should not be used. Interrupts are not supported by output GPIOs.
+Set GPIO interrupt generating edge.
+
+activeLow()
+Returns true or false indicating whether or not the values read from or written to the GPIO are inverted.
+
+setActiveLow(invert)
+invert - A boolean value specifying whether the values read from or written to the GPIO should be inverted. The interrupt generating edge for the GPIO also follow this this setting. The valid values for invert are true and false. Setting activeLow to true inverts.
+Set GPIO activeLow setting.
+
+unexport()
+Reverse the effect of exporting the GPIO to userspace. A Gpio object should not be used after invoking its unexport method.
+
+static accessible
+Determine whether or not GPIO access is possible. true if the current process has the permissions required to export GPIOs to userspace. false otherwise. Loosely speaking, if this property is true it should be possible for the current process to create Gpio objects.
+
+It is notable that while this property may be false indicating that the current process does not have the permissions required to export GPIOs to userspace, existing exported GPIOs may still be accessible.
+
+This property is useful for mocking functionality on computers used for development that do not provide access to GPIOs.
+
+This is a static property and should be accessed as Gpio.accessible.
+
+static HIGH / LOW
+Constants used when reading or writing a GPIO value. Gpio.HIGH and Gpio.LOW can be used in place of the numeric constants 1 and 0.
+
+onoff Work
+Internally onoff uses sysfs files located at /sys/class/gpio to access GPIOs and the epoll package to detect hardware interrupts. The Linux GPIO sysfs interface for userspace is documented here. It's a relatively simple interface which can be used to ask the Linux kernel to export control of a GPIO to userspace. After control of a GPIO has been exported to userspace, the GPIO can be configured as an input or output. Thereafter, the state of an input can be read, and the state of an output can be written. Some systems will also allow the state of a output to be read. The GPIO sysfs interface can also be used for interrupt detection. onoff can detect several thousand interrupts per second on both the BeagleBone and the Raspberry Pi.
+
+Configuring Pullup and Pulldown Resistors
+As mentioned in section How Does onoff Work the sysfs interface is used to access GPIOs. The sysfs interface doesn't offer support for configuring pullup and pulldown resistors on GPIOs.
+
+There are however many platform specific mechanisms for configuring pullup and pulldown resistors that are compatible with onoff. onoff itself doesn't use these mechanisms as one of the goals of onoff is to be platform independent.
+
+Here we'll take a look at two mechanisms available on the Raspberry Pi for configuring pullup and pulldown resistors.
+
+The first point to be aware of is that most GPIOs on a Raspberry Pi have either their pullup or pulldown resistor activated by default. The defaults can be seen in Table 6-31 on pages 102 and 103 of the BCM2835 ARM Peripherals documentation.
+
+Using the gpio Command in /boot/config.txt
+On Raspbian 2018-04-18 or later the gpio configuration command can be used in /boot/config.txt to configure pullup and pulldown resistors. Further information is available at New "gpio" config command.
+
+Using Device Tree Overlays
+Device tree overlays can also be used to configure pullup and pulldown resistors. The Wiki page Enabling Pullup and Pulldown Resistors on The Raspberry Pi describes this mechanism in more detail.
+
+Benchmarks
+Three of the onoff tests are used to monitor performance.
+
+performance-async.js - determine max. no. of write ops per seconds
+performance-sync.js - determine max. no. of writeSync ops per second
+performance-interrupt.js - determine max. no. of interrupts per second
+The results of these tests are shown in the following tables.
+
+Raspberry Pi 4 B, 1.5GHz, Raspberry Pi OS (March 4th 2021, Buster 10.8)
+
+node onoff kernel write / sec writeSync / sec interrupts / sec
+v16.0.0 v6.0.3 5.10.17-v7l+ 25124 280417 20240
+v15.14.0 v6.0.3 5.10.17-v7l+ 24055 271149 20488
+v14.16.1 v6.0.3 5.10.17-v7l+ 21669 254705 19703
+v12.22.1 v6.0.3 5.10.17-v7l+ 22618 318417 21122
+v10.24.1 v6.0.3 5.10.17-v7l+ 22405 329927 19583
+Raspberry Pi 3 B, 1.2GHz, Raspbian Buster 10.1
+
+node onoff kernel write / sec writeSync / sec interrupts / sec
+v12.14.0 v5.0.0 4.19.75-v7l+ 21670 207222 18328
+v10.18.0 v5.0.0 4.19.75-v7l+ 23661 225758 20741
+Raspberry Pi 2 B, 900MHz, Raspbian Buster 10.1
+
+node onoff kernel write / sec writeSync / sec interrupts / sec
+v12.14.0 v5.0.0 4.19.75-v7l+ 10769 113107 10373
+v10.18.0 v5.0.0 4.19.75-v7l+ 11843 129086 10536
+Raspberry Pi 1 B, 700MHz, Raspbian Buster 10.1
+
+node onoff kernel write / sec writeSync / sec interrupts / sec
+v12.14.0 v5.0.0 4.19.75+ 2316 26696 2112
+v10.18.0 v5.0.0 4.19.75+ 2613 33129 2225
+BeagleBone Black, 1GHz, Debian Buster 10.2
+
+node onoff kernel write / sec writeSync / sec interrupts / sec
+v12.14.0 v5.0.0 4.19.79-ti-r30 6855 70535 5911
+v10.18.0 v5.0.0 4.19.79-ti-r30 7564 79133 5920
+BeagleBone, 720MHz, Debian Buster 10.2
+
+node onoff kernel write / sec writeSync / sec interrupts / sec
+v12.14.0 v5.0.0 4.19.79-ti-r30 5013 49741 4297
+v10.18.0 v5.0.0 4.19.79-ti-r30 5400 57157 4371
+Related Packages
+Here are a few links to other hardware specific Node.js packages that may be of interest.
+
+pigpio - Fast GPIO, PWM, servo control, state change notification and interrupt handling on the Raspberry Pi
+i2c-bus - I2C serial bus access
+spi-device - SPI serial bus access
+mcp-spi-adc - Analog to digital conversion with the MCP3002/4/8, MCP3202/4/8 and MCP3304
+Additional Information
+onoff was tested on the following platforms:
+
+Raspberry Pi 1, 2, 3 and 4
+Raspbian or Raspberry Pi OS
+BeagleBone, BeagleBone Black and PocketBeagle
+Debian
+The suitability of onoff for a particular Linux board is highly dependent on how GPIO interfaces are made available on that board. The GPIO interfaces documentation describes GPIO access conventions rather than standards that must be followed so GPIO can vary from platform to platform. For example, onoff relies on sysfs files located at /sys/class/gpio being available. However, these sysfs files for userspace GPIO are optional and may not be available on a particular platform.
+
+
+Spi-device.
+
+Build Status npm Version Downloads Per Month Mentioned in Awesome Node.js
+
+spi-device
+SPI serial bus access with Node.js on Linux boards like the Raspberry Pi or BeagleBone. All methods have asynchronous and synchronous forms.
+
+spi-device supports Node.js versions 10, 12, 14, 15 and 16.
+
+Contents
+Installation
+Usage
+API Documentation
+Installation
+npm install spi-device
+Usage
+Determine the temperature using a TMP36 analog temperature sensor wired to channel 5 on an MCP3008 SPI A/D converter.
+
+const spi = require('spi-device');
+
+// The MCP3008 is on bus 0 and it's device 0
+const mcp3008 = spi.open(0, 0, err => {
+  // An SPI message is an array of one or more read+write transfers
+  const message = [{
+    sendBuffer: Buffer.from([0x01, 0xd0, 0x00]), // Sent to read channel 5
+    receiveBuffer: Buffer.alloc(3), // Raw data read from channel 5
+    byteLength: 3,
+    speedHz: 20000 // Use a low bus speed to get a good reading from the TMP36
+  }];
+
+  if (err) throw err;
+
+  mcp3008.transfer(message, (err, message) => {
+    if (err) throw err;
+
+    // Convert raw value from sensor to celcius and log to console
+    const rawValue = ((message[0].receiveBuffer[1] & 0x03) << 8) +
+      message[0].receiveBuffer[2];
+    const voltage = rawValue * 3.3 / 1023;
+    const celcius = (voltage - 0.5) * 100;
+
+    console.log(celcius);
+  });
+});
+spi-device enables low-level access to SPI devices. Often, high-level access is required. When this is the case, high-level packages can be built using spi-device. An example of such a package is mcp-spi-adc which provides a high-level API for accessing an MCP3008 SPI A/D converter and will generally be more useful than the low-level demonstration code shown above.
+
+API Documentation
+All methods have asynchronous and synchronous forms.
+
+The asynchronous form always take a completion callback as its last argument. The arguments passed to the completion callback depend on the method, but the first argument is always reserved for an exception. If the operation was completed successfully, then the first argument will be null or undefined.
+
+When using the synchronous form any exceptions are immediately thrown. You can use try/catch to handle exceptions or allow them to bubble up.
+
+Functions
+open(busNumber, deviceNumber[, options], cb)
+openSync(busNumber, deviceNumber[, options])
+Class SpiDevice
+device.transfer(message, cb)
+device.transferSync(message)
+device.getOptions(cb)
+device.getOptionsSync()
+device.setOptions(options, cb)
+device.setOptionsSync(options)
+device.close(cb)
+device.closeSync()
+Constants
+MODE0
+MODE1
+MODE2
+MODE3
+open(busNumber, deviceNumber[, options], cb)
+busNumber - the number of the SPI bus to open, 0 for /dev/spidev0.n, 1 for /dev/spidev1.n, ...
+deviceNumber - the number of the SPI device to open, 0 for /dev/spidevn.0, 1 for /dev/spidevn.1, ...
+options - an optional object specifying device configuration options
+cb - completion callback
+Asynchronous open. Returns a new SpiDevice object. The completion callback gets one argument (err). The SpiDevice object returned should not be used before the completion callback is called.
+
+openSync(busNumber, deviceNumber[, options])
+busNumber - the number of the SPI bus to open, 0 for /dev/spidev0.n, 1 for /dev/spidev1.n, ...
+deviceNumber - the number of the SPI device to open, 0 for /dev/spidevn.0, 1 for /dev/spidevn.1, ...
+options - an optional object specifying device configuration options
+Synchronous open. Returns a new SpiDevice object.
+
+device.transfer(message, cb)
+message - an array of one or more read+write transfers
+cb - completion callback
+Asynchronous message transfer. An SPI message is an array of one or more read+write transfers. The completion callback gets two arguments (err, message). Returns this.
+
+device.transferSync(message)
+message - an array of one or more read+write transfers
+Synchronous message transfer. An SPI message is an array of one or more read+write transfers. Returns this.
+
+device.getOptions(cb)
+cb - completion callback
+Asynchronously read device configuration options. The completion callback gets two arguments (err, options) where options is an object describing the device configuration options. Returns this.
+
+device.getOptionsSync()
+Synchronously read device configuration options. Returns an object describing the device configuration options.
+
+device.setOptions(options, cb)
+options - an object specifying device configuration options
+cb - completion callback
+Asynchronously write device configuration options. The completion callback gets one argument (err). Returns this.
+
+device.setOptionsSync(options)
+options - an object specifying device configuration options
+Synchronously write device configuration options. Returns this.
+
+device.close(cb)
+cb - completion callback
+Asynchronous close. Frees system resources used by this instance. The completion callback gets one argument (err). Returns null.
+
+device.closeSync()
+Synchronous close. Frees system resources used by this instance. Returns null.
+
+MODE0
+SPI mode number 0.
+
+MODE1
+SPI mode number 1.
+
+MODE2
+SPI mode number 2.
+
+MODE3
+SPI mode number 3.
+
+Message
+An SPI message is an array of one or more read+write transfers. A transfer is an object with the properties listed below. Most of the properties are optional. Note that although both sendBuffer and receiveBuffer are optional, at least one one of them must be specified.
+
+byteLength - number, 32-bit, the number of bytes to transfer
+sendBuffer - optional Buffer, transmit data
+receiveBuffer - optional Buffer, receive data
+speedHz - optional number, 32-bit, override of the device's clock frequency in Hertz
+microSecondDelay - optional number, 16-bit, delay after the last bit transfer before optionally deselecting the device before the next transfer, default 0
+bitsPerWord - optional number, 8-bit, override of the device's wordsize
+chipSelectChange - optional boolean, true to deselect device before starting the next transfer, default false
+Configuration Options
+Device configuration options can be optionally specified when a device is opened with the open or openSync methods. They can also be specified at a later point with the setOptions or setOptionsSync methods. When calling these methods, only the options that need to be set need to be specified in the options object passed to those methods. All options are optional and the appropriate defaults will be used for options that are not specified.
+
+The options supported varies from system to system and will depend on the device drivers used on those systems.
+
+Configurations options can be read with the getOptions and getOptionsSync methods.
+
+IMPORTANT The semantics of chipSelectHigh have changed with Linux kernel 5. To the best of my knowledge, the chipSelectHigh option no longer serves any purpose when used from user space with Linux kernel 5 and should not be used. With Linux kernel 5, the chip select is assumed to be active low. With Linux kernel 5, if an SPI device has has active high chip select, it's chip select must be controlled manually with a GPIO using a module such as onoff. The chipSelectHigh option has been crossed out below but it's still available for usage on older kernels.
+
+mode - number, 2-bit, MODE0, MODE1, MODE2, or MODE3, default MODE0
+chipSelectHigh - boolean, true for active high chip select, default false
+lsbFirst - boolean, true for least significant bit first transfer, default false
+threeWire - boolean, true for shared MISO/MOSI signals, default false
+loopback - boolean, true for loopback mode, default false
+noChipSelect - boolean, true for 1 device per bus, no chip select, default false
+ready - boolean, true if device pulls low to pause, default false
+bitsPerWord - number, 8-bit, device word size, default 8
+maxSpeedHz - number, 32-bit, device clock frequency in Hertz, default system specific.
+
+
+
+Pigpio.
+
+Build Status npm Version Downloads Per Month Mentioned in Awesome Node.js
+
+pigpio
+A wrapper for the pigpio C library to enable fast GPIO, PWM, servo control, state change notification and interrupt handling with Node.js on the Raspberry Pi Zero, 1, 2, 3 or 4.
+
+pigpio supports Node.js versions 10, 12, 14, 15 and 16.
+
+Contents
+Features
+Installation
+Usage
+Pulse an LED with PWM
+Buttons and Interrupt Handling
+Servo Control
+Measure Distance with a HC-SR04 Ultrasonic Sensor
+Determine the Width of a Pulse with Alerts
+Debounce a Button
+Generate a waveform
+Sending a wavechain
+API Documentation
+Limitations
+Troubleshooting
+Related Packages
+Features
+Digital IO
+Up to 3.5 million digital reads per second *)
+Up to 2.5 million digital writes per second *)
+PWM on any of GPIOs 0 through 31
+Multiple frequencies and duty cycle ranges supported
+Servo control on any of GPIOs 0 through 31
+Jitter free
+Alerts when any of GPIOs 0 through 31 change state
+The time of the state change is available accurate to a few microseconds
+Notification streams for monitoring state changes on any of GPIOs 0 through 31 concurrently
+The time of the state changes are available accurate to a few microseconds
+Low latency interrupt handlers
+Handle up to 20000 interrupts per second *)
+Read or write up to 32 GPIOs as one operation with banked GPIO
+Trigger pulse generation
+Pull up/down resistor configuration
+Waveforms to generate GPIO level changes (time accurate to a few µs)
+*) On a Raspberry Pi 4 Model B running Raspberry Pi OS 2021-03-04 (Buster 10.8) with pigpio v3.3.1, Node.js v16.0.0 and V79 of the pigpio C library.
+
+Installation
+Step 1 - Install the pigpio C library
+The pigpio C library is a prerequisite for the pigpio Node.js module.
+
+Run the following command to determine which version of the pigpio C library is installed:
+
+pigpiod -v
+For the Raspberry Pi Zero, 1, 2 and 3 V41 or higher of the pigpio C library is required. For the Raspberry Pi 4 V69 or higher is required.
+
+If the pigpio C library is not installed or if the installed version is too old, the latest version can be installed with the following commands:
+
+sudo apt-get update
+sudo apt-get install pigpio
+Alternative installation instructions for the pigpio C library can be found here.
+
+Warning: The pigpio C library contains a number of utilities. One of these utilities is pigpiod which launches the pigpio C library as a daemon. This utility should not be used as the pigpio Node.js package uses the C library directly.
+
+Step 2 - Install the pigpio Node.js package
+npm install pigpio
+Usage
+Assume there's an LED connected to GPIO17 (pin 11) and a momentary push button connected to GPIO4 (pin 7).
+
+
+Pulse an LED with PWM
+Use PWM to pulse the LED connected to GPIO17 from fully off to fully on continuously.
+
+const Gpio = require('pigpio').Gpio;
+
+const led = new Gpio(17, {mode: Gpio.OUTPUT});
+
+let dutyCycle = 0;
+
+setInterval(() => {
+  led.pwmWrite(dutyCycle);
+
+  dutyCycle += 5;
+  if (dutyCycle > 255) {
+    dutyCycle = 0;
+  }
+}, 20);
+Buttons and Interrupt Handling
+Turn the LED connected to GPIO17 on when the momentary push button connected to GPIO4 is pressed. Turn the LED off when the button is released.
+
+const Gpio = require('pigpio').Gpio;
+
+const led = new Gpio(17, {mode: Gpio.OUTPUT});
+const button = new Gpio(4, {
+  mode: Gpio.INPUT,
+  pullUpDown: Gpio.PUD_DOWN,
+  edge: Gpio.EITHER_EDGE
+});
+
+button.on('interrupt', (level) => {
+  led.digitalWrite(level);
+});
+Servo Control
+Continuously move a servo connected to GPIO10 clockwise and anti-clockwise.
+
+
+const Gpio = require('pigpio').Gpio;
+
+const motor = new Gpio(10, {mode: Gpio.OUTPUT});
+
+let pulseWidth = 1000;
+let increment = 100;
+
+setInterval(() => {
+  motor.servoWrite(pulseWidth);
+
+  pulseWidth += increment;
+  if (pulseWidth >= 2000) {
+    increment = -100;
+  } else if (pulseWidth <= 1000) {
+    increment = 100;
+  }
+}, 1000);
+Measure Distance with a HC-SR04 Ultrasonic Sensor
+The trigger function can be used to generate a pulse on a GPIO and alerts can be used to determine the time of a GPIO state change accurate to a few microseconds. These two features can be combined to measure distance using a HC-SR04 ultrasonic sensor.
+
+
+const Gpio = require('pigpio').Gpio;
+
+// The number of microseconds it takes sound to travel 1cm at 20 degrees celcius
+const MICROSECDONDS_PER_CM = 1e6/34321;
+
+const trigger = new Gpio(23, {mode: Gpio.OUTPUT});
+const echo = new Gpio(24, {mode: Gpio.INPUT, alert: true});
+
+trigger.digitalWrite(0); // Make sure trigger is low
+
+const watchHCSR04 = () => {
+  let startTick;
+
+  echo.on('alert', (level, tick) => {
+    if (level == 1) {
+      startTick = tick;
+    } else {
+      const endTick = tick;
+      const diff = (endTick >> 0) - (startTick >> 0); // Unsigned 32 bit arithmetic
+      console.log(diff / 2 / MICROSECDONDS_PER_CM);
+    }
+  });
+};
+
+watchHCSR04();
+
+// Trigger a distance measurement once per second
+setInterval(() => {
+  trigger.trigger(10, 1); // Set trigger high for 10 microseconds
+}, 1000);
+Determine the Width of a Pulse with Alerts
+Alerts can be used to determine the time of a GPIO state change accurate to a few microseconds. Typically, alerts will be used for GPIO inputs but they can also be used for outputs. In this example, the trigger method is used to pulse the LED connected to GPIO17 on for 15 microseconds once per second. Alerts are used to measure the length of the pulse.
+
+// Assumption: the LED is off when the program is started
+
+const Gpio = require('pigpio').Gpio;
+
+const led = new Gpio(17, {
+  mode: Gpio.OUTPUT,
+  alert: true
+});
+
+const watchLed = () => {
+  let startTick;
+
+  // Use alerts to determine how long the LED was turned on
+  led.on('alert', (level, tick) => {
+    if (level == 1) {
+      startTick = tick;
+    } else {
+      const endTick = tick;
+      const diff = (endTick >> 0) - (startTick >> 0); // Unsigned 32 bit arithmetic
+      console.log(diff);
+    }
+  });
+};
+
+watchLed();
+
+// Turn the LED on for 15 microseconds once per second
+setInterval(() => {
+  led.trigger(15, 1);
+}, 1000);
+Here's an example of the typical output to the console:
+
+15
+15
+15
+15
+15
+15
+20
+15
+15
+15
+15
+Debounce a Button
+The GPIO glitch filter will prevent alert events from being emitted if the corresponding level change is not stable for at least a specified number of microseconds. This can be used to filter out unwanted noise from an input signal. In this example, a glitch filter is applied to filter out the contact bounce of a push button.
+
+Button debounce circuit
+
+const Gpio = require('pigpio').Gpio;
+
+const button = new Gpio(23, {
+  mode: Gpio.INPUT,
+  pullUpDown: Gpio.PUD_UP,
+  alert: true
+});
+
+let count = 0;
+
+// Level must be stable for 10 ms before an alert event is emitted.
+button.glitchFilter(10000);
+
+button.on('alert', (level, tick) => {
+  if (level === 0) {
+    console.log(++count);
+  }
+});
+Generate a waveform
+Waveforms can be used to time and execute Gpio level changes with an accuracy up to 1 microsecond. The following example generates a waveform that starts with a 1µs pulse, then has a 2µs pause, followed by a 3µs pulse and so on. The waveform definition is a simple Array where each entry is an object with the properties gpioOn, gpioOff and usDelay.
+
+The basic workflow to generate and execute waveforms is as follows:
+
+First, we usually clear previous wave entries with the waveClear method. Then we can add pulses with the waveAddGeneric method to the cleared waveform. We then create a waveId by calling the waveCreate method. To execute the waveform, we call the waveTxSend method. Once the wave is sent, we can delete the wave by calling the waveDelete method.
+
+const pigpio = require('pigpio');
+const Gpio = pigpio.Gpio;
+
+const outPin = 17;
+
+const output = new Gpio(outPin, {mode: Gpio.OUTPUT});
+
+output.digitalWrite(0);
+pigpio.waveClear();
+
+let waveform = [];
+
+for (let x = 0; x < 20; x++) {
+  if (x % 2 === 1) {
+    waveform.push({ gpioOn: outPin, gpioOff: 0, usDelay: x + 1 });
+  } else {
+    waveform.push({ gpioOn: 0, gpioOff: outPin, usDelay: x + 1 });
+  }
+}
+
+pigpio.waveAddGeneric(waveform);
+
+let waveId = pigpio.waveCreate();
+
+if (waveId >= 0) {
+  pigpio.waveTxSend(waveId, pigpio.WAVE_MODE_ONE_SHOT);
+}
+
+while (pigpio.waveTxBusy()) {}
+
+pigpio.waveDelete(waveId);
+Sending a wavechain
+The waveChain method allows you to chain multiple waveforms together. A chain is basically just an array with several waveId's. However you can insert different modifiers as described here.
+
+In the example the chain consists of two waves. The first waveform is transmitted normally, then the second waveform is repeated 3 times.
+
+const pigpio = require('pigpio');
+const Gpio = pigpio.Gpio;
+
+const outPin = 17;
+const output = new Gpio(outPin, {mode: Gpio.OUTPUT});
+
+output.digitalWrite(0);
+pigpio.waveClear();
+
+let firstWaveForm = [];
+let secondWaveForm = [];
+
+for (let x = 0; x < 10; x++) {
+  if (x % 2 === 0) {
+    firstWaveForm.push({ gpioOn: outPin, gpioOff: 0, usDelay: 10 });
+  } else {
+    firstWaveForm.push({ gpioOn: 0, gpioOff: outPin, usDelay: 10 });
+  }
+}
+
+pigpio.waveAddGeneric(firstWaveForm);
+let firstWaveId = pigpio.waveCreate();
+
+for (let x = 0; x < 10; x++) {
+  if (x % 2 === 0) {
+    secondWaveForm.push({ gpioOn: outPin, gpioOff: 0, usDelay: 20 });
+  } else {
+    secondWaveForm.push({ gpioOn: 0, gpioOff: outPin, usDelay: 20 });
+  }
+}
+
+pigpio.waveAddGeneric(secondWaveForm);
+let secondWaveId = pigpio.waveCreate();
+
+if (firstWaveId >= 0 && secondWaveId >= 0) {
+  let chain = [firstWaveId, 255, 0, secondWaveId, 255, 1, 3, 0];
+  pigpio.waveChain(chain);
+}
+
+while (pigpio.waveTxBusy()) {}
+
+pigpio.waveDelete(firstWaveId);
+pigpio.waveDelete(secondWaveId);
+API Documentation
+Classes
+Gpio - General Purpose Input Output
+GpioBank - Banked General Purpose Input Output
+Notifier - Notification Stream
+pigpio Module
+Global - Module Globals
+Configuring pigpio
+Configuration - pigpio configuration
+Limitations
+The pigpio Node.js package is a wrapper for the pigpio C library. A limitation of the pigpio C library is that it can only be used by a single running process.
+The pigpio C library and therefore the pigpio Node.js package requires root/sudo privileges to access hardware peripherals.
+Troubleshooting
+If you have a problem with the library, before you remove it from your code and start trying something else, please check the troubleshooting page first. Some problems are solvable and documented.
+
+Related Packages
+Here are a few links to other hardware specific Node.js packages that may be of interest.
+
+onoff - GPIO access and interrupt detection
+i2c-bus - I2C serial bus access
+spi-device - SPI serial bus access
+mcp-spi-adc - Analog to digital conversion with the MCP3002/4/8, MCP3202/4/8 and MCP3304
+pigpio-dht - Implements logic to read DHT11 or DHT22/AM2302 temperature and relative humidity sensor
+pigpio-mock - A pigpio mock library for development on your local machine
+
+
+GPS.
+
+GPS.js
+NPM Package MIT license
+
+GPS.js is an extensible parser for NMEA sentences, given by any common GPS receiver. The output is tried to be as high-level as possible to make it more useful than simply splitting the information. The aim is, that you don't have to understand NMEA, just plug in your receiver and you're ready to go.
+
+Usage
+The interface of GPS.js is as simple as the following few lines. You need to add an event-listener for the completion of the task and invoke the update method with a sentence you want to process. There are much more examples in the examples folder.
+
+const gps = new GPS;
+
+// Add an event listener on all protocols
+gps.on('data', parsed => {
+    console.log(parsed);
+});
+
+// Call the update routine directly with a NMEA sentence, which would
+// come from the serial port or stream-reader normally
+gps.update("$GPGGA,224900.000,4832.3762,N,00903.5393,E,1,04,7.8,498.6,M,48.0,M,,0000*5E");
+It's also possible to add event-listeners only on one of the following protocols, by stating gps.on('GGA', ...) for example.
+
+State
+The real advantage over other NMEA implementations is, that the GPS information is interpreted and normalized. The most high-level API is the state object, which changes with every new event. You can use this information with:
+
+gps.on('data', () => {
+  console.log(gps.state);
+});
+Installation
+Installing GPS.js is as easy as cloning this repo or use the following command:
+
+npm install gps
+Find the serial device
+On Linux serial devices typically have names like /dev/ttyS1, on OSX /dev/tty.usbmodem1411 after installing a USB to serial driver and on Windows, you're probably fine by using the highest COM device you can find in the device manager. Please note that if you have multiple USB ports on your computer and use them randomly, you have to lookup the path/device again.
+
+Examples
+GPS.js comes with some examples, like drawing the current latitude and longitude to Google Maps, displaying a persistent state and displaying the parsed raw data. In some cases you have to adjust the serial path to your own GPS receiver to make it work.
+
+Simple serial example
+const SerialPort = require('serialport');
+const GPS = require('gps');
+
+const port = new SerialPort('/dev/tty.usbmodem11401', { // change path
+  baudRate: 9600,
+  parser: new SerialPort.parsers.Readline({
+    delimiter: '\r\n'
+  })
+});
+
+const gps = new GPS;
+
+gps.on('data', data => {
+  console.log(data, gps.state);
+})
+
+port.on('data', data => {
+  gps.updatePartial(data);
+})
+Dashboard
+Go into the folder examples/dashboard and start the server with
+
+node server
+After that you can open the browser and go to http://localhost:3000. The result should look like the following, which in principle is just a visualization of the state object gps.state
+
+GPS TU Dresden
+
+Google Maps
+Go into the folder examples/maps and start the server with
+
+node server
+After that you can open the browser and go to http://localhost:3000 The result should look like
+
+GPS Google Maps Dresden
+
+Confluence
+Confluence is a project, which tries to travel to and document all integer GPS coordinates. GPS.js can assist on that goal. Go into the examples folder and run:
+
+node confluence
+You should see something like the following, updating as you move around
+
+You are at (48.53, 9.05951),
+The closest confluence point (49, 9) is in 51.36 km.
+You have to go 355.2° N
+Set Time
+On systems without a RTC - like Raspberry PI - you need to update the time yourself at runtime. If the device has an internet connection, it's quite easy to use an NTP server. An alternative for disconnected projects with access to a GPS receiver can be the high-precision time signal, sent by satellites. Go to the examples folder and run the following to update the time:
+
+node set-date
+Available Methods
+update(line)
+The update method is the most important function, it parses a NMEA sentence and forces the callbacks to trigger
+
+updatePartial(chunk)
+Will call update() when a full NMEA sentence has been arrived
+
+on(event, callback)
+Adds an event listener for a protocol to occur (see implemented protocols, simply use the name - upper case) or for all sentences with data. Because GPS.js should be more general, it doesn't inherit EventEmitter, but simply invokes the callback.
+
+off(event)
+Removes an event listener
+
+Implemented Protocols
+GGA - Fix information
+Gets the data, you're most probably looking for: latitude and longitude
+
+The parsed object will have the following attributes:
+
+type: "GGA"
+time: The time given as a JavaScript Date object
+lat: The latitude
+lon: The longitude
+alt: The altitude
+quality: Fix quality (either invalid, fix or diff)
+satellites: Number of satellites being tracked
+hdop: Horizontal dilution of precision
+geoidal: Height of geoid in meters (mean sea level)
+age: time in seconds since last DGPS update
+stationID: DGPS station ID number
+valid: Indicates if the checksum is okay
+RMC - NMEAs own version of essential GPS data
+Similar to GGA but gives also delivers the velocity
+
+The parsed object will have the following attributes:
+
+type: "RMC"
+time: The time given as a JavaScript Date object
+status: Status active or void
+lat: The latitude
+lon: The longitude
+speed: Speed over the ground in km/h
+track: Track angle in degrees
+variation: Magnetic Variation
+faa: The FAA mode, introduced with NMEA 2.3
+valid: Indicates if the checksum is okay
+GSA - Active satellites
+The parsed object will have the following attributes:
+
+type: "GSA"
+mode: Auto selection of 2D or 3D fix (either auto or manual)
+fix: The selected fix mode (either 2D or 3D)
+satellites: Array of satellite IDs
+pdop: Position dilution of precision
+vdop: Vertical dilution of precision
+hdop: Horizontal dilution of precision
+valid: Indicates if the checksum is okay
+GLL - Geographic Position - Latitude/Longitude
+The parsed object will have the following attributes:
+
+type: "GLL"
+lat: The latitude
+lon: The longitude
+status: Status active or void
+time: The time given as a JavaScript Date object
+valid: Indicates if the checksum is okay
+GSV - List of Satellites in view
+GSV messages are paginated. msgNumber indicates the current page and msgsTotal is the total number of pages.
+
+The parsed object will have the following attributes:
+
+type: "GSV"
+msgNumber: Current page
+msgsTotal: Number of pages
+satellites: Array of satellite objects with the following attributes:
+prn: Satellite PRN number
+elevation: Elevation in degrees
+azimuth: Azimuth in degrees
+snr: Signal to Noise Ratio (higher is better)
+valid: Indicates if the checksum is okay
+VTG - vector track and speed over ground
+The parsed object will have the following attributes:
+
+type: "VTG"
+track: Track in degrees
+speed: Speed over ground in km/h
+faa: The FAA mode, introduced with NMEA 2.3
+valid: Indicates if the checksum is okay
+ZDA - UTC day, month, and year, and local time zone offset
+The parsed object will have the following attributes:
+
+type: "ZDA"
+time: The time given as a JavaScript Date object
+HDT - Heading
+The parsed object will have the following attributes:
+
+type: "HDT"
+heading: Heading in degrees
+trueNorth: Indicates heading relative to True North
+valid: Indicates if the checksum is okay
+GST - Position error statistics
+The parsed object will have the following attributes:
+
+type: "GST"
+time: The time given as a JavaScript Date object
+rms: RMS value of the pseudorange residuals; includes carrier phase residuals during periods of RTK (float) and RTK (fixed)
+ellipseMajor: Error ellipse semi-major axis 1 sigma error, in meters
+ellipseMinor: Error ellipse semi-minor axis 1 sigma error, in meters
+ellipseOrientation: Error ellipse orientation, degrees from true north
+latitudeError: Latitude 1 sigma error, in meters
+longitudeError: Longitude 1 sigma error, in meters
+heightError: Height 1 sigma error, in meters
+valid: Indicates if the checksum is okay
+GPS State
+If the streaming API is not needed, but a solid state of the system, the gps.state object can be used. It has the following properties:
+
+time: Current time
+lat: Latitude
+lon: Longitude
+alt: Altitude
+satsActive: Array of active satellites
+speed: Speed over ground in km/h
+track: Track in degrees
+satsVisible: Array of all visible satellites
+Adding new protocols is a matter of minutes. If you need a protocol which isn't implemented, I'm happy to see a pull request or a new ticket.
+
+Troubleshooting
+If you don't get valid position information after turning on the receiver, chances are high you simply have to wait as it takes some time to first fix.
+
+Functions
+GPS.js comes with a few static functions, which helps working with geo-coordinates.
+
+GPS.Parse(line)
+Parses a single line and returns the resulting object, in case the callback system isn't needed/wanted
+
+GPS.Distance(latFrom, lonFrom, latTo, lonTo)
+Calculates the distance between two geo-coordinates using Haversine formula
+
+GPS.TotalDistance(points)
+Calculates the length of a traveled route, given as an array of {lat: x, lon: y} point objects
+
+GPS.Heading(latFrom, lonFrom, latTo, lonTo)
+Calculates the angle from one coordinate to another. Heading is represented as windrose coordinates (N=0, E=90, S=189, W=270). The result can be used as the argument of angles compass() method:
+
+const angles = require('angles');
+console.log(angles.compass(GPS.Heading(50, 10, 51, 9))); // will return x ∈ { N, S, E, W, NE, ... }
+Using GPS.js with the browser
+The use cases should be rare to parse NMEA directly inside the browser, but it works too.
+
+<script src="gps.min.js"></script>
+<script>
+   var gps = new GPS;
+   gps.update('...');
+</script>
+Building the library
+After cloning the Git repository run:
+
+npm install
+npm run build
+Run a test
+Testing the source against the shipped test suite is as easy as
+
+npm run test
+Copyright and Licensing
+Copyright (c) 2025, Robert Eisele Licensed under the MIT license.
 
