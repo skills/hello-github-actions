@@ -1,14 +1,20 @@
-name: My Workflow Template
+name: Mein Erster Workflow
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
- build:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Checkout code
-     uses: Actions/checkout@v2
-   - name: Install dependencies
-     run: npm install
-   - name: Build app
-     run: npm run build
+  mein_erster_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Hallo Welt Nachricht
+        run: echo "Hallo von meinem ersten GitHub Actions Job!"
+
+      - name: Zeige aktuelles Datum und Uhrzeit
+        run: date
