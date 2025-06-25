@@ -18,7 +18,7 @@ env:
 jobs:
   find_exercise:
     name: Find Exercise Issue
-    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.5.0
+    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.6.0
 
   check_step_work:
     name: Check step work
@@ -36,7 +36,7 @@ jobs:
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.5.0
+          ref: v0.6.0
 
       - name: Update comment - checking work
         run: |
@@ -49,7 +49,7 @@ jobs:
       - name: Check if welcome.yml file exists
         id: check-file-exists
         continue-on-error: true
-        uses: skills/exercise-toolkit/actions/file-exists@v0.5.0
+        uses: skills/exercise-toolkit/actions/file-exists@v0.6.0
         with:
           file: .github/workflows/welcome.yml
 
@@ -140,27 +140,32 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ISSUE_URL: ${{ needs.find_exercise.outputs.issue-url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Get response templates
         uses: actions/checkout@v4
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.5.0
+          ref: v0.6.0
+
       - name: Create comment - add step content
         run: |
           gh issue comment "$ISSUE_URL" \
             --body-file "$STEP_2_FILE"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create comment - watching for progress
         run: |
           gh issue comment "$ISSUE_URL" \
             --body-file exercise-toolkit/markdown-templates/step-feedback/watching-for-progress.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Disable current workflow and enable next one
         run: |
           gh workflow disable "${{github.workflow}}"
