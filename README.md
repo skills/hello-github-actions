@@ -9,7 +9,7 @@ Automation is key for repetitive tasks like testing, scanning, review, and deplo
 - **Who is this for**: Developers, DevOps engineers, Security engineers
 - **What you'll learn**: How to create GitHub Actions workflows, how to run them, and how to use them to automate tasks.
 - **What you'll build**: An Actions workflow that will comment on a pull request when it is created.
-- **Prerequisites**: [Introduction to GitHub](https://github.com/skills-dev/introduction-to-github)
+- **Prerequisites**: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
 - **How long**: This exercise can be finished in less than 30min.
 
 In this exercise, you will:
@@ -24,7 +24,7 @@ In this exercise, you will:
 
 Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills-dev&template_name=hello-github-actions&owner=%40me&name=skills-hello-github-actions&description=Exercise:+Create+and+run+a+GitHub+Actions+Workflow&visibility=public)
+[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=hello-github-actions&owner=%40me&name=skills-hello-github-actions&description=Exercise:+Create+and+run+a+GitHub+Actions+Workflow&visibility=public)
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
