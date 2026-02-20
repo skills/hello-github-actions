@@ -49,7 +49,7 @@ jobs:
       - name: Check if welcome.yml file exists
         id: check-file-exists
         continue-on-error: true
-        uses: skills/exercise-toolkit/actions/file-exists@v0.6.0
+        uses: skills/exercise-toolkit/actions/file-exists@v0.8.1
         with:
           file: .github/workflows/welcome.yml
 
