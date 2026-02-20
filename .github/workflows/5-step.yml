@@ -41,7 +41,7 @@ jobs:
   finish_exercise:
     name: Finish Exercise
     needs: [find_exercise, post_review_content]
-    uses: skills/exercise-toolkit/.github/workflows/finish-exercise.yml@v0.6.0
+    uses: skills/exercise-toolkit/.github/workflows/finish-exercise.yml@v0.8.1
     with:
       issue-url: ${{ needs.find_exercise.outputs.issue-url }}
       exercise-title: "Hello GitHub Actions"
