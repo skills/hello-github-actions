@@ -27,7 +27,7 @@ Because you set the workflow to run on the `pull_request` event, it will automat
 
 1. In the left sidebar, select the workflow named **Post welcome comment**.
 
-  > 💡 **Tip:** You can ignore the other actions. Those were for teaching this exercise.
+    > 💡 **Tip:** You can ignore the other actions. Those were for teaching this exercise.
 
 1. Click the first run entry titled **Welcome workflow** to show a diagram of the run's jobs.
 

@@ -33,8 +33,7 @@ Workflows let you automate tasks like building, testing, or deploying your code,
      pull-requests: write
    ```
 
-   > [!NOTE]
-   > This is an incomplete workflow file. It is normal if you receive an error message. One step at a time! 😎
+   > 🪧 **Note**: This is an incomplete workflow file. It is normal if you receive an error message. One step at a time! 😎
 
 1. Commit your changes directly to the `welcome-workflow` branch.
 
